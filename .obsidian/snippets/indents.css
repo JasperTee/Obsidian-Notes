@@ -1,0 +1,46 @@
+/* Heading các cấp */
+.markdown-preview-view h1 {
+    margin-left: 0.5em;
+  }
+  .markdown-preview-view h2 {
+    margin-left: 1em;
+  }
+  .markdown-preview-view h3 {
+    margin-left: 1.5em;
+  }
+  .markdown-preview-view h4 {
+    margin-left: 2em;
+  }
+  .markdown-preview-view h5 {
+    margin-left: 2.5em;
+  }
+  .markdown-preview-view h6 {
+    margin-left: 3em;
+  }
+  
+  /* Paragraph ngay sau heading sẽ thụt sâu hơn 0.5em */
+  .markdown-preview-view h1 + p {
+    margin-left: 1em;
+    text-indent: 1em;
+  }
+  .markdown-preview-view h2 + p {
+    margin-left: 1.5em;
+    text-indent: 1em;
+  }
+  .markdown-preview-view h3 + p {
+    margin-left: 2em;
+    text-indent: 1em;
+  }
+  .markdown-preview-view h4 + p {
+    margin-left: 2.5em;
+    text-indent: 1em;
+  }
+  .markdown-preview-view h5 + p {
+    margin-left: 3em;
+    text-indent: 1em;
+  }
+  .markdown-preview-view h6 + p {
+    margin-left: 3.5em;
+    text-indent: 1em;
+  }
+  

@@ -1,0 +1,20 @@
+/* Thụt lề tiêu đề trong Obsidian Preview mode */
+.markdown-preview-view h1 {
+    margin-left: 1em; /* Bạn có thể chỉnh số em để thay đổi độ lùi */
+  }
+  .markdown-preview-view h2 {
+    margin-left: 2em;
+  }
+  .markdown-preview-view h3 {
+    margin-left: 3em;
+  }
+  .markdown-preview-view h4 {
+    margin-left: 4em;
+  }
+  .markdown-preview-view h5 {
+    margin-left: 5em;
+  }
+  .markdown-preview-view h6 {
+    margin-left: 6em;
+  }
+  
