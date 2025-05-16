@@ -9,7 +9,7 @@
 #### Symmetric cryptography
 ![[Symmetric Cryptography.png]]
 **Symmetric cryptography** is a method of encryption where the same secret key is used to both encrypt (lock) and decrypt (unlock) a message.
-### How It Works:
+##### How It Works
 1. **One Key for Everything:**  
     Both the sender and receiver share one common key. This key must be kept secret. If someone else obtains it, they can read all the messages.
     
