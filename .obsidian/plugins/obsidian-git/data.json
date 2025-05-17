@@ -2,7 +2,7 @@
   "commitMessage": "vault backup: {{date}}",
   "autoCommitMessage": "auto backup ({{numFiles}} files changed) - {{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
-  "autoSaveInterval": 50,
+  "autoSaveInterval": 10,
   "autoPushInterval": 10,
   "autoPullInterval": 0,
   "autoPullOnBoot": true,
