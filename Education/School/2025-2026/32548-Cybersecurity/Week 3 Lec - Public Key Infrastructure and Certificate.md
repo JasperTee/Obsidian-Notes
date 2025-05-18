@@ -173,7 +173,7 @@ The public key **encrypts** the message, and only the private key can **decry
 - **Defence:** Use long and complex keys (e.g., RSA-2048 or ECC-256).
 ## **Public Key Infrastructure (PKI)?**
 **PKI** is a system that **manages, issues, and verifies digital certificates** to help people, websites, and devices **trust each other** when exchanging information securely over the internet.
->   X.509 standard is used for specifying format of Public Key Certificates
+   X.509 standard is used for specifying format of Public Key Certificates
 ![[Public Key Infrastructure.png]]
 ---
 ### **Key Components of PKI**
@@ -187,6 +187,15 @@ The public key **encrypts** the message, and only the private key can **decry
     - Expiration date
     - CA’s name
     - Digital signature from CA
+#### 2. **Digital Certificate**
+- A file that proves a **public key belongs to a specific person, website, or organisation**
+- Includes:
+    - Owner's name (domain/organisation)
+    - Public key
+    - Expiration date
+    - CA’s name
+    - Digital signature from CA
+
 #### 3. **Registration Authority (RA)**
 - Helps CA verify identities before issuing certificates (like an assistant to the CA)
 #### 4. **Certificate Revocation Mechanisms**
