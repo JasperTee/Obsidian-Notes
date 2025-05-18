@@ -8,3 +8,5 @@ Week 1
 Week 2
 [[Week 2 Lab - Password Cracking using John the Ripper and SQL Injection]]
 [[Week 2 Lec - Web- based attacks, mitigation strategy]]
+Week 3
+[[Week 3 Lec - Public Key Infrastructure and Certificate]]

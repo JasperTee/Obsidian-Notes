@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 478.5
+    "width": 443.5
   },
   "right": {
     "id": "bb6033fe7f83a09b",
@@ -171,11 +171,15 @@
       "graph:Open graph view": false
     }
   },
-  "active": "30feacd5e8a1aa2c",
+  "active": "1ffa685845189fb7",
   "lastOpenFiles": [
-    "Images/Public Key Infrastructure.png",
+    "Images/Real World CAs.png",
+    "Images/Type of Digital Certificates.png",
     "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lec - Public Key Infrastructure and Certificate.md",
+    "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
+    "Education/School/School - Subject Contents.md",
+    "Images/Public Key Infrastructure.png",
     "Pasted image 20250517223202.png",
     "Images/RSA Algorithm 2.png",
     "Images/RSA Algorithm 1.png",
@@ -183,8 +187,6 @@
     "Images/Asymmetric Cryptography.png",
     "Images/Symmetric Cryptography.png",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
-    "Education/School/School - Subject Contents.md",
-    "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
     "Education/External Cources",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lab - Password Cracking using John the Ripper and SQL Injection.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
@@ -193,7 +195,6 @@
     "Education/School/2025-2026/32548-Cybersecurity/Untitled.canvas",
     "Images/How Stored XSS Works?.png",
     "Images/How Reflected XSS Works?.png",
-    "Images/How CSRF Works?.png",
     "Education/School/2025-2026",
     "Education/School/Diploma",
     "Education/School/2025-2026/32548-Cybersecurity",
