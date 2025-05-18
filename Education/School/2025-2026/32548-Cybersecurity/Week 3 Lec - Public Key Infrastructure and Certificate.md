@@ -178,15 +178,7 @@ The public key **encrypts** the message, and only the private key can **decry
 ---
 ### **Key Components of PKI**
 #### 1. **Certificate Authority (CA)**
-- A **trusted organisation** that:
-    - **Verifies** your identity (e.g., confirms you own a website)
-- A file that proves a **public key belongs to a specific person, website, or organisation**
-- Includes:
-    - Owner's name (domain/organisation)
-    - Public key
-    - Expiration date
-    - CA’s name
-    - Digital signature from CA
+a trusted party, responsible for verifying the identity of users, and then bind the verified identity to a public keys.
 #### 2. **Digital Certificate**
 - A file that proves a **public key belongs to a specific person, website, or organisation**
 - Includes:
