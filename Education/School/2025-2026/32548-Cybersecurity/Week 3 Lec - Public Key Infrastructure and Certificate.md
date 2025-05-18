@@ -187,7 +187,22 @@ a trusted party, responsible for verifying the identity of users, and then bind 
     - Expiration date
     - CA’s name
     - Digital signature from CA
-
+##### **How Digital Certificates Works**
+**1. Signing the Message (Sender’s side)**
+Let’s say **Alice** wants to send a message to **Bob**.
+1. Alice writes the message (M).
+2. She uses a **hash function** (like SHA-256) to create a **message digest** (a fixed-size summary of M).
+3. Alice **encrypts the digest** with her **private key** → this is the **digital signature**.
+4. Alice sends both the message and the signature to Bob.
+---
+ **2. Verifying the Signature (Receiver’s side)**
+1. Bob receives the message and the signature.
+2. Bob uses **Alice’s public key** to **decrypt the signature**, revealing the original message digest.
+3. Bob hashes the received message himself.
+4. If the two digests match, then:
+    - The message was **not changed**
+    - The message was **definitely from Alice**
+    
 #### 3. **Registration Authority (RA)**
 - Helps CA verify identities before issuing certificates (like an assistant to the CA)
 #### 4. **Certificate Revocation Mechanisms**
