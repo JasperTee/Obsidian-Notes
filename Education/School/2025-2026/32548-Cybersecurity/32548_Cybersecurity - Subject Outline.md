@@ -10,3 +10,4 @@ Week 2
 [[Week 2 Lec - Web- based attacks, mitigation strategy]]
 Week 3
 [[Week 3 Lec - Public Key Infrastructure and Certificate]]
+[[Week 3 Lab - DNS Pharming]]
