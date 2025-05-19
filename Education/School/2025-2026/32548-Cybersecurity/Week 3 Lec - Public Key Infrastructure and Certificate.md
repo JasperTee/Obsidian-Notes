@@ -1,4 +1,4 @@
-## What is Cryptography?**
+## What is Cryptography?
 **Cryptography** is the science of protecting information by converting it into a form that only authorised people can read and understand.
 ### Main Goals of Cryptography:
 1. **Confidentiality** – Keep data secret from unauthorised users.
