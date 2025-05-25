@@ -159,6 +159,7 @@ How it works:
 - It does **not encrypt audio or video data** (that’s handled by SRTP)
 - It prevents attackers from spoofing or intercepting call setup
 # SSL/TLS Vulnerabilities
+![[TLS Vulnerabilities.png]]
 Although SSL/TLS is designed to secure communications, **it can still be vulnerable** due to weaknesses in different parts of its design or implementation.
 ## 1. **Handshake Protocol**
 This is the initial phase where:
@@ -198,3 +199,4 @@ These occur when **TLS is used incorrectly or poorly configured** in the appli
 - Transmitting sensitive data **before the handshake is completed**
 - **Weak or outdated cipher suites** being used
 - **Misconfigured TLS settings** (e.g., not enabling certificate validation)
+
