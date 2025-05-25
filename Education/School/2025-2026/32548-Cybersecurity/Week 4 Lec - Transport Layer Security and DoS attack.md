@@ -615,3 +615,51 @@ DTLS adds three key mechanisms:
 3. **Handshake Message Numbering**
     - Each handshake message is tagged with a handshake-specific sequence number.
     - The receiver can request any missing handshake message be resent, ensuring the handshake can complete even when individual datagrams are lost.
+## Handshake Flow
+### Step 1: ClientHello (initial)
+1. **Client** sends a normal `ClientHello` over UDP, including:
+    - DTLS version (e.g. 1.2)
+    - Client random
+    - Supported cipher suites
+    - A **zero-length cookie**
+        
+2. **Server** receives it—but to avoid wasted state on spoofed floods, it does **not** immediately allocate a session. Instead, it replies with a **HelloVerifyRequest**, containing a **stateless cookie** tied to the client’s IP and the original ClientHello.
+---
+### Step 2: ClientHello (with cookie)
+3. **Client** receives the `HelloVerifyRequest` and resends **another** `ClientHello`, identical to before but now including the server-issued cookie.
+    
+4. **Server** verifies the cookie. If it matches, the server now knows the client’s address isn’t spoofed, so it allocates session state and proceeds.
+---
+### Step 3: Full TLS-style handshake
+5. **Server → Client**
+    - `ServerHello` (chosen cipher, server random)
+    - `Certificate` (its public key)
+    - `ServerKeyExchange` (if using DHE/ECDHE)
+    - (Optional) `CertificateRequest`
+    - `ServerHelloDone`
+        
+6. **Client → Server**
+    - (Optional) `Certificate` (if requested)
+    - `ClientKeyExchange` (pre-master secret, encrypted under server key)
+    - (Optional) `CertificateVerify`
+    - `ChangeCipherSpec`
+    - **Finished** (MAC of all prior handshake messages)
+        
+7. **Server → Client**
+    - `ChangeCipherSpec`
+    - **Finished**
+        
+At this point both sides share the same symmetric keys and can send encrypted application data.
+
+---
+## 3. Reliability and Ordering
+- **Retransmissions**  
+    Each of the above steps is wrapped in a timer. If either side doesn’t see the expected reply in time, it **retransmits**its last message.
+    
+- **Sequence numbers**  
+    Every DTLS record carries an explicit sequence number. This lets the receiver:
+    - **Detect duplicates** and drop replayed packets
+    - **Accept out-of-order** records (up to a window) without breaking the MAC
+        
+- **Handshake message numbers**  
+    Even within a single record, each handshake fragment is numbered so the remote peer can **reassemble** the full handshake in the right order.
