@@ -172,6 +172,143 @@ This is the initial phase where:
 	- **Man-in-the-Middle (MITM)**: Attacker intercepts the handshake to impersonate the server
 	- **Version rollback**: The protocol is tricked into using SSL 2.0/3.0, which are vulnerable
 
+### Man-in-the-Middle (MITM) Attack
+![[Man-in-the-Middle (MITM) Attack.png]]
+#### 1. What is a MITM attack?
+A **Man-in-the-Middle (MITM)** attack happens when an attacker **secretly intercepts, reads, or alters communication**between two parties (such as a user and a website) **without either side knowing**.
+- The **user thinks they are talking to the website**.
+- The **website thinks it’s talking to the real user**.
+- In reality, the **attacker sits silently in the middle**.
+
+---
+#### 2. Goal of MITM
+- **Eavesdrop** on sensitive data (cookies, passwords, login tokens)
+    
+- **Impersonate** the user or the server
+    
+- **Modify** the communication content
+    
+- **Hijack** the session or connection
+
+---
+#### 3. Three common types of MITM attacks
+
+##### SSL/TLS Renegotiation Attack
+**Objective:**
+	To **inject malicious data** into a secure TLS session by abusing the **renegotiation feature** of TLS.
+
+---
+**How it works**:
+
+1. The attacker first **establishes a TLS connection with the server** as if they were the legitimate client.
+    
+2. Then, the attacker **captures the real client’s TLS handshake request**.
+    
+3. Instead of starting a new session, the attacker **injects this handshake as a renegotiation** within the already-established session.
+    
+4. The server thinks the original client is **renegotiating the session**, and assumes that all data (from both attacker and client) belongs to the same entity.
+    
+5. As a result:
+    
+    - The attacker’s data and the client’s data are **combined into the same session**.
+        
+    - The server accepts commands or input **that were actually injected by the attacker**.
+---
+ **Consequences**:
+- The attacker can **send unauthorized requests**, such as placing fake orders or altering transactions.
+    
+- This can occur even though the session appears encrypted and authenticated.
+    
+---
+ **Mitigation**:
+
+- **Disable renegotiation** on the server if not needed.
+    
+- Or enforce **RFC 5746**, which ensures that renegotiation is cryptographically linked to the original session.
+---
+#####  SSLstrip Attack
+**Objective**:
+To trick the user into communicating over **unsecured HTTP** instead of **secure HTTPS**, and steal their sensitive data.
+
+ **How it works**:
+1. The user types a website address, such as `http://example.com`.
+    
+2. Normally, the website would **redirect to `https://example.com`** for security.
+    
+3. The attacker, acting as a MITM, **intercepts this redirect** and **blocks or strips the HTTPS upgrade**.
+    
+4. The attacker **sends the user a fake version of the website over HTTP**, which looks exactly like the real site.
+    
+5. The user sees no warning, types in their **username and password**, and submits them.
+    
+6. The attacker captures the credentials and can **immediately log in as the victim**.
+    
+7. The attacker may then forward the user to the real HTTPS version of the site, so the user **does not suspect anything went wrong**.
+---
+
+ **Consequences**:
+- The user believes they are using HTTPS but actually **sends login information in plain text**.
+- The attacker **silently captures sensitive data** without being detected.
+---
+
+ **Mitigation**:
+- The website should use **HSTS (HTTP Strict Transport Security)** to force browsers to only use HTTPS.
+- Modern browsers should show **clear warnings when login forms are served over HTTP**.
+- Users should **always check for the `https://` and the padlock icon** in the address bar.
+---
+
+#####  Version Rollback Attack
+![[Version Rollback Attack.png]]
+ **Objective**:
+To **downgrade the TLS version** used by the client and server to an older, **weaker version**, and then exploit known vulnerabilities in that version.
+
+---
+ **How it works**:
+1. The client sends a **ClientHello** message offering support for the latest TLS version (e.g., TLS 1.3).
+    
+2. The attacker, acting as a MITM, **intercepts this message** and **modifies it** to indicate that the client only supports TLS 1.0.
+    
+3. The server receives this altered handshake and **agrees to use TLS 1.0** instead of a newer, more secure version.
+    
+4. The handshake completes, and both sides communicate using **TLS 1.0**.
+    
+5. Now that the communication is protected with a **weaker, outdated protocol**, the attacker can:
+    
+    - Use a **BEAST attack** to recover encrypted cookies
+        
+    - Use **known exploits** against TLS 1.0 or SSL 3.0
+---
+
+ **Consequences**:
+- Even though both the client and server support strong encryption, the attacker **forces them to fall back** to weak security.
+- The attacker can then **break encryption, steal data, or manipulate traffic**.
+
+---
+ **Mitigation**:
+- Servers and clients should be configured to **refuse old versions of TLS**.
+- Use **TLS 1.2 or TLS 1.3 only**.
+- Implement **version negotiation protection** to detect and block downgrade attempts.
+
+---
+
+#### 4. Can SSL/TLS stop MITM?
+Yes — **if properly configured**, SSL/TLS can prevent MITM by:
+
+- **Encrypting all traffic** between client and server
+    
+- **Authenticating server identity** using certificates
+    
+- **Verifying data integrity**
+    
+
+But SSL/TLS can fail if:
+
+- Outdated protocols like TLS 1.0 are used
+    
+- The client doesn't verify the server certificate
+    
+- HTTPS is stripped or downgraded
+
 ---
 ## 2. **Record and Application Data Protocols**
 After the handshake, this layer handles **secure transmission of actual data** (e.g., HTTP content, emails, files).
