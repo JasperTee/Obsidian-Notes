@@ -181,6 +181,75 @@ After the handshake, this layer handles **secure transmission of actual data**�
 	- **Padding Oracle Attacks**: Exploit incorrect handling of padding in encrypted messages
 	- **Heartbleed**: A bug in OpenSSL that leaks memory content, including private keys and passwords
 
+### **BEAST Attack (Browser Exploit Against SSL/TLS)**
+
+#### I.  **What is BEAST?**
+**BEAST** stands for **Browser Exploit Against SSL/TLS**  
+It is a **real-world attack discovered in 2011 (CVE-2011-3389)** that:
+- Targets **TLS 1.0 and SSL 3.0**
+- Allows attackers to **decrypt HTTPS traffic**
+- Specifically focuses on **breaking cookies, login tokens, or private user data**
+---
+#### II.  **Why is it possible? (The root problem)**
+The BEAST attack exploits a flaw in how **TLS 1.0 uses CBC (Cipher Block Chaining)** for encryption.
+
+CBC encryption works like this:
+`Cipher[0] = Encrypt(Plain[0] XOR IV) Cipher[1] = Encrypt(Plain[1] XOR Cipher[0]) Cipher[2] = Encrypt(Plain[2] XOR Cipher[1]) ...`
+
+- Each plaintext block is **XORed with the previous ciphertext block**
+- The first block uses a public **IV (Initialization Vector)**
+**The issue:** In TLS 1.0, the IV is **not secret** → attacker knows it.
+---
+#### III.  **How does the BEAST attack work?**
+**Goal:**
+To decrypt something sensitive (like a session cookie) that the browser is sending encrypted via HTTPS.
+
+ **Setup:**
+The attacker must:
+- Control JavaScript or applet code in the victim’s browser (via injected script)
+- Be in a position to **capture encrypted HTTPS traffic** (MITM = Man-in-the-Middle)
+
+**Step-by-step Attack:**
+Let’s say the cookie being sent is:
+`Cookie = "Secret"`
+That gets encrypted like this:
+`C1 = Encrypt("S" XOR IV)`
+1. Attacker sees C1 and IV (both are visible)
+
+2. Attacker guesses the first byte of the cookie
+He tries:
+- Guess = "A" → Encrypt("A" XOR IV) = G1
+- If G1 == C1 → Cookie[0] = "A" (correct!)
+- Otherwise, try "B", "C", ..., until it matches
+👉 This might take **up to 256 tries per byte**
+
+2. Repeat for the next byte
+Attacker shifts the plaintext block position and guesses byte 2, then 3...
+Eventually, attacker **decrypts the whole cookie**.
+
+---
+#### IV. **Example:**
+
+|Guess|XORed with IV|Result (Encrypted)|Match with C1?|
+|---|---|---|---|
+|"A"|"A" XOR IV|Encrypted result|❌|
+|"B"|"B" XOR IV|Encrypted result|❌|
+|"S"|"S" XOR IV|Encrypted result|✅ Match!|
+
+→ First byte of cookie = `"S"`
+
+Repeat the same to get `"e"`, `"c"`, `"r"`, etc.
+
+---
+#### V. **How to defend against BEAST**
+
+| Defense                                                  | Explanation                                         |
+| -------------------------------------------------------- | --------------------------------------------------- |
+| **Upgrade to TLS 1.2 or 1.3**                            | These do not use predictable CBC IVs                |
+| **Use AES-GCM instead of CBC**                           | GCM mode is not vulnerable to this attack           |
+| **Block Java/JavaScript applets from untrusted sources** | Prevent attacker from injecting guess attempts      |
+| **Disable TLS 1.0 and SSL 3.0 on servers**               | Prevent vulnerable clients from connecting this way |
+
 ---
 ## 3. **Crypto using PKI (Public Key Infrastructure)**
 TLS uses PKI to validate digital certificates and verify the identity of servers (and sometimes clients).
