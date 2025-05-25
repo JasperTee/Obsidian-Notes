@@ -386,6 +386,106 @@ Repeat the same to get `"e"`, `"c"`, `"r"`, etc.
 | **Use AES-GCM instead of CBC**                           | GCM mode is not vulnerable to this attack           |
 | **Block Java/JavaScript applets from untrusted sources** | Prevent attacker from injecting guess attempts      |
 | **Disable TLS 1.0 and SSL 3.0 on servers**               | Prevent vulnerable clients from connecting this way |
+### **POODLE Attack – Padding Oracle On Downgraded Legacy Encryption**
+![[POODLE Attack.png]]
+
+#### 1. What is POODLE?
+**POODLE** is a **padding oracle attack** discovered in 2014 that targets the outdated **SSL 3.0** protocol.  
+It allows an attacker to **decrypt encrypted HTTPS traffic**, such as **session cookies**, even without knowing the encryption key.
+
+---
+#### 2. Background
+- Most modern systems use **TLS 1.2 or 1.3**, which are secure.
+    
+- However, for backward compatibility, many servers and clients still **allow fallback to SSL 3.0**.
+    
+- POODLE exploits this by **forcing a downgrade** to SSL 3.0 and then exploiting a **padding flaw** in CBC mode encryption.
+    
+
+---
+#### 3. The technical flaw in SSL 3.0
+SSL 3.0 uses **CBC (Cipher Block Chaining)** encryption.
+- In CBC, plaintext is divided into fixed-size blocks.
+    
+- If the last block is not full, **padding is added** to make it complete.
+    
+- When the server decrypts the message, it checks:
+    
+    - The **length** of the padding
+    - The **MAC (Message Authentication Code)**
+
+**The problem:**  
+SSL 3.0 **does not check the actual content of the padding bytes** — only the length and MAC.
+This weakness is what makes the POODLE attack possible.
+
+---
+#### 4. How POODLE works (step by step)
+ **Step 1: Force SSL 3.0 downgrade**
+- The attacker intercepts the connection between client and server.
+    
+- They **block TLS handshakes**, so both sides **fall back to SSL 3.0**.
+
+
+ **Step 2: Capture ciphertext**
+- The attacker monitors the network and **captures encrypted data**, such as cookies.
+
+
+ **Step 3: Modify ciphertext**
+- The attacker **modifies the previous ciphertext block (Cipher[i–1])**.
+    
+- In CBC mode:
+    `Plain[i] = Decrypt(Cipher[i]) XOR Cipher[i–1]`
+- By changing Cipher[i–1], the attacker **influences Plain[i]**.
+
+
+ **Step 4: Send modified ciphertext to the server**
+- The server decrypts the message.
+    
+- If the **padding is valid**, the server **does not return an error**.
+    
+- If the padding is **invalid**, the server **returns an error**.
+    
+The attacker **uses this response to guess the correct value**.
+
+ **Step 5: Repeat the process**
+- The attacker tries all 256 possible values for a single byte.
+    
+- When the padding is accepted, the attacker knows the **correct plaintext byte**.
+    
+- They continue this process for the remaining bytes.
+---
+#### 5. Why can an attacker guess plaintext just by changing padding?
+Because in CBC:
+- Each plaintext block is **influenced by the previous ciphertext block**.
+- The attacker does not need the key — only the ability to **change ciphertext** and **observe the server’s response**.
+- The server acts like an **oracle**, revealing whether the padding was valid or not.
+
+This is why it’s called a **padding oracle attack**.
+
+---
+#### 6. Conditions required for the POODLE attack
+- The server must **support SSL 3.0**
+- The client must be **willing to downgrade** to SSL 3.0
+- The attacker must be able to **intercept and modify network traffic** (MITM position)
+- The data to be decrypted must be **predictably located** (like a cookie at the start of a request)
+    
+
+---
+
+#### 7. Consequences
+- Even though the connection is encrypted, the attacker can **decrypt sensitive data byte by byte**
+- The attacker may steal **session cookies**, impersonate the user, or gain unauthorized access
+    
+
+---
+#### 8. How to defend against POODLE
+
+| Defense method                        | Explanation                                     |
+| ------------------------------------- | ----------------------------------------------- |
+| **Disable SSL 3.0 completely**        | Prevent any downgrade to this insecure protocol |
+| **Use TLS 1.2 or 1.3 only**           | These versions fix the padding validation issue |
+| **Use modern ciphers like AES-GCM**   | These do not use CBC padding and are resistant  |
+| **Keep browsers and servers updated** | Most modern systems no longer support SSL 3.0   |
 
 ---
 ## 3. **Crypto using PKI (Public Key Infrastructure)**
@@ -406,3 +506,81 @@ These occur when **TLS is used incorrectly or poorly configured** in the appli
 - **Weak or outdated cipher suites** being used
 - **Misconfigured TLS settings** (e.g., not enabling certificate validation)
 
+### **Heartbleed Attack (CVE-2014-0160)**
+#### 1. What is Heartbleed?
+Heartbleed is a **critical security vulnerability** in the OpenSSL library, discovered in **2014**.  
+It affects systems using **TLS** (Transport Layer Security), specifically the **heartbeat extension**.
+
+The bug allows attackers to **read sensitive data from the server's memory** — such as **passwords**, **user credentials**, and even the **server’s private key** — **without authentication** and **without leaving a trace**.
+
+---
+#### 2. What is the Heartbeat Extension?
+TLS includes a feature called **heartbeat** that allows the client and server to send small "are you alive?" messages during idle periods.
+
+A **normal heartbeat request** looks like this:
+
+- Client: “If you're alive, send me back the word 'OK', and it’s 2 bytes long.”
+    
+- Server: Receives the message and sends back: “OK” (2 bytes)
+    
+
+This feature was meant to **keep connections alive**.
+
+---
+
+#### 3. What is the vulnerability?
+The problem is in **how OpenSSL handles the heartbeat request**.
+
+- The client **tells the server how many bytes** of data it is sending (e.g., “I'm sending 2 bytes”).
+    
+- But OpenSSL **does not check if the client actually sent that amount**.
+    
+- If the client **lies** and says “I'm sending 65536 bytes,” but only sends 2 bytes...
+    
+- The server **blindly replies** with 65536 bytes, by **reading from its own memory** to fill the gap.
+    
+
+---
+
+#### 4. How does the attack work?
+ **Normal flow**:
+- Client: “Send me back 2 bytes of ‘OK’.”
+- Server: “OK” (2 bytes) → all good.
+    
+
+ **Exploit**:
+- Attacker: “Send me back 65536 bytes — but here are only 2 bytes.”    
+- Server: Tries to reply with 65536 bytes.
+- Because only 2 bytes were sent, the server **fills the rest** by reading **whatever is in memory** (including secrets).
+    
+
+---
+
+#### 5. Why is this dangerous?
+This memory can contain:
+- Session cookies
+- Passwords
+- Private keys of SSL certificates
+- Credit card numbers
+- Emails or other user data
+    
+
+The attacker **does not need to log in** or have any access rights — just send a fake heartbeat request and receive sensitive memory.
+
+---
+#### 6. Who is affected?
+Any service using:
+- **OpenSSL 1.0.1 to 1.0.1f** (inclusive)
+- With the heartbeat extension enabled (default in those versions)
+
+This includes many **web servers**, **VPNs**, **email services**, and **embedded devices**.
+
+---
+#### 7. How to defend against Heartbleed?
+- **Recompile OpenSSL** with the option `-DOPENSSL_NO_HEARTBEATS` to disable the heartbeat feature.
+    
+- **Upgrade to a patched version of OpenSSL** (1.0.1g or later).
+    
+- **Reissue SSL certificates** if private keys may have been leaked.
+    
+- **Force user password resets** if credentials were exposed.
