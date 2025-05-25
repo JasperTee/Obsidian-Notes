@@ -182,7 +182,7 @@ After the handshake, this layer handles **secure transmission of actual data**�
 	- **Heartbleed**: A bug in OpenSSL that leaks memory content, including private keys and passwords
 
 ### **BEAST Attack (Browser Exploit Against SSL/TLS)**
-
+![[BEAST Attack.png]]
 #### I.  **What is BEAST?**
 **BEAST** stands for **Browser Exploit Against SSL/TLS**  
 It is a **real-world attack discovered in 2011 (CVE-2011-3389)** that:
