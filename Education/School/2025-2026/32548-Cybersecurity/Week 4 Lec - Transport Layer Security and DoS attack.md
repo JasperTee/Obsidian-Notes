@@ -584,3 +584,34 @@ This includes many **web servers**, **VPNs**, **email services**, and **embe
 - **Reissue SSL certificates** if private keys may have been leaked.
     
 - **Force user password resets** if credentials were exposed.
+---
+# DTLS (Datagram Transport Layer Security)?
+**DTLS (Datagram Transport Layer Security)** is a version of TLS designed to run over UDP instead of TCP.
+
+- **Purpose:** Provide the same security guarantees as TLS—confidentiality, integrity, and authentication—while tolerating packet loss, reordering, and duplication inherent in UDP.
+- **Standard:** Defined in RFC 4347 as “TLS over Datagram Transport.”
+- **Key features:**
+    1. **HelloVerifyRequest:** A challenge–response step in the handshake that thwarts simple denial-of-service attacks.
+    2. **Fragmentation and Retransmission:** Large handshake messages are split into fragments; lost fragments are resent automatically.
+    3. **Epoch and Sequence Numbers:** Each record carries an explicit sequence number and epoch counter to detect and reject duplicates or replayed packets.
+        
+- **Use cases:** Real-time applications such as VoIP, video conferencing, online gaming, and IoT protocols—where low latency is critical but security cannot be sacrificed.
+## Why Not Use TLS Directly over UDP?
+TLS assumes a **reliable, ordered byte stream** (TCP). In contrast, UDP:
+- **May lose packets** (no retransmission by itself)
+- **May deliver packets out of order**
+- **Has no built-in flow control**
+
+*How Does DTLS Solve Those Problems?*
+DTLS adds three key mechanisms:
+1. **Retransmission Timer**
+    - Each handshake message is assigned a timer.        
+    - If an expected message is not received within the timeout, the sender **retransmits** it.
+    
+2. **Explicit Sequence Numbers**
+    - Every DTLS record carries its own sequence number.
+    - This ensures that out-of-order or replayed packets can be detected and discarded, and that the MAC (message authentication code) can be verified correctly.
+        
+3. **Handshake Message Numbering**
+    - Each handshake message is tagged with a handshake-specific sequence number.
+    - The receiver can request any missing handshake message be resent, ensuring the handshake can complete even when individual datagrams are lost.
