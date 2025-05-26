@@ -652,7 +652,7 @@ DTLS adds three key mechanisms:
 At this point both sides share the same symmetric keys and can send encrypted application data.
 
 ---
-## 3. Reliability and Ordering
+ 3. Reliability and Ordering
 - **Retransmissions**  
     Each of the above steps is wrapped in a timer. If either side doesn’t see the expected reply in time, it **retransmits**its last message.
     
