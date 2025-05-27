@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
+                "file": "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lec - Public Key Infrastructure and Certificate.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 2 Lec - Web- based attacks, mitigation strategy"
+              "title": "Week 3 Lec - Public Key Infrastructure and Certificate"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
+                "file": "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lec - Public Key Infrastructure and Certificate.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 2 Lec - Web- based attacks, mitigation strategy"
+              "title": "Outline of Week 3 Lec - Public Key Infrastructure and Certificate"
             }
           }
         ],
@@ -173,6 +173,9 @@
   },
   "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
+    "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lab - DNS Pharming.md",
+    "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
+    "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lec - Public Key Infrastructure and Certificate.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lab - Password Cracking using John the Ripper and SQL Injection.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 4 Lec - Transport Layer Security and DoS attack.md",
     "Images/POODLE Attack.png",
@@ -185,10 +188,7 @@
     "Pasted image 20250519233557 1.png",
     "Pasted image 20250519233557.png",
     "Pasted image 20250519233556.png",
-    "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lec - Public Key Infrastructure and Certificate.md",
     "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
-    "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lab - DNS Pharming.md",
-    "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
     "Education/School/School - Subject Contents.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
     "Education/External Cources",
