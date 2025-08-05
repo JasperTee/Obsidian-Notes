@@ -156,7 +156,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 341.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,18 +173,18 @@
   },
   "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
-    "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
-    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
+    "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lab - Password Cracking using John the Ripper and SQL Injection.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
-    "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
     "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
+    "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
+    "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
     "Education/School/School - Subject Contents.md",
     "Education/School/2025-2026/48433-Software Architecture",
     "Education/School/2025-2026/32548-Cybersecurity/Week 4 Lec - Transport Layer Security and DoS attack.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lec - Public Key Infrastructure and Certificate.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lab - DNS Pharming.md",
-    "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lab - Password Cracking using John the Ripper and SQL Injection.md",
     "Images/POODLE Attack.png",
     "Images/TLS Data Transmission.png",
     "Images/Version Rollback Attack.png",
