@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
+                "file": "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec -.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 1 Lec - Introduction to Cybersecurity"
+              "title": "Week 1 Lec -"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
+                "file": "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec -.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 1 Lec - Introduction to Cybersecurity"
+              "title": "Outline of Week 1 Lec -"
             }
           }
         ],
@@ -173,9 +173,11 @@
   },
   "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
-    "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
-    "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
+    "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec -.md",
     "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
+    "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
+    "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
     "Education/School/School - Subject Contents.md",
     "Education/School/2025-2026/48433-Software Architecture",
     "Education/School/2025-2026/32548-Cybersecurity/Week 4 Lec - Transport Layer Security and DoS attack.md",
