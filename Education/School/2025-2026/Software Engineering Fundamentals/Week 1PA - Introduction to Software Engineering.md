@@ -204,3 +204,187 @@ It is broader than just writing code — it includes everything needed to make t
 - Many different methodologies exist for software system development. 
 - Each has its own strengths and weaknesses.
 - There’s no  “good” or “bad” methodology — the best choice depends on project needs and organizational context.
+##### Waterfall Model
+![[Waterfall Model.png]]
+- **Waterfall Model** is a **sequential** software development model where phases are carried out from top to bottom like a waterfall.  
+- Each phase must be completed before moving to the next, and it is very difficult to go back and modify a previous phase once it is finished.
+---
+###### 1. Key Characteristics
+- **Linear process**: steps are executed in a fixed order.
+- **Complete one phase** before starting the next.
+- **Hard to change** once a phase is completed.
+---
+###### 2. Phases 
+1. **Project Initiation** – Start and approve the project.
+2. **Project Planning** – Create and freeze the project plan.
+3. **Analysis** – Define and freeze the requirement specifications.
+4. **Design** – Create and freeze the design specifications.
+5. **Implementation** – Develop and implement the code according to the design.
+6. **Deployment** – Install and deliver the product to the end users.
+---
+###### 3. Advantages
+- **Clear structure**, easy to follow and manage progress.
+- Suitable when **requirements are clear and stable** from the start.
+- Produces detailed documentation for each phase.
+---
+###### 4. Disadvantages
+- **Not flexible** when requirements change.
+- If errors are found in earlier phases, fixing them is **time-consuming and costly**.
+- Users only see the final product, making early feedback difficult.
+#####  Iterative models
+![[Iterative models.png]]
+**Iterative Models** in SDLC, such as the **Spiral Model**, focus on repeating the development process in cycles (iterations) to improve the product step-by-step.
+
+---
+###### 1. Key Characteristics
+- Development happens in **multiple iterations** instead of a single pass.
+- Each iteration includes development, testing, and feedback for improvement.
+- Emphasis on:
+    
+    - **Early prototyping** – building an early version to test ideas.
+        
+    - **Incremental deliveries** – releasing working parts of the system step-by-step.
+        
+    - **Risk management** – identifying and addressing potential risks early.
+        
+
+---
+###### 2. Main Steps in the Spiral Model
+
+1. **Determine objectives** – Define the goals for the current iteration.
+    
+2. **Identify and resolve risks** – Analyse and address risks (technical, cost, unclear requirements).
+    
+3. **Development and Test** – Build and test the software for this iteration.
+    
+4. **Plan the next iteration** – Adjust plans based on feedback and lessons learned.
+    
+
+---
+
+###### 3. Advantages
+
+- Reduces risk through regular evaluation and resolution.
+    
+- Produces early working versions for customer review.
+    
+- Adapts easily to changing requirements.
+---
+
+###### 4. Disadvantages
+- Can take more time and cost more if not managed well.
+- Requires a team with experience in **risk management** and **iteration planning**.
+##### Agile Methodologies
+![[Agile Methodologies.png]]
+- **Definition**: An **iterative** and **incremental** software development approach.
+- **Structure**: Work is divided into short cycles called **Sprints** (usually 1–4 weeks).
+- **Sprint activities**: Plan → Design → Develop → Test → Deploy → Review.
+###### 1. Key characteristics:
+- **Customer/stakeholder collaboration** – frequent involvement and feedback.
+- **Adaptability** – can quickly adjust direction when requirements change.
+###### 2.Advantages:
+-  Early usable product.
+- Flexibility to handle changes.
+- Clear visibility of progress for customers.
+###### 3.Limitations:
+- Requires regular customer participation.
+- Demands strong self-management and teamwork skills.
+###### Agile Scrum (Framework within Agile)**
+- **Approach**:
+    - Uses an **empirical approach** – accepts that problems can’t be fully defined upfront.
+    - Focuses on delivering value quickly.
+    - Always ready to adapt to new or changing requirements.
+- **Strengths**:
+    - **Deliver quickly** – rapid delivery of usable product increments.
+    - **Respond to emerging requirements** – highly flexible to new needs.
+- **Difference from Agile in general**:
+    - Agile is a **philosophy/methodology**.
+    - Scrum is a **concrete framework** with defined roles, rules, and events (e.g., Sprint, Daily Scrum, Sprint Review, Sprint Retrospective).
+### What Are Software Requirements?
+Software requirements describe:
+- **What** a software system should do.
+- **How** it should behave.
+- **Features** it should have.
+**Purpose**:
+- Ensure a **shared understanding** between stakeholders and developers.
+- Act as a **communication tool** to align business needs with technical work.
+---
+#### Main Types of Requirements
+**a) Functional Requirements**
+- Define **what the system should do** — the actual features and capabilities.
+- Examples:
+    - User authentication.
+    - Data input and output.
+    - Performing calculations.
+    - Data processing.
+
+**b) Non-Functional Requirements**
+- Define **how well** the system should perform, focusing on quality attributes and constraints.
+- Areas:
+    - Reliability
+    - Performance
+    - Security
+    - Usability
+    - Maintainability
+- Examples:
+    - Response time < 2 seconds.
+    - 99.9% system availability.
+    - Data encryption for privacy.
+    - Intuitive UI design.
+    - Ability to scale to more users.
+---
+#### **Other Requirement Types**
+1. **User Requirements** – Needs, preferences, and expectations of the end-user or stakeholders.    
+2. **System Requirements** – Hardware, software, network, and other technical needs for the software to run effectively.
+3. **Business Requirements** – Goals, objectives, and constraints from a business perspective (e.g., cost limits, market demands, regulatory compliance).
+---
+### Stakeholders in Software Development
+- **Clients** – Fund or request the software.
+- **End-Users** – Directly use the software.
+- **Project Managers** – Plan, organise, and oversee the project.
+- **Software Engineers** – Design, develop, and implement the system.
+- **Quality Assurance Professionals** – Ensure the system is reliable and meets standards.
+- **Domain Experts** – Provide industry-specific knowledge to ensure the system fits its intended use.
+#### Perspectives and Expectations
+Involving stakeholders early and throughout the process ensures their perspectives and expectations are considered, reducing misunderstandings and mismatches later.
+
+---
+### Importance of Software Engineering Standards and Best Practices
+ **a) Coding Conventions**
+- A set of **rules and guidelines** for writing code in a consistent style.
+- Benefits:
+    - **Enhance Code Quality** – fewer errors, more structured code.
+    - **Improve Readability** – easier for other developers to understand.
+    - **Ensure Maintainability** – easier to update and fix later.
+
+**Common Coding Conventions**:
+- **Naming Conventions** – Consistent and descriptive names for variables, functions, classes.
+- **Indentation & Formatting** – Standard code alignment for clarity.
+- **Commenting Practices** – Explain complex logic.
+- **Code Structure & Organisation** – Logical arrangement of modules and files
+- Example: **Google Java Style Guide**.
+    
+**b) Documentation**
+- Records and communicates information about the software (requirements, design, functionality, usage).
+- Benefits:
+    - **Facilitates Understanding** – for developers and stakeholders.
+    - **Supports Maintenance** – easier to fix or upgrade.
+    - **Enables Future Enhancements** – serves as a reference.
+
+**Types of Documentation**:
+1. **Requirements Documents** – Define the system’s intended functionality.
+2. **Design Documents** – Describe architecture, structure, and internal components.
+3. **User Manuals** – Instructions for end-users.
+4. **API Documentation** – Technical reference for developers using system interfaces.
+---
+**c) Peer Review**
+- Collaborative evaluation of software artefacts by team members.
+- Benefits:
+    - Identify defects early.
+    - Improve code and design quality.
+    - Share knowledge among the team.
+
+**Types**:
+- **Code Reviews** – Evaluate source code for errors and improvements.
+- **Design Reviews** – Assess architecture and design decisions.
+- **Document Reviews** – Check documentation for accuracy and clarity.
