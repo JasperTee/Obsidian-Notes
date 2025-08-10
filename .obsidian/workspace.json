@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
-                "mode": "source",
+                "file": "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 2PA- Requirements Engineering"
+              "title": "Week 1PA - Introduction to Software Engineering"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
+                "file": "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 2PA- Requirements Engineering"
+              "title": "Outline of Week 1PA - Introduction to Software Engineering"
             }
           }
         ],
@@ -173,8 +173,9 @@
   },
   "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
-    "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
+    "Education/School/2025-2026/Software Engineering Fundamentals/Images/Use Case Diagram.png",
+    "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Images/Agile Methodologies.png",
     "Education/School/2025-2026/Software Engineering Fundamentals/Images/Iterative models.png",
     "Education/School/School - Subject Contents.md",
@@ -198,7 +199,6 @@
     "Education/School/2025-2026/32548-Cybersecurity/Images/Version Rollback Attack.png",
     "Education/School/2025-2026/32548-Cybersecurity/Images/Man-in-the-Middle (MITM) Attack.png",
     "Education/School/2025-2026/32548-Cybersecurity/Images/BEAST Attack.png",
-    "Education/School/2025-2026/32548-Cybersecurity/Images/TLS Vulnerabilities.png",
     "Education/External Cources",
     "Education/Untitled.md",
     "Education/School/2025-2026/32548-Cybersecurity/Images",
