@@ -723,8 +723,6 @@ Unlike operational databases, which are optimized for day-to-day transaction pro
 
  4. **Three-Tier Data Warehouse Architecture**
 
-From your slide diagram:
-
  **Tier 1 – Bottom Tier (Data Source Layer)**
 
 - Data comes from **internal systems** (transaction databases, log files, etc.) and **external sources** (third-party data providers).
@@ -797,7 +795,7 @@ From your slide diagram:
 - When you want a **single, consistent version of the truth** for decision-making.
 ---
 
-### b) **Data Mart**
+###### b) Data Mart
  1. **Definition**
 A **Data Mart** is a **subset** of a **Data Warehouse**, designed to serve the needs of a **specific group of users, department, or business function** within an organization.
 
@@ -913,4 +911,119 @@ If a **Data Warehouse** is the “main warehouse” containing all processed e
 - When improving query performance is a priority due to smaller data volume.
 
 ---
-### c) **Data Lake**
+###### c) Data Lake
+ 1. **Definition**
+
+A **Data Lake** is a **centralized storage repository** that holds **large volumes of raw data** in its **native format** — whether **structured, semi-structured, or unstructured** — without requiring transformation before storage.
+
+It is built for **scalability, flexibility, and cost efficiency**, making it ideal for **big data, advanced analytics, artificial intelligence (AI), and machine learning (ML)** workloads.
+
+📌 Analogy: If a **Data Warehouse** is a neatly organized supermarket, a **Data Lake** is like a massive storage yard where you keep everything first, then organize and process it only when needed.
+
+---
+
+ 2. **Purpose**
+
+- Store **all types of data** from multiple sources in one place.
+    
+- Enable **schema-on-read** → apply structure only when the data is read for analysis.
+    
+- Support modern analytics, AI, and ML that require raw, diverse datasets.
+    
+- Reduce preparation time for data scientists and analysts.
+    
+
+---
+
+ 3. **Key Characteristics**
+
+- **Stores raw data** exactly as received, without forcing it into a fixed schema.
+    
+- **Highly scalable** — can hold petabytes (PB) or even exabytes (EB) of data.
+    
+- **Cost-effective storage** using cloud-based object storage systems.
+    
+- **Supports all data types**:
+    
+    - **Structured** (tables, CSV files, relational DB dumps)
+        
+    - **Semi-structured** (JSON, XML, logs)
+        
+    - **Unstructured** (text, images, videos, audio)
+        
+    - **Binary** files
+        
+- **Compatible with multiple processing frameworks** (batch, streaming, real-time).
+    
+
+---
+
+ 4. **Typical Architecture**
+
+ **a) Ingestion Layer**
+
+- Collects data from various sources: databases, APIs, streaming platforms (e.g., Kafka), IoT devices, files, etc.
+    
+- Uses **ELT** or streaming pipelines to ingest data into the lake.
+    
+
+ **b) Storage Layer**
+
+- Stores raw data in cloud object storage (AWS S3, Azure Data Lake Storage, Google Cloud Storage).
+    
+- Often partitioned by source, date, or metadata for easier retrieval.
+    
+
+ **c) Processing Layer**
+
+- Processes data **on demand** using tools like Apache Spark, Databricks, Presto, Flink.
+    
+- Supports **batch** and **real-time** processing.
+    
+
+**d) Consumption Layer**
+
+- Serves data to BI tools, analytics platforms, AI, and ML systems.
+    
+- Examples: Tableau, Power BI, Jupyter Notebook, TensorFlow, PyTorch.
+    
+
+---
+
+ 5. **Advantages**
+
+- **Stores everything** — no need to decide upfront what to keep.
+    
+- **Flexible** — works with any data format.
+    
+- **Scalable** — can grow without performance loss.
+    
+- **Cost-efficient** — cloud object storage is cheaper than relational databases.
+    
+- **Supports modern analytics** — AI, ML, predictive analytics, and big data processing.
+    
+
+---
+
+6. **Challenges**
+
+- **Data swamp risk** — without proper governance, the lake can become unorganized and hard to use.
+    
+- **Security** — sensitive data must be encrypted and access-controlled.
+    
+- **Metadata management** — without proper cataloging, finding and understanding data becomes difficult.
+    
+- **Skilled workforce needed** — requires data engineers and scientists with advanced tools.
+    
+
+---
+
+ 7. **When to Use a Data Lake**
+
+- When data comes in **various formats** (structured, semi-structured, unstructured).
+    
+- When you need to retain **raw historical data** for compliance, auditing, or future analysis.
+    
+- When working on **machine learning, AI, or big data analytics**.
+    
+- When you need **real-time streaming** and **batch processing** together.
