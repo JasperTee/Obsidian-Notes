@@ -477,3 +477,48 @@ Data Modelling is the process of **identifying, organising, and representing th
 - Enables accurate reporting and analytics.
     
 - Improves system performance by optimising design early.
+#### 2.4.2 Data Ingestion 
+##### 2.4.2.1 Definition 
+Data Ingestion is **the process of collecting and bringing data from multiple sources** into a centralized storage location (Data Destination) such as a Data Lake, Data Warehouse, or analytics platform for storage, processing, and analysis.
+
+- It is the **first step** in a data pipeline.
+    
+- Can happen in **batch mode** or **real-time/streaming** mode.
+##### 2.4.2.2 Purpose
+
+- Bring **data from various sources** (databases, IoT devices, APIs, applications, external providers) into a centralised system.
+    
+- Ensure data is **captured in a consistent, accurate, and timely manner**.
+    
+- Support **real-time decision-making** or **batch processing** for reports and analytics.
+    
+---
+
+##### 2.4.2.3 Types of Data Ingestion
+
+1. **Batch Ingestion**
+    
+    - Data is collected and loaded at **scheduled intervals** (e.g., hourly, daily).
+        
+    - Best for large volumes of data that don’t require instant updates.
+        
+    - Example: Loading daily sales transactions from a store’s POS system to a central data warehouse at midnight.
+        
+2. **Real-Time (Streaming) Ingestion**
+    
+    - Data is ingested **continuously** as it is created or updated.
+        
+    - Useful for applications that require **instant insights**.
+        
+    - Example: Live stock price updates, IoT sensor readings, or social media feeds.
+        
+3. **Micro-Batch Ingestion**
+    
+    - Hybrid approach: very small batches processed frequently (e.g., every few minutes).
+        
+    - Balances speed with processing efficiency.
+#####  2.4.2.4 General Workflow
+Data ingestion typically follows one of two main patterns: **ETL** or **ELT**
+###### a) ETL (Extract – Transform – Load)
+
+######  b) ELT (Extract – Load – Transform)
