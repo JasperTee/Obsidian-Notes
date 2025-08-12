@@ -680,3 +680,237 @@ Common destinations include:
 - **Amazon S3** (cloud object storage)
     
 - **Databricks** (big data analytics platform)
+#### 2.4.3 Data Management Systems
+##### 2.4.3.1 Definition
+A **Data Management System** is a platform or set of tools that allows an organization to **store, manage, process, and retrieve data** efficiently.  
+Its goal is to ensure that data is **accurate, complete, secure, easily accessible**, and **ready to support analysis and decision-making**.
+
+---
+##### 2.4.3.2 Main Components
+
+###### a) Data Warehouse
+1. **Definition**
+A **Data Warehouse (DW)** is a **large-scale, centralized storage system** designed to **collect, store, and manage data**from multiple sources for the purpose of **analysis, reporting, and business intelligence (BI)**.  
+Unlike operational databases, which are optimized for day-to-day transaction processing (OLTP), a DW is optimized for **querying large volumes of historical data** (OLAP – Online Analytical Processing).
+
+---
+
+2. **Purpose**
+
+- **Integrate data** from multiple systems (ERP, CRM, sales databases, sensors, etc.) into a single, unified format.
+    
+- **Support decision-making** by providing accurate, consistent, and up-to-date analytical data.
+    
+- Allow **fast, complex queries** without affecting operational systems.
+    
+- Provide a **"single source of truth"** for the organization’s historical and analytical data.
+    
+
+---
+
+ 3. **Key Characteristics**
+
+- **Structured Data Only** → Data must be cleaned, validated, and stored in a defined schema before loading.
+    
+- **Read-Optimized** → Designed for high-performance queries and analytics, not for frequent writes or updates.
+    
+- **Historical Focus** → Stores years of historical data for trend analysis and forecasting.
+    
+- **Centralized Repository** → All analytical data is stored in one place to ensure consistency.
+    
+
+---
+
+ 4. **Three-Tier Data Warehouse Architecture**
+
+From your slide diagram:
+
+ **Tier 1 – Bottom Tier (Data Source Layer)**
+
+- Data comes from **internal systems** (transaction databases, log files, etc.) and **external sources** (third-party data providers).
+    
+- **ETL process** (Extract → Transform → Load) cleans, standardizes, and prepares data.
+    
+- Data is stored in the **staging area** before being loaded into the warehouse.
+    
+
+ **Tier 2 – Middle Tier (Data Storage Layer)**
+
+- **Central database** for storing processed, integrated data.
+    
+- Managed by a **Database Server** (often an OLAP server).
+    
+- Data is organized into **fact tables** (quantitative metrics) and **dimension tables** (descriptive attributes).
+    
+
+ **Tier 3 – Top Tier (Presentation Layer)**
+
+- **Business Intelligence & Analytics tools** connect to the DW to perform:
+    
+    - Data mining
+        
+    - Reporting
+        
+    - Dashboards
+        
+    - Trend and forecasting analysis
+        
+- Examples: Tableau, Power BI, Qlik.
+    
+
+---
+
+ 5. **Advantages**
+
+- **High Performance Queries** → Optimized indexing and schema for fast analytics.
+    
+- **Data Consistency** → All data is standardized into one schema.
+    
+- **Business Intelligence Support** → Enables complex analysis, KPIs, and strategic insights.
+    
+- **Historical Analysis** → Long-term trend identification and forecasting.
+    
+
+---
+
+ 6. **Limitations**
+
+- **Schema rigidity** → Changes in business requirements or source systems may require redesigning the schema.
+    
+- **No unstructured data support** → Only works well with structured, schema-defined data.
+    
+- **High cost** → Requires significant infrastructure and maintenance.
+    
+- **Not Real-Time** → Usually batch-loaded, so it may not reflect the very latest transactions.
+    
+
+---
+
+ 7. **When to Use a Data Warehouse**
+
+- When you need **organization-wide reporting**.
+    
+- When your data sources are mostly **structured** and relatively stable in schema.
+    
+- When historical analysis and trend forecasting are important.
+    
+- When you want a **single, consistent version of the truth** for decision-making.
+---
+
+### b) **Data Mart**
+ 1. **Definition**
+A **Data Mart** is a **subset** of a **Data Warehouse**, designed to serve the needs of a **specific group of users, department, or business function** within an organization.
+
+If a **Data Warehouse** is the “main warehouse” containing all processed enterprise data, a **Data Mart** is like a “smaller store section” that contains only the data relevant to **one specific purpose**.
+
+**Examples:**
+
+- Marketing department → **Marketing Data Mart** with campaign, lead, and market analysis data.
+    
+- Finance department → **Finance Data Mart** with revenue, cost, and profit data.
+    
+
+---
+
+ 2. **Purpose**
+- Provide **quick access** to data relevant to a specific business function.
+    
+- Reduce complexity compared to a full Data Warehouse (DW) → smaller and easier to use.
+    
+- **Improve query performance** because it only contains necessary data for that user group.
+    
+- Reduce data processing cost and time.
+    
+
+---
+
+ 3. **Types of Data Marts**
+
+	 **Dependent Data Mart**
+	- Built **from an existing Data Warehouse**.
+	    
+	- Uses a **top-down approach**: data is loaded into the DW first, then a subset is extracted to create the Data Mart.
+	    
+	- **Pros:**
+	    
+	    - Data is consistent with the DW.
+	        
+	    - Centralized management and easier maintenance.
+	        
+	- **Cons:**
+	    
+	    - Fully dependent on the DW — if DW data is delayed, the Data Mart is also delayed.
+	        
+	
+	---
+	
+	**Independent Data Mart**
+	
+	- Operates **independently** of a Data Warehouse.
+	    
+	- Sources data directly from operational or external systems → processes it → stores it in the Data Mart.
+	    
+	- **Pros:**
+	    
+	    - Quick deployment, no need for a DW first.
+	        
+	    - Good for analyzing a small, focused dataset.
+	        
+	- **Cons:**
+	    
+	    - **Data inconsistency** risk if multiple independent marts exist.
+	        
+	    - Harder to integrate into a centralized DW later.
+	        
+	
+	---
+	
+	**Hybrid Data Mart**
+	
+	- Combines data from both **a Data Warehouse** and **other operational sources**.
+	    
+	- More flexible — has the speed of an independent mart plus the consistency of a dependent mart.
+	    
+	- Common when:
+	    
+	    - Real-time operational data is needed.
+	        
+	    - Historical data from DW is still valuable.
+	        
+
+---
+
+ 4. **Advantages**
+
+- **Faster** → quicker deployment and query times than a full DW.
+    
+- **Simpler** → only contains relevant data.
+    
+- **Lower cost** compared to building a full DW for one department.
+    
+- **Focused** → tailored to the needs of a specific group.
+    
+
+---
+
+ 5. **Disadvantages**
+
+- Without proper synchronization, **data discrepancies** may arise between Data Marts and DW.
+    
+- **Limited analysis scope** — only department-specific data.
+    
+- Independent marts can cause **data duplication** and waste resources.
+    
+
+---
+
+ 6. **When to Use**
+
+- When a department needs fast analytics **without waiting for DW implementation**.
+    
+- When analysis is **focused on a specific dataset or function**.
+    
+- When improving query performance is a priority due to smaller data volume.
+
+---
+### c) **Data Lake**
