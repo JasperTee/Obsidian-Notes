@@ -253,4 +253,104 @@ If we think of data as raw materials, then Data Architecture is like a factory a
     
 - Supports decision-making based on **processed and analyzed data**.
     
-- Reduces cost and risk by **optimizing data flows** and implementing **centralized governance**.
+- Reduces cost and risk by **optimizing data flows** and implementing **centralized governance**
+### 2.3 Main Layers in Data Architecture
+
+#### 2.3.1 Data Sources (Nguồn dữ liệu)
+
+This is where **all the raw data originates**.  
+Think of it as the “input warehouse” of your factory.
+
+- **Transactional Databases** – Data from applications that handle day-to-day transactions (e.g., sales systems, banking systems).
+    
+- **Log Files** – Records of system activity, user actions, and error tracking.
+    
+- **Applications** – Business software like CRM, ERP that generate data.
+    
+- **IoT Sensors** – Devices that collect environmental readings like temperature, location, machine status.
+    
+- **APIs** – Data pulled from other systems or platforms via programmatic access.
+    
+- **Third-party Data** – Data purchased or received from external providers, such as market research or demographic data.
+    
+
+💡 _In short: This is the “raw ingredient” stage before any cleaning or processing happens._
+
+---
+
+#### 2.3.2 Operational Data Layer (Lớp dữ liệu vận hành)
+
+The **working area** where data is stored and accessed for **real-time business operations**.
+
+- Usually based on **OLTP (Online Transaction Processing)** systems.
+    
+- Handles frequent updates, inserts, and queries.
+    
+- Focuses on **speed and accuracy** to support day-to-day activities like order entry, banking transactions, or inventory updates.
+    
+
+💡 _Analogy: This is like the “production floor” where materials are actively used in daily operations._
+
+---
+
+#### 2.3.3 Ingestion & Staging Layer (Lớp tiếp nhận và lưu tạm)
+
+A **temporary holding area** for raw data before it is processed.
+
+- **Data Ingestion**: Pulling in data from multiple sources.
+    
+- **Staging**: Storing that data in its raw form without altering it.
+    
+- Allows data engineers to **validate quality** before it moves forward.
+    
+- Protects **original, unmodified copies** for backup and auditing.
+    
+
+💡 _Analogy: This is the “receiving dock” where goods arrive and are checked before being sent into production._
+
+---
+
+#### 2.3.4 Integration & Transformation Layer (Lớp tích hợp và chuyển đổi)
+
+This is where **data cleaning, merging, and formatting** happens.
+
+- **Integration**: Combine data from multiple sources into one consistent format.
+    
+- **Transformation**: Change data structure, remove duplicates, standardize units, fix missing values.
+    
+- Ensures data is **accurate, consistent, and analysis-ready**.
+    
+
+💡 _Analogy: This is the “quality control & assembly area” where raw parts are processed into usable components._
+
+---
+
+#### 2.3.5 Analytics Data Layer (Lớp phân tích dữ liệu)
+
+A **centralized storage** for cleaned and structured data ready for reporting and analysis.
+
+- Often implemented as **Data Warehouse** or **Data Mart**.
+    
+- Stores **historical data** for trend analysis and strategic planning.
+    
+- Supports **OLAP (Online Analytical Processing)** for deep analysis and querying.
+    
+
+💡 _Analogy: This is the “finished goods warehouse” where products are ready to be shipped to customers (in this case, the customers are analysts and decision-makers)._
+
+---
+
+#### 2.3.6 Business Intelligence (BI) Layer (Lớp thông tin kinh doanh)
+
+The **user-facing layer** where decision-makers interact with the data.
+
+- Provides **dashboards**, **reports**, and **data visualizations**.
+    
+- Tools like **Power BI, Tableau, Qlik** help managers and staff extract insights quickly.
+    
+- Supports **data-driven decision making** at all levels of the organization.
+    
+
+💡 _Analogy: This is the “storefront” where the final products are displayed and delivered to customers in the most usable form._
+
+### 2.4 
