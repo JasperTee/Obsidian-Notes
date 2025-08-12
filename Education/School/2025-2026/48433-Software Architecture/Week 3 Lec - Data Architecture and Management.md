@@ -238,3 +238,19 @@
 - **Applications**:
     
     - Media streaming, advertising, facial recognition, voice analytics.
+## 2. Data Architecture 
+### 2.1 Concepts
+Data Architecture is the **“overall blueprint”** for the entire lifecycle of data within an organization.  
+It specifies **where the data comes from, where it is stored, how it is processed, and how it is ultimately used**.
+
+If we think of data as raw materials, then Data Architecture is like a factory assembly line that ensures the raw materials go through the right paths, are processed correctly, and result in high-quality finished products.
+
+---
+### 2.2 Role
+- Connects data from various sources into a **unified system**.
+    
+- Ensures **high-quality data** – accurate, complete, consistent, and ready for use.
+    
+- Supports decision-making based on **processed and analyzed data**.
+    
+- Reduces cost and risk by **optimizing data flows** and implementing **centralized governance**.
