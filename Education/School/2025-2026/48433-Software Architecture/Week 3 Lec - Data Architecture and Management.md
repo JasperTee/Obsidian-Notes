@@ -353,4 +353,127 @@ The **user-facing layer** where decision-makers interact with the data.
 
 💡 _Analogy: This is the “storefront” where the final products are displayed and delivered to customers in the most usable form._
 
-### 2.4 
+### 2.4 Components of Data Architecture
+#### 2.4.1 Data Modelling
+
+##### 2.4.1.1 Definition
+Data Modelling is the process of **identifying, organising, and representing the structure of data** in a system so that it is clear, consistent, and understandable for both technical teams and business stakeholders.
+
+- It defines **what data needs to be stored**, **how it relates to other data**, and **what business rules** apply.
+    
+- Think of it as the “blueprint” of the data system, similar to how an architectural drawing works for a building.
+    
+
+---
+
+##### 2.4.1.2 Main Objectives
+
+- Ensure **data consistency** across the entire system.
+    
+- Provide a **common language** for everyone involved in the project.
+    
+- Reduce errors during implementation by creating a complete, agreed-upon plan before coding.
+    
+- Create a foundation for query optimisation and data management.
+    
+
+---
+
+##### 2.4.1.3 Three Levels of Data Modelling
+
+###### a) Conceptual Data Model
+![[Conceptual Data Model.png]]
+- **Purpose:** Provide a big-picture view of the data in the system.
+    
+- **Focus:**
+    
+    - Identify **entities** (things we store information about) and **relationships** between them.
+        
+    - Does **not** define tables or database structures yet.
+        
+- **Characteristics:**
+    
+    - High-level, business-oriented.
+        
+    - Example: “Customer” places “Orders”.
+        
+    - May show relationships such as one-to-many or many-to-many, but not the exact table design.
+        
+- **When used:** Early in the project, to align understanding with stakeholders.
+    
+
+---
+###### b) Logical Data Model
+![[Logical Data Model.png]]
+- **Purpose:** Turn the conceptual model into a more technical structure, but still **not tied to any specific technology**.
+    
+- **Focus:**
+    
+    - Define **attributes** for each entity.
+        
+    - Specify **primary keys (PK)** and **foreign keys (FK)** logically.
+        
+    - Show relationship cardinality (1:1, 1:N, M:N).
+        
+- **Characteristics:**
+    
+    - More detail than conceptual, but independent of the database platform.
+        
+    - Example: “Customer” table has `CustomerID`, `Name`, `Email`; “Order” table has `OrderID`, `CustomerID`, `OrderDate`.
+        
+- **When used:** After finalising the conceptual model, to prepare for database design.
+    
+
+---
+
+###### c) Physical Data Model
+![[Physical Data Model'.png]]
+- **Purpose:** Implement the logical model into an **actual database structure** on a specific DBMS.
+    
+- **Focus:**
+    
+    - Create **real database tables**.
+        
+    - Define **exact data types** (`VARCHAR`, `INT`, `DATE`, etc.).
+        
+    - Add **indexes, constraints, partitions** for performance optimisation.
+        
+    - Set storage, backup, and user permissions.
+        
+- **Characteristics:**
+    
+    - Highly technical, depends on chosen technology (e.g., MySQL, PostgreSQL, Oracle).
+        
+    - Example:
+        
+        sql
+        
+        CopyEdit
+        
+        `CREATE TABLE Customers (   CustomerID INT PRIMARY KEY,   Name VARCHAR(100),   Email VARCHAR(100) );`
+        
+- **When used:** During implementation, before starting application development.
+    
+
+---
+
+##### 2.4.1.4 Relationship Between the Three Levels
+
+- **Conceptual:** Decides **WHAT** to store.
+    
+- **Logical:** Decides **HOW** to organise data logically.
+    
+- **Physical:** Decides **HOW** to implement it technically in the database.
+    
+
+---
+
+##### 2.4.1.5 Benefits of Data Modelling
+
+- Reduces misunderstandings between business and technical teams.
+    
+- Makes maintenance and future expansion easier.
+    
+- Enables accurate reporting and analytics.
+    
+- Improves system performance by optimising design early.
