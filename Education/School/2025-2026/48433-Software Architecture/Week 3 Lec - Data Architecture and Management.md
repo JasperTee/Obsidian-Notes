@@ -520,5 +520,163 @@ Data Ingestion is **the process of collecting and bringing data from multiple s
 #####  2.4.2.4 General Workflow
 Data ingestion typically follows one of two main patterns: **ETL** or **ELT**
 ###### a) ETL (Extract – Transform – Load)
+**Definition of ETL (Extract – Transform – Load)**  
+	ETL is a traditional data processing model, especially common for loading data into an **Enterprise Data Warehouse (EDW)**.  
+	The process consists of three main steps:
+	- **Extract**
+		- Copy data from various source systems into a **staging area**.
+		- Usually performed in **batch mode** (e.g., every hour, every day).
+	- **Transform**
+		- **Data cleansing** → remove errors, duplicates, and missing values.		
+		- **Data enrichment** → add necessary supplementary information.
+		- Convert structure and format so the data fits the **data warehouse schema**.
+	- **Load**
+		- Load the processed data into the tables of the **data warehouse**.
+		
+---
 
+**Limitations of the ETL Model**
+- Suitable only for **batch processing** → not optimized for **real-time data processing**.
+
+- Rigid schema in EDW → difficult to change or adapt when the source data structure changes.
+    
+- Does not support **unstructured data** → data without a schema (unstructured) or binary data is difficult to load into EDW.
+    
+- Loss of data that cannot be loaded → if data can’t be loaded into EDW, it becomes unavailable for analysis.
+    
+- Loss of **lineage information** (data origin) → once loaded into EDW, the source history is not retained, making backtracking difficult.
+    
+---
+**When to Use ETL?**
+
+- When data is **stable** and schema changes are rare.
+    
+- When **real-time analytics** is not required.
+    
+- When strict **data control and standardization** is needed before storage.
 ######  b) ELT (Extract – Load – Transform)
+**Definition of ELT**  
+ELT is a variation of ETL, but the processing order changes: instead of **Extract → Transform → Load**, ELT performs **Extract → Load → Transform**.
+
+**Steps in ELT:**
+
+- **Extract and Load**
+    
+    - Data from multiple source systems is extracted and directly loaded into a **centralized repository**, often in the form of a **data lake**.
+        
+    - The data is stored in its **raw form** immediately upon loading, without any processing.
+        
+- **Transform**
+    
+    - When analysis is needed, the data in the data lake is **cleansed** (error removal, handling missing values), **enriched** (adding supplemental data), and **transformed** (structural and format changes).
+        
+    - The processed data is then sent to the most appropriate location for analysis, for example:
+        
+        - **Data Warehouse** (with clear tabular structure)
+            
+        - **NoSQL Database** (for unstructured data)
+            
+
+---
+
+ **Advantages of ELT**
+
+- **Preserves Raw Data** – Keeps all original data in the data lake, protecting historical records and **data lineage**(origin tracking).
+    
+- **Supports All Data Types** – Works with structured, semi-structured (JSON, XML), unstructured (text, images, videos), and binary data.
+    
+- **Flexible** – You can transform data only when needed, rather than before loading.
+    
+- **Faster Loading** – Since transformation is skipped during ingestion, large datasets can be loaded quickly.
+    
+- **Real-time Friendly** – Works well with streaming and real-time ingestion.
+    
+
+---
+
+ **When to Use ELT**
+
+- When you have **large volumes** of data from many sources.
+    
+- When you need to **retain raw historical data** for auditing, compliance, or future analysis.
+    
+- When your analytics environment needs to **handle diverse data types** (structured + unstructured).
+    
+- When you use **modern cloud-based platforms** that can store and process raw data at scale (e.g., Snowflake, Databricks, BigQuery).
+###### c) ETL vs ELT 
+ **1. Processing Order**
+- **ETL**: Extract → **Transform** → Load
+    
+    - Data is cleaned and transformed **before** loading into the target system.
+        
+- **ELT**: Extract → **Load** → Transform
+    
+    - Data is loaded **first** in its raw form, then transformed **later** when needed.
+        
+
+---
+ **2. Where the Transformation Happens**
+
+- **ETL**: In a **separate ETL processing engine** before the data reaches the data warehouse.
+    
+- **ELT**: Inside the **target system** (data lake, cloud warehouse) after data is already stored.
+    
+
+---
+ **3. Storage of Raw Data**
+
+- **ETL**: Raw data is **not stored** — only processed data is kept in the data warehouse.
+    
+- **ELT**: Raw data is **stored and preserved**, which means you keep full historical records and lineage.
+    
+
+---
+ **4. Data Types Supported**
+
+- **ETL**: Mostly **structured data** (tabular, fixed schema).
+    
+- **ELT**: Can handle **structured, semi-structured, unstructured, and binary** data.
+    
+
+---
+ **5. Speed and Flexibility**
+
+- **ETL**: Slower to load large datasets because transformation happens first.
+    
+- **ELT**: Faster to load because transformation is skipped during ingestion, and more flexible since transformation can be done anytime.
+    
+
+---
+ **6. Real-Time Capability**
+
+- **ETL**: Mainly batch processing, not optimized for real-time.
+    
+- **ELT**: Works well with **real-time and streaming** data ingestion.
+##### 2.4.2.5 Data Sources
+Common types include:
+
+- **Apache Kafka** (streaming platform)
+    
+- **JDBC** (database connectors)
+    
+- **Oracle CDC** (Change Data Capture)
+    
+- **HTTP Clients** (API data ingestion)
+    
+- **HDFS** (Hadoop Distributed File System)
+    
+
+---
+
+##### 2.4.2.5 Data Destinations  
+Common destinations include:
+
+- **Apache Kafka** (for streaming pipelines)
+    
+- **JDBC** (to write into databases)
+    
+- **Snowflake** (cloud data warehouse)
+    
+- **Amazon S3** (cloud object storage)
+    
+- **Databricks** (big data analytics platform)
