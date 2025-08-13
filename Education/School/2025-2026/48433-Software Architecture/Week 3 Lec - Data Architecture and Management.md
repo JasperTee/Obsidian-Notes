@@ -1027,3 +1027,104 @@ It is built for **scalability, flexibility, and cost efficiency**, making it id
 - When working on **machine learning, AI, or big data analytics**.
     
 - When you need **real-time streaming** and **batch processing** together.
+##### 2.4.3.3 Type of Data Architecture
+###### 2.4.3.3.1 Data Fabric
+ **1. Definition**
+**Data Fabric** is a data architecture that enables **end-to-end integration** of data from multiple sources (databases, data warehouses, data lakes, APIs, cloud systems, and external platforms) into a **unified, intelligent, and automated ecosystem**.
+- It creates a **virtualized, metadata-driven layer** on top of existing data systems.
+    
+- Users and applications can **access data without knowing its physical location, format, or storage details**.
+    
+
+> In simple terms: **Data Fabric is a “data network fabric” that connects and integrates all data across the organization seamlessly**.
+
+---
+
+ **2. Components & How It Works**
+From the slides, we can view Data Fabric’s evolution in **three stages**:
+
+ **a. Traditional Data Management**
+![[Traditional Data Management.png]]
+- Data from multiple sources (**Operational Systems, Individual Databases, Websites, Social Media, IoT Devices, Flat Files**) is collected through **ETL** and stored in **Data Warehouses, Data Lakes, or Data Marts**.
+    
+- Consumers (BI tools, reporting systems, applications) access the data via **APIs** or **SQL**.
+    
+- **Limitation:** Data must be moved and duplicated to central storage before use → slower and more resource-intensive.
+    
+
+---
+
+ **b. Data Virtualization Architecture**
+![[Data Virtualization Architecture.png]]
+- Introduces an **Abstraction Layer** containing:
+    
+    - **Virtual View**: Provides a combined view of data from multiple sources without physically moving it.
+        
+    - **Data Catalog & Metadata**: Stores information about data location, structure, meaning, and relationships.
+        
+- Allows direct access via APIs or SQL without heavy data replication.
+    
+
+---
+
+ **c. Data Fabric (Modern Approach)**
+ ![[Data Fabric (Modern Approach).png]]
+- Builds on **Data Virtualization** but adds **AI/ML automation** and **metadata-driven orchestration**:
+    
+    - **Knowledge Graph**: Maps and visualizes relationships between datasets.
+        
+    - **Recommendation Engine**: Suggests relevant datasets for analysis.
+        
+    - **Business Rules**: Automates data governance and processing logic.
+        
+    - **Metadata & Data Catalog**: Centralized data descriptions to track lineage and improve discovery.
+        
+- AI/ML helps automate:
+    
+    - **Ingestion**: Loading data from diverse sources.
+        
+    - **Transformation**: Cleaning and enriching data.
+        
+    - **Data Delivery**: Supplying data to BI tools, dashboards, and business apps.
+        
+
+---
+
+**3. Key Characteristics** (from the slides)
+
+- **Data Integration**: Connects all types of sources—databases, warehouses, lakes, APIs, and external systems.
+    
+- **Data Virtualization**: Lets applications access data without needing to know where it is physically stored.
+    
+- **Data Governance**: Implements security, privacy, compliance, and quality controls.
+    
+- **Data Orchestration**: Automates pipelines, workflows, and delivery processes.
+    
+- **Metadata Management**: Maintains a centralized metadata repository for complete data asset visibility (definitions, relationships, lineage).
+    
+
+---
+
+**4. Benefits**
+
+- **Real-time access** to distributed data without duplication.
+    
+- **Keeps original data at the source**, reducing redundancy.
+    
+- Speeds up integration and analysis.
+    
+- Flexible to add new sources without heavy reengineering.
+    
+- Supports **structured, semi-structured, unstructured, and streaming** data.
+    
+---
+
+**5. Best Use Cases**
+
+- Organizations with **multi-cloud, hybrid, or on-premise** data environments.
+    
+- Businesses that need **fast analytics** without waiting for ETL processes.
+    
+- Scenarios where **data must remain in source systems** for compliance or cost reasons.
+    
+- Enterprises that want **metadata-driven insights** and **AI-assisted data discovery**.
