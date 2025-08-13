@@ -1128,3 +1128,91 @@ From the slides, we can view Data Fabric’s evolution in **three stages**:
 - Scenarios where **data must remain in source systems** for compliance or cost reasons.
     
 - Enterprises that want **metadata-driven insights** and **AI-assisted data discovery**.
+###### 2.4.3.3.1 Data Mesh
+ **1. Definition**
+
+**Data Mesh** is a **decentralized data architecture** that focuses on delegating data management responsibilities to each business domain (e.g., Marketing, Sales, Finance) and treats data as a product (**Data as a Product**).
+
+- Each domain **owns, manages, and is responsible** for its own data.
+    
+- Domains create, store, process, and share their data through a **self-serve data infrastructure**.
+    
+- A **federated governance** framework ensures that data from different domains is interoperable, secure, and reliable.
+    
+
+> In other words: **Data Mesh turns data into a “product” and gives each team full responsibility for the entire lifecycle of that data**.
+
+---
+
+ **2. Components & How It Works**
+ #### **a. Traditional Centralized Data Management**
+
+- A central data team collects, processes, and manages data from all domains.
+    
+- Data is stored in a centralized **Data Warehouse** or **Data Lake**.
+    
+- **Limitation:** Prone to bottlenecks, lacks deep domain knowledge, and responds slowly to specialized data needs.
+- 
+- **b. Data mesh Approach**
+ ![[Data Mesh.png]]
+- **Domain-Oriented Ownership:** Each domain owns and manages its own data.
+    
+- **Data as a Product:**
+    
+    - Data comes with clear metadata, APIs, and documentation.
+        
+    - Standards for quality, security, and accessibility are applied.
+        
+- **Self-Serve Data Platform:**
+    
+    - A shared platform provides tools for domains to ingest, transform, store, and share data without depending on the central team.
+        
+- **Federated Computational Governance:**
+    
+    - A unified set of rules ensures that all domain data meets organizational standards.
+        
+    - Governance is automated via infrastructure.
+        
+
+---
+
+ **3. Key Characteristics**
+
+- **Decentralized Data Ownership:** Data responsibility lies within the domains.
+    
+- **Data Product Mindset:** Data is treated as a product, serving multiple consumers.
+    
+- **Self-Service Infrastructure:** Domains have full access and tools to work with their data.
+    
+- **Federated Governance:** Combines common standards with domain autonomy.
+    
+- **Interoperability:** Data from different domains can be easily integrated.
+    
+
+---
+
+ **4. Benefits**
+
+- **Scalable:** Easily expand without overloading the central data team.
+    
+- **Faster Delivery:** Domains can quickly create and share data.
+    
+- **Higher Quality:** Data is created and managed by those with deep domain knowledge.
+    
+- **Flexibility:** Each domain can choose the tools and methods that suit them best.
+    
+
+---
+
+ **5. Best Use Cases**
+
+- Organizations with multiple independent domains and large data volumes.
+    
+- Businesses needing agility and speed in creating data products.
+    
+- Complex and diverse data requiring deep domain expertise.
+    
+- When wanting to avoid bottlenecks caused by a centralized data team.
+    
+
+---
