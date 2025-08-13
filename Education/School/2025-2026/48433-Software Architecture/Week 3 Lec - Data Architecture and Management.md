@@ -1090,7 +1090,7 @@ From the slides, we can view Data Fabric’s evolution in **three stages**:
 
 ---
 
-**3. Key Characteristics** (from the slides)
+**3. Key Characteristics** 
 
 - **Data Integration**: Connects all types of sources—databases, warehouses, lakes, APIs, and external systems.
     
