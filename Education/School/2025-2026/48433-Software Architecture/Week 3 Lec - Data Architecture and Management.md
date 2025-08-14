@@ -1458,3 +1458,88 @@ d. **Graph Database**
 | **Document**  | Flexible schema, distributed        | Harder maintainability, limited SQL-like queries | IoT data, content management     | MongoDB, CouchDB |
 | **Column**    | High performance, distributed       | Some lack SQL-like queries                       | Time-series, catalog search      | Cassandra, HBase |
 | **Graph**     | Good for relationships              | Limited scalability, transactions                | Social networks, recommendations | Neo4j, Neptune   |
+### 3.5 Patterns in Big Data Architecture
+#### **3.5.1 Batch Architecture**
+![[Batch Architecture.png]]
+📌 **What is it?**
+
+- Processes data **in batches**, meaning data is collected over a period of time and then processed all at once.
+    
+- Best for scenarios where **real-time results are not required**.
+    
+
+📍 **Workflow:**
+
+1. **Data Sources** → Log files, ERP, RDBMS, social media, sensors, machines, mobile apps…
+    
+2. **Data Collection** → Data is staged or channeled into storage.
+    
+3. **(Analytical) Data Processing** → Raw data is processed into computed/usable information.
+    
+4. **Result Storage** → Computed results are stored.
+    
+5. **Data Access** → Access via reports, dashboards, or analytics tools.
+    
+
+✅ **Advantages:** Can handle very large volumes of historical data.  
+⚠️ **Disadvantages:** Results have latency, not suitable for real-time decisions.
+
+💡 **Tech examples:** Hadoop, Spark (batch mode), Oracle Data Integrator.
+
+---
+
+#### **3.5.2 Streaming Architecture**
+![[Streaming Architecture.png]]
+📌 **What is it?**
+
+- Processes data **almost in real-time**, handling each record (or small group of records) as it arrives.
+    
+- Best for applications that need **instant responses** (e.g., fraud detection, IoT monitoring).
+    
+
+📍 **Workflow:**
+
+1. **Data Sources** → Continuous sources such as social media, IoT sensors, financial transactions…
+    
+2. **Data Collection** → Data flows into a channel (e.g., Kafka, MQTT).
+    
+3. **Real-Time Processing** → Events or streams are processed immediately.
+    
+4. **Info Delivery** → Results are stored or alerts are sent via messaging.
+    
+5. **Data Access** → Applications, dashboards, alert systems get updates instantly.
+    
+
+✅ **Advantages:** Low latency, immediate feedback.  
+⚠️ **Disadvantages:** Complex implementation, harder for deep historical analysis.
+
+💡 **Tech examples:** Apache Kafka, Spark Streaming, Apache Flink, Storm.
+
+---
+
+#### **3.5.3 Lambda Architecture**
+![[Lambda Architecture.png]]
+📌 **What is it?**
+
+- **Hybrid approach combining Batch + Streaming**, taking advantage of both:
+    
+    - **Batch Layer:** Processes large datasets for accurate results.
+        
+    - **Speed Layer (Streaming):** Processes incoming data for immediate insights.
+        
+
+📍 **Workflow:**
+
+1. Incoming data is sent **simultaneously** to both the **Batch Processing** and **Real-Time Processing** pipelines.
+    
+2. **Batch Layer**: Processes complete datasets periodically → stores in Batch Result Store.
+    
+3. **Speed Layer**: Processes new data instantly → stores in Real-Time Result Store.
+    
+4. User-facing systems combine both results for **fast + accurate** output.
+    
+
+✅ **Advantages:** Combines speed of streaming with accuracy of batch.  
+⚠️ **Disadvantages:** Complex architecture, high resource usage.
+
+💡 **Tech examples:** Spark + Hadoop + Kafka + Cassandra + Elasticsearch.
