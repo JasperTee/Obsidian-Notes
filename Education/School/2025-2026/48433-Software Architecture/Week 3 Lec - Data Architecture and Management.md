@@ -1027,8 +1027,8 @@ It is built for **scalability, flexibility, and cost efficiency**, making it id
 - When working on **machine learning, AI, or big data analytics**.
     
 - When you need **real-time streaming** and **batch processing** together.
-##### 2.4.3.3 Type of Data Architecture
-###### 2.4.3.3.1 Data Fabric
+#### 2.4.4 Type of Data Architecture
+##### 2.4.4.1 Data Fabric
  **1. Definition**
 **Data Fabric** is a data architecture that enables **end-to-end integration** of data from multiple sources (databases, data warehouses, data lakes, APIs, cloud systems, and external platforms) into a **unified, intelligent, and automated ecosystem**.
 - It creates a **virtualized, metadata-driven layer** on top of existing data systems.
@@ -1128,7 +1128,7 @@ From the slides, we can view Data Fabric’s evolution in **three stages**:
 - Scenarios where **data must remain in source systems** for compliance or cost reasons.
     
 - Enterprises that want **metadata-driven insights** and **AI-assisted data discovery**.
-###### 2.4.3.3.1 Data Mesh
+##### 2.4.4.2 Data Mesh
  **1. Definition**
 
 **Data Mesh** is a **decentralized data architecture** that focuses on delegating data management responsibilities to each business domain (e.g., Marketing, Sales, Finance) and treats data as a product (**Data as a Product**).
@@ -1145,7 +1145,7 @@ From the slides, we can view Data Fabric’s evolution in **three stages**:
 ---
 
  **2. Components & How It Works**
- #### **a. Traditional Centralized Data Management**
+  **a. Traditional Centralized Data Management**
 
 - A central data team collects, processes, and manages data from all domains.
     
@@ -1216,3 +1216,159 @@ From the slides, we can view Data Fabric’s evolution in **three stages**:
     
 
 ---
+## 3. Big Data Era
+### 3.1 **Definition**
+
+The **Big Data Era** describes the current stage of computing and data management where:
+
+- The **volume** of data is massive (terabytes to petabytes).
+    
+- The **velocity** is high (data arrives in real-time or streams).
+    
+- The **variety** of data is large (structured, semi-structured, unstructured, multimedia).
+    
+- The **veracity** of data—its quality and reliability—must be maintained despite scale.
+    
+- The **value** comes from using this data to gain insights, make predictions, and drive business actions.
+### 3.2 **Shift in Data Management Requirements**
+
+#### **Legacy Demands** (Old Approach)
+
+- Small number of users.
+    
+- Designed to run on a **single server**.
+    
+- Focused on **transactions** with ACID properties, consistency, and integrity.
+    
+- Goal was **storage efficiency** and optimized relational database structures.
+    
+
+#### **Modern Demands** (Big Data Era)
+
+- Massive numbers of **users and devices**.
+    
+- Need **scale and performance** to handle large datasets quickly.
+    
+- **Flexibility** for agile development and fast adaptation.
+    
+- Adoption of **microservices architectures**.
+    
+- Support for **web, mobile, and IoT** experiences.
+### 3.3 ***Architectural Shifts in Big Data Era***
+### **1. Generation**
+
+- **From (Before):**
+    
+    - Mostly **on-prem(physically inside the organization’s own facilities — instead of being hosted in the cloud)** relational databases.
+        
+    - Only **structured data**.
+        
+    - Data collected in **batch** mode.
+        
+- **To (Now):**
+    
+    - **Cloud-based relational** and **NoSQL databases**.
+        
+    - Both **structured** and **unstructured** data.
+        
+    - Handles **real-time** and batch.
+        
+- **Rationale:**
+    
+    - Moving to the **cloud** for **flexibility** and **scalability**.
+        
+    - **Polyglot persistence**: use the most suitable database type for each task.
+        
+
+---
+
+### **2. Ingestion**
+
+- **From:**
+    
+    - **On-prem ETL tools**.
+        
+    - Structured data only.
+        
+    - Batch mode.
+        
+- **To:**
+    
+    - **Cloud-based ELT tools**.
+        
+    - Structured + unstructured data.
+        
+    - Real-time & batch processing.
+        
+- **Rationale:**
+    
+    - Traditional **ETL** replaced by more **flexible** and **high-performance ELT**, supporting real-time ingestion.
+        
+
+---
+
+### **3. Storage**
+
+- **From:**
+    
+    - **On-prem centralized data warehouse**.
+        
+- **To:**
+    
+    - **Cloud-based data warehouse**.
+        
+    - **Distributed storage** systems.
+        
+    - **Data lakes** for raw data in multiple formats.
+        
+- **Rationale:**
+    
+    - Greater **flexibility** in collecting and storing from multiple sources, **scalability**, and **advanced analytics**.
+        
+
+---
+
+### **4. Analytics**
+
+- **From:**
+    
+    - **Historical** and **prescriptive** analytics (recommendations based on past data).
+        
+    - Batch processing.
+        
+    - Traditional data mining.
+        
+- **To:**
+    
+    - **Prescriptive & predictive** analytics (forecasting future trends).
+        
+    - Real-time and batch.
+        
+    - **AI/ML models**.
+        
+- **Rationale:**
+    
+    - Moving from just **prescriptive** to **predictive** analytics.
+        
+    - Leveraging **AI/ML approaches**.
+        
+
+---
+
+### **5. Consumption**
+
+- **From:**
+    
+    - **Dashboards & reports**.
+        
+    - Centralized administration.
+        
+- **To:**
+    
+    - **AI/ML model-driven insights**.
+        
+    - **Self-service** analytics for business users.
+        
+- **Rationale:**
+    
+    - Enables **non-technical users** to run analytics themselves via self-service portals.
