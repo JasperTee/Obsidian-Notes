@@ -1372,3 +1372,90 @@ The **Big Data Era** describes the current stage of computing and data managem
 - **Rationale:**
     
     - Enables **non-technical users** to run analytics themselves via self-service portals.
+### 3.4 NoSQL Databases
+## 1. Why Relational Databases Are Not Suitable for Big Data
+
+Traditional relational databases (RDBMS) have limitations when handling **modern internet-scale data**:
+
+- **Assumption in RDBMS**: Data is **dense** and **structured** (uniform).
+    
+- **Reality of internet data**:
+    
+    - **Massive & sparse** — large datasets with many empty or irregular fields.
+        
+    - **Semi-structured or unstructured** — such as JSON, images, videos, logs, IoT signals.
+        
+- With such massive, sparse datasets, **typical storage & indexing methods in RDBMS become inefficient**, leading to slower queries and scalability issues.
+    
+
+---
+
+## 2. NoSQL Distinguishing Characteristics
+
+NoSQL databases are designed to handle **big, fast, and varied data**:
+
+- **Large data volumes** — terabytes to petabytes.
+    
+- **Scalable replication & distribution** — can run on **thousands of machines** and be **geographically distributed**.
+    
+- **Fast queries** — optimized for quick retrieval.
+    
+- **Read-heavy workloads** — many queries, fewer updates.
+    
+- **Asynchronous writes** — inserts and updates don’t block queries.
+    
+- **Schema-less** — data structure can evolve without migrations.
+    
+- **No strict ACID requirement** — favors availability & scalability (BASE model) over strict consistency.
+    
+
+---
+
+## 3. Types of NoSQL Databases
+
+### a. **Column Store**
+
+- Stores data **by columns** instead of rows.
+    
+- Optimized for large analytical queries.
+    
+- Example: Cassandra, HBase.
+    
+
+### b. **Document Store**
+
+- Stores data as **documents** (e.g., JSON, BSON).
+    
+- Each document has a unique key and flexible structure.
+    
+- Example: MongoDB, CouchDB.
+    
+
+### c. **Key-Value Store**
+
+- Simplest NoSQL type — stores key–value pairs.
+    
+- Very fast for lookups.
+    
+- Example: Redis, DynamoDB.
+    
+
+### d. **Graph Database**
+
+- Stores **nodes** and **relationships** between them.
+    
+- Best for networked data like social graphs.
+    
+- Example: Neo4j, Amazon Neptune.
+    
+
+---
+
+## 4. Strengths, Weaknesses, and Use Cases
+
+| Type          | Strengths                           | Weaknesses                                       | Use Cases                        | Examples         |
+| ------------- | ----------------------------------- | ------------------------------------------------ | -------------------------------- | ---------------- |
+| **Key-Value** | High scalability, fast reads/writes | Limited query options, no partial updates        | User sessions, caching           | Redis, DynamoDB  |
+| **Document**  | Flexible schema, distributed        | Harder maintainability, limited SQL-like queries | IoT data, content management     | MongoDB, CouchDB |
+| **Column**    | High performance, distributed       | Some lack SQL-like queries                       | Time-series, catalog search      | Cassandra, HBase |
+| **Graph**     | Good for relationships              | Limited scalability, transactions                | Social networks, recommendations | Neo4j, Neptune   |
