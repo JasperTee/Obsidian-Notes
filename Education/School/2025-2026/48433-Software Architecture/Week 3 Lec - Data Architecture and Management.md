@@ -1255,7 +1255,7 @@ The **Big Data Era** describes the current stage of computing and data managem
     
 - Support for **web, mobile, and IoT** experiences.
 ### 3.3 ***Architectural Shifts in Big Data Era***
-### **1. Generation**
+#### **3.3.1 Generation**
 
 - **From (Before):**
     
@@ -1282,7 +1282,7 @@ The **Big Data Era** describes the current stage of computing and data managem
 
 ---
 
-### **2. Ingestion**
+#### **3.3.2 Ingestion**
 
 - **From:**
     
@@ -1307,7 +1307,7 @@ The **Big Data Era** describes the current stage of computing and data managem
 
 ---
 
-### **3. Storage**
+#### **3.3.3 Storage**
 
 - **From:**
     
@@ -1328,7 +1328,7 @@ The **Big Data Era** describes the current stage of computing and data managem
 
 ---
 
-### **4. Analytics**
+#### **3.3.4 Analytics**
 
 - **From:**
     
@@ -1355,7 +1355,7 @@ The **Big Data Era** describes the current stage of computing and data managem
 
 ---
 
-### **5. Consumption**
+#### **3.3.5 Consumption**
 
 - **From:**
     
