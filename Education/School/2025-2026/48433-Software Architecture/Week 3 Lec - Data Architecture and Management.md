@@ -1373,7 +1373,7 @@ The **Big Data Era** describes the current stage of computing and data managem
     
     - Enables **non-technical users** to run analytics themselves via self-service portals.
 ### 3.4 NoSQL Databases
-## 1. Why Relational Databases Are Not Suitable for Big Data
+#### 3.4.1 Why Relational Databases Are Not Suitable for Big Data ?
 
 Traditional relational databases (RDBMS) have limitations when handling **modern internet-scale data**:
 
@@ -1390,7 +1390,7 @@ Traditional relational databases (RDBMS) have limitations when handling **moder
 
 ---
 
-## 2. NoSQL Distinguishing Characteristics
+#### 3.4.2 NoSQL Distinguishing Characteristics
 
 NoSQL databases are designed to handle **big, fast, and varied data**:
 
@@ -1411,9 +1411,9 @@ NoSQL databases are designed to handle **big, fast, and varied data**:
 
 ---
 
-## 3. Types of NoSQL Databases
+#### 3.4.3 Types of NoSQL Databases
 
-### a. **Column Store**
+ a. **Column Store**
 
 - Stores data **by columns** instead of rows.
     
@@ -1421,8 +1421,7 @@ NoSQL databases are designed to handle **big, fast, and varied data**:
     
 - Example: Cassandra, HBase.
     
-
-### b. **Document Store**
+b. **Document Store**
 
 - Stores data as **documents** (e.g., JSON, BSON).
     
@@ -1431,7 +1430,7 @@ NoSQL databases are designed to handle **big, fast, and varied data**:
 - Example: MongoDB, CouchDB.
     
 
-### c. **Key-Value Store**
+c. **Key-Value Store**
 
 - Simplest NoSQL type — stores key–value pairs.
     
@@ -1440,7 +1439,7 @@ NoSQL databases are designed to handle **big, fast, and varied data**:
 - Example: Redis, DynamoDB.
     
 
-### d. **Graph Database**
+d. **Graph Database**
 
 - Stores **nodes** and **relationships** between them.
     
@@ -1451,7 +1450,7 @@ NoSQL databases are designed to handle **big, fast, and varied data**:
 
 ---
 
-## 4. Strengths, Weaknesses, and Use Cases
+#### 3.4.4 Strengths, Weaknesses, and Use Cases
 
 | Type          | Strengths                           | Weaknesses                                       | Use Cases                        | Examples         |
 | ------------- | ----------------------------------- | ------------------------------------------------ | -------------------------------- | ---------------- |
