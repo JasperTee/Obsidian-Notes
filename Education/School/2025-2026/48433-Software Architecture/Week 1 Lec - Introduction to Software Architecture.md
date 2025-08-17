@@ -112,8 +112,8 @@ In software architecture, there are **many ways to describe a system**, but mos
 
 ---
 
-#### 1. **Module Structures** (Static Structures)
-
+#### 2.3.1 **Module Structures** (Static Structures)
+![[Module Structures.png]]
 - **What it shows**:
     
     - How the software is **divided into modules** in the code.
@@ -140,8 +140,8 @@ In software architecture, there are **many ways to describe a system**, but mos
 
 ---
 
-#### 2. **Component-and-Connector (C&C) Structures** (Dynamic Structures)
-
+#### 2.3.2 **Component-and-Connector (C&C) Structures** (Dynamic Structures)
+![[Component-and-Connector (C&C) Structures.png]]
 - **What it shows**:
     
     - How the system **runs at runtime**.
@@ -166,8 +166,8 @@ In software architecture, there are **many ways to describe a system**, but mos
 
 ---
 
-#### 3. **Allocation Structures** (Mapping Structures)
-
+#### 2.3.3 **Allocation Structures** (Mapping Structures)
+![[Allocation Structures.png]]
 - **What it shows**:
     
     - How software is **mapped onto the environment** (hardware, file system, teams).
@@ -195,3 +195,98 @@ In software architecture, there are **many ways to describe a system**, but mos
     
 
 👉 Think of it as the **bridge between software and its environment**.
+# 3. Why is Software Architecture Important?
+
+Software Architecture is **not just about drawing diagrams** — it plays a **critical role** in the success of a software system.
+
+---
+
+### 3.1 **Defines Structure and Organization**
+
+- Architecture provides the **blueprint** for how the system is broken down (modules, components, data flows, deployment).
+    
+- Without it, the system may become chaotic, hard to maintain, and inconsistent.
+    
+
+**Example**: An online store with no clear separation between UI, business logic, and database → adding new features becomes slow and risky.
+
+---
+
+### 3.2 **Guides Development and Communication**
+
+- Architecture acts as a **shared language** between stakeholders (developers, architects, managers, clients).
+    
+- Ensures **everyone understands the system** at a high level, even non-coders.
+    
+- Helps align technical decisions with **business goals**.
+    
+
+**Example**: When deciding between **monolithic** or **microservices**, the architecture communicates trade-offs clearly to business managers.
+
+---
+
+### 3.3 **Supports Quality Attributes (Non-functional Requirements)**
+
+- Many **“-ilities”** (performance, scalability, security, reliability, maintainability, usability) are influenced by architecture.
+    
+- These cannot simply be “added later”; they must be designed into the system from the beginning.
+    
+
+**Example**:
+
+- **Performance** → choosing caching layers.
+    
+- **Scalability** → microservices or cloud-native design.
+    
+- **Security** → limiting access points, authentication design.
+    
+
+---
+
+### 3.4 **Manages Complexity**
+
+- Modern software systems are very complex.
+    
+- Architecture **abstracts details** and provides **layers, modules, and views** to handle complexity step by step.
+    
+
+**Example**: In a healthcare system, architecture separates patient records, billing, and analytics into clear modules so teams don’t get overwhelmed.
+
+---
+
+### 3.5 **Enables Reuse and Evolution**
+
+- A good architecture supports **reuse** of modules and services.
+    
+- Makes it easier to **adapt to future changes** in technology or requirements.
+    
+
+**Example**: If the payment module is well-architected, it can be reused in multiple apps (e-commerce, booking, subscription).
+
+---
+
+### 3.6 **Reduces Risk and Cost**
+
+- Poor architecture leads to **technical debt**, which increases maintenance costs.
+    
+- Good architecture reduces risks of:
+    
+    - Project delays.
+        
+    - System failures.
+        
+    - Expensive rework.
+        
+
+**Example**: A banking system with poor architecture may fail to scale under high load → millions lost during peak usage.
+
+---
+
+### 3.7 **Supports Decision Making**
+
+- Architecture documents trade-offs and alternatives.
+    
+- Provides a framework to evaluate new requirements or technologies.
+    
+
+**Example**: Deciding whether to store data in **SQL** vs **NoSQL** depends on architectural considerations (consistency vs scalability).
