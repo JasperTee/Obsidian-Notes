@@ -1,57 +1,66 @@
-### What is Software Architecture?
-> **Software Architecture** is the **set of structures** needed to understand, design, and reason about a software system.  
+## 1. Software Architecture
+### 1.1 Definition
 
-  These structures describe:
-
-#### 1. **What the system is made of? - Module Structures **
-- Focus on **code organisation**
+- **Software Architecture** is not just a drawing with boxes and arrows.
     
-- Show how the system is broken into **implementation units** (modules, classes, packages)
+- It is a **set of structures** used to describe a software system.
     
-- Describe **relationships** like: “uses”, “inherits”, “contains”
+- Each structure includes:
     
-- Help answer:
-    
-    - What does each module do?
+    - **Elements (components)** → e.g., modules, services, classes, databases.
         
-    - How are responsibilities divided?
+    - **Relations (connectors)** → e.g., dependencies, API calls, message passing.
         
-    - What does this module depend on?
-    
-> → Architecture defines **how the system is built in code**
-#### 2. **How those parts connect and interact - Component-and-Connector (C&C) Structures**
-- Focus on **runtime behavior**
-    
-- Show how components (e.g., services, clients) **interact during execution**
-    
-- Define **connectors** (e.g., function calls, data flow, events) that manage communication
-    
-- Help answer:
-    - What components run?
-        
-    - How do they talk to each other?
-        
-    - What is the data flow?
-        
-> → Architecture shows how the system **behaves when running**
-#### 3. **Where those parts are deployed or assigned - Allocation Structures**
-- Focus on **deployment and team structure**
-    
-- Map software parts to:
-    
-    - **Hardware** (e.g., servers, cloud)
-        
-    - **Files** (e.g., project folders)
-        
-    - **Teams** (e.g., which team builds what)
-        
-- Help answer:
-    
-    - Where does this run?
-        
-    - Who is responsible for this part?
-        
-    - What infrastructure is needed?
+    - **Properties (attributes)** → e.g., performance, security, programming language.
         
 
-> → Architecture connects software to the **real-world environment**
+👉 In simple terms, Software Architecture answers:
+
+- **What the system is made of** (its main building blocks).
+    
+- **How those parts connect and interact**.
+    
+- **Where those parts are deployed or assigned** in the environment.
+    
+
+---
+
+### 1.2 Key Points
+
+1. **Important Decisions**
+    
+    - Architecture focuses on **high-level decisions** that have a long-term impact.
+        
+    - Example: choosing between **microservices vs. monolith**, or **SQL vs. NoSQL** storage.
+        
+    - These are costly to change later, so they are made early.
+        
+2. **Abstraction**
+    
+    - Architecture is an **abstraction**, not detailed code.
+        
+    - It presents **just enough information** to reason about the system.
+        
+    - Example: saying _“Authentication Service exists”_ instead of showing all its Java code.
+        
+3. **Quality Attributes (Non-functional requirements)**
+    
+    - Architecture directly affects qualities like **performance, security, scalability, maintainability**.
+        
+    - Example: choosing a distributed database improves scalability but may reduce consistency.
+        
+
+---
+
+### 1.3 Example
+
+Imagine building an **e-commerce application**:
+
+- **Elements**: Web frontend, Mobile app, Payment Service, Inventory Service, Database.
+    
+- **Relations**: The frontend calls Payment API, Payment Service connects to a payment gateway.
+    
+- **Properties**: Payment must comply with PCI-DSS (security), response time < 2 seconds.
+    
+
+👉 All of these decisions together define the **Software Architecture** of the system.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
+                "file": "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 3 Lec - Data Architecture and Management"
+              "title": "Week 1 Lec - Introduction to Software Architecture"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
+                "file": "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 3 Lec - Data Architecture and Management"
+              "title": "Outline of Week 1 Lec - Introduction to Software Architecture"
             }
           }
         ],
@@ -171,11 +171,11 @@
       "graph:Open graph view": false
     }
   },
-  "active": "1ffa685845189fb7",
+  "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
+    "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
     "Education/School/2025-2026/48433-Software Architecture/Images/Lambda Architecture.png",
     "Education/School/School - Subject Contents.md",
-    "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
     "Education/School/2025-2026/48433-Software Architecture/Images/Streaming Architecture.png",
     "Education/School/2025-2026/48433-Software Architecture/Images/Batch Architecture.png",
     "Education/School/2025-2026/48433-Software Architecture/Images/Business Value from Big Data.png",
@@ -188,7 +188,6 @@
     "Education/School/2025-2026/32548-Cybersecurity/Week 4 Lec - Transport Layer Security and DoS attack.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
-    "Education/School/2025-2026/48433-Software Architecture/Images/Physical Data Model'.png",
     "Education/School/2025-2026/48433-Software Architecture/Images",
     "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
