@@ -64,3 +64,134 @@ Imagine building an **e-commerce application**:
     
 
 👉 All of these decisions together define the **Software Architecture** of the system.
+# 2. Architectural Structures & Views
+
+### 2.1 Why We Need Structures & Views
+
+- A **software system** is too complex to describe in a single diagram.
+    
+- Different stakeholders (developers, testers, managers, clients) **care about different aspects**.
+    
+    - A developer wants to see **modules and their dependencies**.
+        
+    - A system admin cares about **deployment on servers or cloud**.
+        
+    - A tester cares about **data flow and interactions**.
+        
+- Therefore, we need **multiple structures (models)** and **views** to show different perspectives of the same system.
+    
+
+👉 Think of it like **Google Maps**:
+
+- Street view, satellite view, and traffic view show different aspects of the same city.
+    
+- Similarly, architecture has multiple **views** of the same system.
+    
+
+---
+
+### 2.2 What is an Architectural Structure?
+
+- **Definition**: A **set of elements** (components), the **relations** among them, and the **properties** of both.
+    
+- Each structure shows the system from a **different angle**.
+    
+- One system = many structures.
+    
+
+Example:
+
+- Module structure → shows modules and dependencies.
+    
+- Deployment structure → shows servers, containers, and where modules run.
+    
+- Component-and-connector structure → shows runtime interactions (calls, messages).
+### 2.3 Common Types of Structures
+
+In software architecture, there are **many ways to describe a system**, but most fall into **three main categories**:
+
+---
+
+#### 1. **Module Structures** (Static Structures)
+
+- **What it shows**:
+    
+    - How the software is **divided into modules** in the code.
+        
+    - The **static organization** (what exists in the code before runtime).
+        
+- **Elements**: modules, packages, classes, subsystems.
+    
+- **Relationships**: _is part of_, _depends on_, _uses_.
+    
+- **Purpose**: supports understanding, development, and maintenance.
+    
+
+**Example (E-commerce app)**:
+
+- `User` module → login, registration.
+    
+- `Order` module → order processing.
+    
+- `Payment` module → payment logic.
+    
+
+👉 Think of it as the **blueprint of code organization**.
+
+---
+
+#### 2. **Component-and-Connector (C&C) Structures** (Dynamic Structures)
+
+- **What it shows**:
+    
+    - How the system **runs at runtime**.
+        
+    - **Interactions, data flow, and communication** between components.
+        
+- **Elements**: components (services, UI, DB, APIs) + connectors (REST calls, message queues, events).
+    
+- **Purpose**: helps analyze performance, reliability, and system behavior.
+    
+
+**Example (Banking app)**:
+
+- User → Web UI (browser).
+    
+- UI → API Gateway → Auth Service → Database.
+    
+- Services talk over HTTP or MQ (message queue).
+    
+
+👉 Think of it as the **map of runtime conversations**.
+
+---
+
+#### 3. **Allocation Structures** (Mapping Structures)
+
+- **What it shows**:
+    
+    - How software is **mapped onto the environment** (hardware, file system, teams).
+        
+- **Types**:
+    
+    - **Deployment View** → where software runs (servers, containers, cloud).
+        
+    - **Implementation View** → mapping modules to files, repos, libraries.
+        
+    - **Work Assignment View** → which team is responsible for which part.
+        
+- **Purpose**: supports project planning, deployment, and responsibility management.
+    
+
+**Example**:
+
+- Microservices → deployed in Kubernetes cluster.
+    
+- Database → runs in AWS RDS.
+    
+- `Payment` module → owned by backend team.
+    
+- `UI` module → owned by frontend team.
+    
+
+👉 Think of it as the **bridge between software and its environment**.
