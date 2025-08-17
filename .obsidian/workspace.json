@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
+                "file": "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 1 Lec - Introduction to Software Architecture"
+              "title": "Week 1PA - Introduction to Software Engineering"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
+                "file": "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 1 Lec - Introduction to Software Architecture"
+              "title": "Outline of Week 1PA - Introduction to Software Engineering"
             }
           }
         ],
@@ -171,8 +171,10 @@
       "graph:Open graph view": false
     }
   },
-  "active": "1ffa685845189fb7",
+  "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
+    "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Images/Allocation Structures.png",
     "Education/School/2025-2026/48433-Software Architecture/Images/Module Structures.png",
     "Education/School/2025-2026/48433-Software Architecture/Images/Component-and-Connector (C&C) Structures.png",
@@ -185,14 +187,11 @@
     "Education/School/2025-2026/48433-Software Architecture/Images/Data Mesh.png",
     "Pasted image 20250814084751.png",
     "Education/School/2025-2026/48433-Software Architecture/Images/Data Fabric (Modern Approach).png",
-    "Education/School/2025-2026/48433-Software Architecture/Images/Data Fabric (Modern Approach).png",
     "Education/School/2025-2026/32548-Cybersecurity/Week 4 Lec - Transport Layer Security and DoS attack.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
     "Education/School/2025-2026/48433-Software Architecture/Images",
-    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
-    "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Images",
     "Education/School/2025-2026/Software Engineering Fundamentals",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lab - Password Cracking using John the Ripper and SQL Injection.md",
