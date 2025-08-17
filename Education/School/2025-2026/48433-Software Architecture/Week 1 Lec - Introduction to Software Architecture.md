@@ -64,7 +64,7 @@ Imagine building an **e-commerce application**:
     
 
 👉 All of these decisions together define the **Software Architecture** of the system.
-# 2. Architectural Structures & Views
+## 2. Architectural Structures & Views
 
 ### 2.1 Why We Need Structures & Views
 
@@ -195,7 +195,7 @@ In software architecture, there are **many ways to describe a system**, but mos
     
 
 👉 Think of it as the **bridge between software and its environment**.
-# 3. Why is Software Architecture Important?
+## 3. Why is Software Architecture Important?
 
 Software Architecture is **not just about drawing diagrams** — it plays a **critical role** in the success of a software system.
 
@@ -290,3 +290,91 @@ Software Architecture is **not just about drawing diagrams** — it plays a *
     
 
 **Example**: Deciding whether to store data in **SQL** vs **NoSQL** depends on architectural considerations (consistency vs scalability).
+## 4. SOLID Principles of Object-Oriented Class Design
+
+**SOLID** is a set of five design principles in Object-Oriented Programming (OOP). They aim to make software easier to maintain, extend, test, and reuse. These principles are considered best practices in software architecture and class design.
+
+---
+
+### 4.1 Single Responsibility Principle (SRP)
+
+A class should have only **one responsibility** or reason to change.
+
+- If a class handles multiple concerns, a change in one area can unintentionally affect another.
+    
+- Example:
+    
+    - Bad: An `InvoiceManager` class that calculates invoices, prints them, and sends emails.
+        
+    - Good: Separate classes such as `InvoiceCalculator`, `InvoicePrinter`, and `InvoiceEmailer`.
+        
+
+**Benefit:** Improves maintainability, readability, and testability.
+
+---
+
+### 4.2 Open/Closed Principle (OCP)
+
+Classes should be **open for extension but closed for modification**.
+
+- When requirements change, functionality should be added by creating new classes or methods (e.g., via inheritance or composition), not by modifying existing code.
+    
+- Example:
+    
+    - Bad: A `Shape` class with a method `calculateArea()` that must be edited each time a new shape (circle, square, triangle) is added.
+        
+    - Good: Define a `Shape` interface with `area()`; each shape implements its own logic.
+        
+
+**Benefit:** Prevents breaking existing code when adding new features.
+
+---
+
+### 4.3 Liskov Substitution Principle (LSP)
+
+Subclasses should be substitutable for their base classes without breaking program behavior.
+
+- A derived class must preserve the behavior expected of its parent class.
+    
+- Example:
+    
+    - Problem: If `Square` extends `Rectangle`, substituting a square may break logic because rectangles allow independent width and height, while squares require them to be equal.
+        
+    - Solution: Avoid incorrect inheritance; treat `Square` and `Rectangle` as separate implementations of `Shape`.
+        
+
+**Benefit:** Ensures correctness when using polymorphism and inheritance.
+
+---
+
+### 4.4 Interface Segregation Principle (ISP)
+
+Clients should not be forced to depend on methods they do not use.
+
+- It is better to have multiple smaller, specific interfaces rather than one large, general-purpose interface.
+    
+- Example:
+    
+    - Bad: A `Machine` interface with `print(), scan(), fax()`. A simple printer must implement methods it does not need.
+        
+    - Good: Split into `Printer`, `Scanner`, and `Fax` interfaces. A class implements only what it requires.
+        
+
+**Benefit:** Reduces unnecessary dependencies and increases flexibility.
+
+---
+
+### 4.5 Dependency Inversion Principle (DIP)
+
+High-level modules should not depend on low-level modules. Both should depend on abstractions.
+
+- Depend on interfaces or abstract classes rather than concrete implementations.
+    
+- Example:
+    
+    - Bad: `ReportService` directly creates `FileLogger logger = new FileLogger()`.
+        
+    - Good: `ReportService` depends on a `Logger` interface, and the specific implementation (`FileLogger`, `DatabaseLogger`) is injected externally.
+        
+
+**Benefit:** Reduces coupling, improves testability, and makes code easier to change or extend.
