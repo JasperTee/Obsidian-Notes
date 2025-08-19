@@ -378,3 +378,120 @@ High-level modules should not depend on low-level modules. Both should depend on
         
 
 **Benefit:** Reduces coupling, improves testability, and makes code easier to change or extend.
+## C4 Model 
+
+### Core Idea
+
+- When building a software system, different people (developers, testers, managers, customers) need a **shared understanding**.
+    
+- But each group needs **a different level of detail**.
+    
+- The **C4 model** solves this by providing **4 levels of diagrams**.
+    
+- Think of it like **Google Maps zoom**: see the whole Earth → city → streets → individual houses.
+    
+
+---
+
+### The Four Levels
+
+#### 1. **System Context**
+
+- **From far above, you see the whole city.**
+    
+- The “system” is the city, surrounded by **users** and **other systems**.
+    
+- Answers: _Who uses this system? What external systems does it interact with?_
+    
+
+**Example: Internet Banking System**
+
+- Users: customers, bank staff.
+    
+- External systems: VISA/MasterCard payment gateway, credit-check service.
+    
+
+---
+
+#### 2. **Container**
+
+- **Zoom in: now you see districts of the city.**
+    
+- A **container** is an application or executable part of the system (web app, mobile app, database, microservice).
+    
+- Answers: _What major building blocks make up the system? What technology do they use? How do they connect?_
+    
+
+**Example: Internet Banking System**
+
+- Web Application (Java Spring MVC).
+    
+- Mobile App (iOS, Android).
+    
+- API Application (microservices).
+    
+- Database (PostgreSQL).
+    
+
+---
+
+#### 3. **Component**
+
+- **Zoom further: inside one district, you now see neighborhoods.**
+    
+- A **component** is a logical grouping of related functionality inside a container.
+    
+- Answers: _What are the main modules of one application? How do they interact?_
+    
+
+**Example: API Application**
+
+- Authentication Service (login handling).
+    
+- Transaction Service (money transfers).
+    
+- Notification Service (email, SMS).
+    
+
+---
+
+#### 4. **Code (Class Diagram)**
+
+- **Zoom all the way in: now you see individual houses.**
+    
+- Shows classes, methods, and detailed implementation.
+    
+- Answers: _How is this component implemented in code?_
+    
+
+**Example: Transaction Service**
+
+- `TransactionService` class (core business logic).
+    
+- `Transaction` class (represents a transaction).
+    
+- `TransactionRepository` class (handles database operations).
+    
+
+---
+
+### Summary of Levels
+
+- **System Context** → Big picture: people + external systems.
+    
+- **Container** → Inside system: applications/services/databases.
+    
+- **Component** → Inside an app: functional modules.
+    
+- **Code** → Inside a module: classes and methods.
+    
+
+---
+
+### Benefits of C4
+
+- **Managers/customers** understand the system at high level (Context + Container).
+    
+- **Developers** understand the technical structure (Component + Code).
+    
+- Whole team shares the same “map,” avoiding misunderstandings.
