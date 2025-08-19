@@ -674,3 +674,140 @@
         
     
     _Ví dụ:_ Một công ty video streaming áp dụng nguyên tắc **Always Be Architecting**: từ 1080p → 4K → 8K, hạ tầng cloud phải liên tục thích nghi.
+## 2.2 Cloud-Native Architecture Principles
+
+Cloud-native means building applications **specifically for the cloud environment**, not just moving traditional apps into cloud infrastructure. It leverages elasticity, automation, and distributed systems.
+
+There are 5 key principles:
+
+---
+
+### **Principle 1: Design for Automation**
+
+- **Meaning:**  
+    Traditional environments required manual provisioning: ordering hardware, installing OS, configuring middleware—slow and error-prone.  
+    In cloud-native, automation is at the core.
+    
+- **Practices:**
+    
+    - Use **Infrastructure as Code (IaC):** Terraform, Ansible, CloudFormation.
+        
+    - Automate CI/CD pipelines: Jenkins, GitHub Actions, Google Cloud Build.
+        
+    - Autoscaling: automatically increase/decrease instances.
+        
+    - Monitoring and self-healing systems.
+        
+- **Example:**
+    
+    - Netflix autoscaling servers to meet peak viewing demand.
+        
+    - Using Terraform to spin up 100 AWS EC2 instances in minutes.
+        
+
+---
+
+### **Principle 2: Be Smart with State**
+
+- **Meaning:**  
+    _State_ = information about current user/application context (e.g., login session, shopping cart).  
+    Traditional apps stored state on local server memory → if the server crashed, the state was lost.  
+    Cloud-native favors **stateless design**.
+    
+- **Practices:**
+    
+    - Make apps stateless so any server can handle requests.
+        
+    - Store state externally: Redis, cloud databases, object storage.
+        
+    - Decouple state management from application logic.
+        
+- **Example:**
+    
+    - E-commerce: shopping cart stored in Redis, not in server session.
+        
+    - When a request arrives, any server can fetch cart data from Redis.
+        
+
+---
+
+### **Principle 3: Favor Managed Services**
+
+- **Meaning:**  
+    Cloud providers offer **managed services** (databases, ML, messaging). Instead of managing infrastructure yourself, use these services.
+    
+- **Benefits:**
+    
+    - Saves operational overhead.
+        
+    - Provider ensures reliability, scaling, patching.
+        
+    - Teams focus on business logic, not infrastructure.
+        
+- **Example:**
+    
+    - Use **AWS RDS** instead of running your own MySQL VM.
+        
+    - Use **Google BigQuery** for analytics instead of self-hosted Hadoop.
+        
+    - Use **Firebase Authentication** for user logins.
+        
+- **Challenge:**
+    
+    - **Vendor lock-in** risk (dependence on one cloud provider).
+        
+
+---
+
+### **Principle 4: Practice Defense in Depth**
+
+- **Meaning:**  
+    Cloud-native apps are internet-facing, so security risks are higher. One firewall is not enough → need **multi-layered security**.
+    
+- **Practices:**
+    
+    - **Edge Firewall:** defend against DDoS.
+        
+    - **Network Segmentation:** enforce authentication inside the system.
+        
+    - **Application Security:** input validation, API authentication.
+        
+    - **Endpoint Security:** secure VMs, containers.
+        
+    - **Data Encryption:** secure data at-rest and in-transit.
+        
+    - **Monitoring & SIEM:** detect suspicious activity (Splunk, AWS GuardDuty).
+        
+- **Example:**
+    
+    - SaaS app setup:
+        
+        - WAF (Web Application Firewall) at the edge.
+            
+        - OAuth2 between microservices.
+            
+        - AES-256 database encryption.
+            
+        - Continuous monitoring with alerts.
+            
+
+---
+
+### **Principle 5: Always Be Architecting**
+
+- **Meaning:**  
+    Cloud-native systems are **constantly evolving**. Architecture must adapt to new business needs, technologies, and provider capabilities.
+    
+- **Practices:**
+    
+    - Continuous architectural reviews.
+        
+    - Proactively adopt new cloud services for efficiency.
+        
+    - Avoid “one-time design” mindset—embrace ongoing evolution.
+        
+- **Example:**
+    
+    - Netflix adapting infrastructure from 480p → 1080p → 4K → 8K streaming.
+        
+    - An AI company upgrading architecture to leverage new GPUs/TPUs.
