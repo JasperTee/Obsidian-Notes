@@ -128,68 +128,289 @@
 
 ### 1. Software as a Service (SaaS)
 ![[Software as a Service (SaaS).png]]
-- **Meaning:**  
-    Customers use applications hosted and maintained by the cloud provider. No need to install or manage infrastructure, only use the software via browser or app.
-    
-- **Key points:**
-    
-    - Accessible through a web browser or API.
-        
-    - Customer only manages user-level settings.
-        
-    - All backend (servers, storage, updates) handled by provider.
-        
-- **Examples:**
-    
-    - Gmail, Outlook.com (email service).
-        
-    - Google Docs, Microsoft 365 (office productivity).
-        
-    - Dropbox (cloud storage).
-        
+#### **Meaning**
 
+- SaaS is a cloud service model where **software applications are hosted, maintained, and operated by the cloud provider (CSP)**.
+    
+- Customers (CSC) access the software through a **web browser or mobile app**, without installing or managing servers, operating systems, or infrastructure.
+    
+- The provider takes care of **all backend responsibilities**: servers, storage, security, patching, and updates.
+    
+
+---
+
+#### **Key Points**
+
+- Accessible anywhere via browser or app.
+    
+- Customers **only manage user-level settings** (e.g., passwords, preferences).
+    
+- **Subscription-based pricing** (monthly/yearly plans) or usage-based pricing.
+    
+- Updates and maintenance are **automatic**.
+    
+- Highly scalable: can serve millions of users without extra work for customers.
+    
+
+---
+
+#### **Responsibilities**
+
+|Component|Managed by|
+|---|---|
+|Application|CSP|
+|User data|CSC manages content, CSP manages storage|
+|Middleware|CSP|
+|Operating System (OS)|CSP|
+|Servers / Storage / Networking|CSP|
+
+_→ Customers only care about **using the application**, not the backend._
+
+---
+
+#### **Advantages**
+
+- No need to install or maintain local software.
+    
+- Accessible from anywhere, on multiple devices.
+    
+- Lower IT costs (no hardware, no infrastructure team needed).
+    
+- Automatic updates and upgrades.
+    
+- Flexible payments (subscriptions, pay-per-use).
+    
+
+---
+
+#### **Disadvantages**
+
+- Less control (limited customization).
+    
+- Internet dependency (offline usage may be limited).
+    
+- **Vendor lock-in**: difficult to migrate data to another provider.
+    
+- Data security relies heavily on the provider’s protection.
+    
+
+---
+
+#### **Examples**
+
+- **Email:** Gmail, Outlook.com.
+    
+- **Office tools:** Google Docs, Microsoft 365.
+    
+- **Storage & Sharing:** Dropbox, Google Drive.
+    
+- **Collaboration:** Slack, Zoom, Microsoft Teams.
+    
+- **CRM:** Salesforce.
+    
+
+---
+
+#### **Practical Example**
+
+- A startup wants business email for its employees:
+    
+    - Instead of buying servers, setting up mail infrastructure, and managing spam/security, it simply subscribes to **Google Workspace (Gmail for Business)**.
+        
+    - Employees log in through a browser or mobile app.
+        
+    - Google handles spam filtering, data storage, updates, and security.
+        
+    - The company just pays a monthly subscription fee.
+        
 ---
 
 ### 2. Platform as a Service (PaaS)
 ![[Platform as a Service (PaaS).png]]
-- **Meaning:**  
-    Customers deploy their own applications on the provider’s platform, using programming languages, libraries, and tools supported by the provider.
+#### **Meaning**
+
+- PaaS is a cloud service model where the **provider delivers a platform** for customers to **develop, run, and manage applications** without dealing with the underlying infrastructure (servers, OS, networking).
     
-- **Key points:**
+- Customers focus on **application logic and code**, while the provider manages everything else.
     
-    - Customer focuses on app code; provider manages servers, OS, middleware.
-        
-    - Supports rapid development and deployment.
-        
-- **Examples:**
+
+---
+
+#### **Key Points**
+
+- Provides a **development and deployment environment** in the cloud.
     
-    - Google App Engine.
+- Includes programming languages, frameworks, libraries, and tools.
+    
+- Customers do **not manage servers, OS, or storage**.
+    
+- Customers have control over **applications and configurations** of the hosting environment.
+    
+- Enables faster development cycles and innovation.
+    
+
+---
+
+#### **Responsibilities**
+
+|Component|Managed by|
+|---|---|
+|Application|Customer|
+|Application configuration|Customer|
+|Runtime environment, Middleware|CSP|
+|Operating System|CSP|
+|Servers / Storage / Networking|CSP|
+
+_→ Customers manage their code and app settings; the provider manages the platform and infrastructure._
+
+---
+
+#### **Advantages**
+
+- Developers focus on building apps, not managing infrastructure.
+    
+- Faster time-to-market with pre-built tools and services.
+    
+- Scalable environment that adjusts to demand.
+    
+- Supports collaboration (multiple developers can work together easily).
+    
+- Often integrates with CI/CD pipelines.
+    
+
+---
+
+#### **Disadvantages**
+
+- Limited flexibility: must use programming languages/frameworks supported by the PaaS provider.
+    
+- Vendor lock-in: migrating apps to another PaaS can be difficult.
+    
+- Less control over performance tuning compared to IaaS.
+    
+
+---
+
+#### **Examples**
+
+- **Google App Engine** – run web apps without managing servers.
+    
+- **Heroku** – simple app deployment for developers.
+    
+- **Microsoft Azure App Service** – deploy apps using .NET, Java, Python, Node.js.
+    
+- **AWS Elastic Beanstalk** – deploy and scale web apps.
+    
+
+---
+
+#### **Practical Example**
+
+- A startup is developing a new mobile app:
+    
+    - Instead of setting up VMs, databases, and servers, they use **Heroku**.
         
-    - Heroku.
+    - Developers push code via Git, and Heroku automatically builds and deploys the app.
         
-    - Microsoft Azure App Services.
+    - The team can scale the app with one command (e.g., `heroku ps:scale web=5`).
         
+    - The provider handles patching, load balancing, monitoring, and scaling.
 
 ---
 
 ### 3. Infrastructure as a Service (IaaS)
 ![[Infrastructure as a Service (IaaS).png]]
-- **Meaning:**  
-    Customers rent fundamental resources: virtual machines, networks, storage, and can install any OS or application.
+#### **Meaning**
+
+- IaaS is a cloud service model where the provider (CSP) delivers **basic computing resources**: virtual machines, storage, and networking.
     
-- **Key points:**
+- Customers (CSC) can **install and manage any operating system, middleware, and applications** they want.
     
-    - Customers control the OS, applications, and configurations.
-        
-    - Provider only manages the underlying infrastructure.
-        
-- **Examples:**
+- It gives the **highest level of control** compared to SaaS and PaaS.
     
-    - Amazon EC2 (Elastic Compute Cloud).
+
+---
+
+#### **Key Points**
+
+- Provides **virtualized infrastructure** (VMs, storage, networking).
+    
+- Customers are responsible for **OS, runtime, middleware, and apps**.
+    
+- Pay-as-you-go pricing (per second, per hour, per GB).
+    
+- Highly scalable: resources can be provisioned on demand.
+    
+- Often used as the foundation for custom IT environments.
+    
+
+---
+
+#### **Responsibilities**
+
+|Component|Managed by|
+|---|---|
+|Applications|Customer|
+|Data|Customer|
+|Runtime, Middleware|Customer|
+|Operating System|Customer|
+|Virtual Machines / Storage / Networking|CSP|
+|Physical hardware & Data centers|CSP|
+
+_→ Customers have control of the OS and above; CSP manages the infrastructure below._
+
+---
+
+#### **Advantages**
+
+- Full control over the operating system and applications.
+    
+- Highly flexible: customers can install any software they want.
+    
+- Scales up/down quickly.
+    
+- Cost-efficient (no need to buy physical hardware).
+    
+- Suitable for businesses that need custom IT setups.
+    
+
+---
+
+#### **Disadvantages**
+
+- More complex to manage than PaaS or SaaS (requires technical expertise).
+    
+- Customers are responsible for patching, updates, and security of the OS and apps.
+    
+- Can be expensive if not managed properly (unused VMs still cost money).
+    
+
+---
+
+#### **Examples**
+
+- **AWS EC2 (Elastic Compute Cloud)** – rent virtual servers.
+    
+- **Microsoft Azure Virtual Machines.**
+    
+- **Google Compute Engine.**
+    
+- **IBM Cloud Virtual Servers.**
+    
+
+---
+
+#### **Practical Example**
+
+- A financial company wants to run a custom risk analysis application:
+    
+    - They use **AWS EC2** to rent VMs.
         
-    - Microsoft Azure Virtual Machines.
+    - Install **Linux OS**, then set up their own middleware and analysis app.
         
-    - Google Compute Engine.
+    - They control everything (OS updates, security patches).
+        
+    - AWS provides the underlying servers, storage, and network.
         
 
 ---

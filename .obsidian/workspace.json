@@ -150,6 +150,16 @@
               "icon": "lucide-list",
               "title": "Outline of Week 4 Lec - Cloud Reference Architecture"
             }
+          },
+          {
+            "id": "11b8b7a14c2da3ba",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
         "currentTab": 3
@@ -173,6 +183,15 @@
   },
   "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
+    "Education/School/2025-2026/48433-Software Architecture/Week 2 Lec - Application Architecture.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
+    "Education/School/2025-2026/32548-Cybersecurity/Week 4 Lec - Transport Layer Security and DoS attack.md",
+    "Education/School/2025-2026/48433-Software Architecture/Images/Business Value from Big Data.png",
+    "Education/School/School - Subject Contents.md",
+    "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
+    "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
     "Images/How DNS Works?.png",
     "Images/What Does TLS Do in Each Protocol?.png",
     "Images/Network Traffics During TLS Handshake.png",
@@ -182,17 +201,9 @@
     "Images/How CSRF Works?.png",
     "Images/TLS Data Transmission.png",
     "Images/How Stored XSS Works?.png",
-    "Images/Public Key Infrastructure.png",
-    "Images/Type of Web Bassed Attacks.png",
     "Images",
-    "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
-    "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
-    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
-    "Education/School/2025-2026/48433-Software Architecture/Week 2 Lec - Application Architecture.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
-    "Education/School/School - Subject Contents.md",
-    "Education/School/2025-2026/32548-Cybersecurity/Week 4 Lec - Transport Layer Security and DoS attack.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
     "Education/School/2025-2026/48433-Software Architecture/Images",
@@ -200,8 +211,6 @@
     "Education/School/2025-2026/Software Engineering Fundamentals",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lab - Password Cracking using John the Ripper and SQL Injection.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
-    "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
-    "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
     "Education/School/2025-2026/48433-Software Architecture",
     "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lec - Public Key Infrastructure and Certificate.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lab - DNS Pharming.md",
