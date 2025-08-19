@@ -4,8 +4,6 @@
 - Resources can be provisioned and released quickly, with minimal management effort.
 ## 1.1 Key Characteristics of Cloud Computing
 
----
-
 ### 1. Broad Network Access
 
 - **Meaning:**  
@@ -49,7 +47,7 @@
 ---
 
 ### 3. Multi-tenancy
-
+![[Multi-tenancy.png]]
 - **Meaning:**  
     Multiple customers (tenants) share the same physical or virtual resources, but their data and operations are securely isolated.
     
@@ -91,7 +89,7 @@
 ---
 
 ### 5. Rapid Elasticity and Scalability
-
+![[Rapid Elasticity and Scalability.png]]
 - **Meaning:**  
     Resources can be scaled up or down quickly, often automatically, to match demand.
     
@@ -111,7 +109,7 @@
 ---
 
 ### 6. Resource Pooling
-
+![[Resource Pooling.png]]
 - **Meaning:**  
     The provider’s physical or virtual resources are pooled together to serve multiple customers dynamically.
     
@@ -129,7 +127,7 @@
 ## 1.2 Cloud Service Categories (7 Service Models)
 
 ### 1. Software as a Service (SaaS)
-
+![[Software as a Service (SaaS).png]]
 - **Meaning:**  
     Customers use applications hosted and maintained by the cloud provider. No need to install or manage infrastructure, only use the software via browser or app.
     
@@ -153,7 +151,7 @@
 ---
 
 ### 2. Platform as a Service (PaaS)
-
+![[Platform as a Service (PaaS).png]]
 - **Meaning:**  
     Customers deploy their own applications on the provider’s platform, using programming languages, libraries, and tools supported by the provider.
     
@@ -175,7 +173,7 @@
 ---
 
 ### 3. Infrastructure as a Service (IaaS)
-
+![[Infrastructure as a Service (IaaS).png]]
 - **Meaning:**  
     Customers rent fundamental resources: virtual machines, networks, storage, and can install any OS or application.
     
@@ -197,7 +195,7 @@
 ---
 
 ### 4. Network as a Service (NaaS)
-
+![[Network as a Service (NaaS).png]]
 - **Meaning:**  
     Customers rent and manage network services like connectivity, routing, VPNs.
     
@@ -320,7 +318,7 @@
 ---
 
 ### 2. Public Cloud
-
+![[Public Cloud.png]]
 - **Meaning:**  
     Cloud services are available to **any customer** over the public internet.  
     Infrastructure is owned and operated by the **cloud provider (CSP)**.
@@ -359,7 +357,7 @@
 ---
 
 ### 3. Community Cloud
-
+![[Community Cloud.png]]
 - **Meaning:**  
     Cloud infrastructure is **shared by a specific group of organizations** that have similar needs, goals, or regulations.
     
@@ -397,7 +395,7 @@
 ---
 
 ### 4. Hybrid Cloud
-
+![[Hybrid Cloud.png]]
 - **Meaning:**  
     A combination of **private cloud** and **public cloud**, bound together to enable data and application portability.
     
@@ -811,12 +809,12 @@ There are 5 key principles:
     - Netflix adapting infrastructure from 480p → 1080p → 4K → 8K streaming.
         
     - An AI company upgrading architecture to leverage new GPUs/TPUs.
-## 2.3 CCRA Viewpoints – Focus on User View & Functional View
+## 2.3 CCRA Viewpoints 
 
 ---
 
 ### **1. User View**
-
+![[User View.png]]
 #### **Meaning**
 
 - Describes the **system context**: which parties are involved in cloud computing, what **roles** they play, and what **activities** they perform.
@@ -870,11 +868,11 @@ There are 5 key principles:
 #### **Activities**
 
 - **CSC Activities:** request services, manage usage, pay bills.
-    
+    ![[CSC Activities.png]]
 - **CSP Activities:** provision services, monitor, enforce SLA, ensure security.
-    
+    ![[CSP Activities.png]]
 - **CSN Activities:** auditing, network connectivity, service brokerage.
-    
+    ![[CSN Activities.png]]
 
 ---
 
@@ -903,7 +901,7 @@ There are 5 key principles:
 ---
 
 #### **Functional Layers (4 main layers)**
-
+![[Functional Layers (4 main layers).png]]
 1. **User Layer**
     
     - Interfaces where users interact with cloud services.
