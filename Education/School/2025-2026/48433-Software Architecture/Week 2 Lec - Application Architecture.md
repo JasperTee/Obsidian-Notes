@@ -389,3 +389,75 @@ Spring Framework uses **dependency injection**, which makes unit testing much e
 - Microsoft Word uses the **Memento pattern** to allow undo/redo.
     
 - Search engines use **predictive typing** to enhance usability.
+## Solution architecture vs. Enterprise architecture
+### 1. Solution Architecture
+
+It’s like when you **build a private house**.  
+You need to know:
+
+- What the owner wants (a big living room, 3 bedrooms, a garage).
+    
+- What materials to use (bricks, cement, steel).
+    
+- How to arrange it (first floor, second floor).
+    
+
+The **Solution Architect** is like the architect of that house:
+
+- Draws the blueprint.
+    
+- Chooses the materials.
+    
+- Supervises the construction team to ensure the house is built according to the plan.
+    
+
+→ Solution Architecture focuses only on a **specific and short-term project**.
+
+**Example in IT**:  
+A company wants to build a **mobile banking application**. The solution architect will design this app:
+
+- The user interface.
+    
+- The connection with the core banking system.
+    
+- The choice of technologies (Java, PostgreSQL, Kubernetes).
+    
+- Supervise the development process.
+    
+
+---
+
+### 2. Enterprise Architecture
+
+It’s like when you **plan an entire city**.  
+You need to consider:
+
+- The city’s development vision for the next 10–20 years.
+    
+- Roads, electricity, water, parks, hospitals, schools.
+    
+- Every house must fit into the city’s overall master plan.
+    
+
+The **Enterprise Architect** is like the city planner:
+
+- Ensures no one builds a house blocking a road.
+    
+- Ensures every building aligns with the long-term strategy.
+    
+- Considers whether new technologies fit with the overall direction.
+    
+
+→ Enterprise Architecture focuses on the **entire organization**, in a **long-term and continuous** way.
+
+**Example in IT**:  
+That same bank doesn’t just have a mobile banking app, but also:
+
+- A CRM system (customer management).
+    
+- A data warehouse system.
+    
+- Security and risk management systems.
+    
+
+The enterprise architect will make sure **all these systems connect smoothly**, align with the strategy of international expansion, comply with legal regulations, and remain easy to upgrade in the future.
