@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
+                "file": "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 1 Lec - Introduction to Software Architecture"
+              "title": "Week 4 Lec - Cloud Reference Architecture"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
+                "file": "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 1 Lec - Introduction to Software Architecture"
+              "title": "Outline of Week 4 Lec - Cloud Reference Architecture"
             }
           }
         ],
@@ -173,14 +173,15 @@
   },
   "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
+    "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 2 Lec - Application Architecture.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
-    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Images/Allocation Structures.png",
     "Education/School/2025-2026/48433-Software Architecture/Images/Module Structures.png",
     "Education/School/2025-2026/48433-Software Architecture/Images/Component-and-Connector (C&C) Structures.png",
-    "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
     "Education/School/2025-2026/48433-Software Architecture/Images/Lambda Architecture.png",
     "Education/School/School - Subject Contents.md",
     "Education/School/2025-2026/48433-Software Architecture/Images/Streaming Architecture.png",
