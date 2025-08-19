@@ -811,3 +811,163 @@ There are 5 key principles:
     - Netflix adapting infrastructure from 480p → 1080p → 4K → 8K streaming.
         
     - An AI company upgrading architecture to leverage new GPUs/TPUs.
+## 2.3 CCRA Viewpoints – Focus on User View & Functional View
+
+---
+
+### **1. User View**
+
+#### **Meaning**
+
+- Describes the **system context**: which parties are involved in cloud computing, what **roles** they play, and what **activities** they perform.
+    
+- Helps clarify **who uses cloud, who provides it, and who supports it**.
+    
+
+---
+
+#### **Parties (based on ISO/IEC 22123-2)**
+
+1. **Cloud Service Customer (CSC)**
+    
+    - The individual or organization that purchases and uses cloud services.
+        
+    - **Sub-roles:**
+        
+        - End User (consumes the service).
+            
+        - Administrator (manages resources).
+            
+        - Developer (deploys applications).
+            
+2. **Cloud Service Provider (CSP)**
+    
+    - The organization delivering cloud services.
+        
+    - **Sub-roles:**
+        
+        - Service Manager.
+            
+        - Operations Manager.
+            
+        - Security Manager.
+            
+3. **Cloud Service Partner (CSN)**
+    
+    - Third-party entities that support cloud usage.
+        
+    - **Sub-roles:**
+        
+        - Auditor (independent verification).
+            
+        - Broker (matchmaking between customer and providers).
+            
+        - Carrier (network infrastructure, telecom).
+            
+
+---
+
+#### **Activities**
+
+- **CSC Activities:** request services, manage usage, pay bills.
+    
+- **CSP Activities:** provision services, monitor, enforce SLA, ensure security.
+    
+- **CSN Activities:** auditing, network connectivity, service brokerage.
+    
+
+---
+
+#### **Example**
+
+- An **e-commerce company** using the cloud:
+    
+    - **CSC:** the company (developers deploy the app, admins manage resources).
+        
+    - **CSP:** AWS providing infrastructure (EC2, S3, RDS).
+        
+    - **CSN:** Deloitte auditing compliance, Cloudflare providing CDN.
+        
+
+---
+
+### **2. Functional View**
+
+#### **Meaning**
+
+- A **technology-neutral perspective** that describes the **functions** required to build a cloud system.
+    
+- Organizes these functions into **layers** and shows their relationships.
+    
+
+---
+
+#### **Functional Layers (4 main layers)**
+
+1. **User Layer**
+    
+    - Interfaces where users interact with cloud services.
+        
+    - Includes web/mobile apps, dashboards, portals.
+        
+    - Example: Accessing Dropbox via mobile app.
+        
+2. **Access Layer**
+    
+    - Manages how users access services.
+        
+    - Includes APIs, self-service portals, authentication/authorization (IAM).
+        
+    - Example: AWS API Gateway enabling applications to call cloud services.
+        
+3. **Service Layer**
+    
+    - Provides the actual cloud services (SaaS, PaaS, IaaS).
+        
+    - Example:
+        
+        - SaaS = Google Docs.
+            
+        - PaaS = Azure App Service.
+            
+        - IaaS = AWS EC2.
+            
+4. **Resource Layer**
+    
+    - Physical and virtual resources that support services.
+        
+    - Servers, storage, networks, virtualization.
+        
+    - Example: AWS storage clusters running under the hood.
+        
+
+---
+
+#### **Cross-Layer Functions (span all layers)**
+
+- **Security functions** – authentication, encryption.
+    
+- **Integration functions** – service orchestration, APIs.
+    
+- **Development support** – CI/CD tools.
+    
+- **Business support** – billing, SLA, customer management.
+    
+- **Operational support** – monitoring, logging, backups.
+    
+
+---
+
+#### **Example Flow (User Request)**
+
+When a user uploads a photo to Google Drive:
+
+1. **User Layer:** user interacts via mobile app.
+    
+2. **Access Layer:** request passes through API + OAuth2 authentication.
+    
+3. **Service Layer:** Google Drive storage service processes the upload.
+    
+4. **Resource Layer:** file stored in physical/virtual storage cluster.
+    
+5. **Cross-layer:** security (encryption), billing (storage quota), monitoring.
