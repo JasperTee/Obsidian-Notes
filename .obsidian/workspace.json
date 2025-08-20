@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Week 4 Lec - Cloud Reference Architecture"
             }
+          },
+          {
+            "id": "a20f230f3d3caf69",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.10"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -142,13 +155,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 4 Lec - Cloud Reference Architecture"
+              "title": "Outline"
             }
           },
           {
@@ -170,6 +182,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
@@ -181,7 +194,7 @@
       "graph:Open graph view": false
     }
   },
-  "active": "30feacd5e8a1aa2c",
+  "active": "a20f230f3d3caf69",
   "lastOpenFiles": [
     "Education/School/2025-2026/48433-Software Architecture/Week 2 Lec - Application Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
