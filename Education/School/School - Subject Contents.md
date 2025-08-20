@@ -8,3 +8,4 @@ tags:
 [[32548_Cybersecurity - Subject Outline]]
 #Core 
 [[48433_Software Architecture - Subject Outline]]
+[[SEF_Software Engineering Fundamentals - Subject Outline]]

@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
+                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 1 Lec - Introduction to Design Principles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 4 Lec - Cloud Reference Architecture"
-            }
-          },
-          {
-            "id": "a20f230f3d3caf69",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.10"
+              "title": "Week 1 Lec - Introduction to Design Principles"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -91,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 443.5
+    "width": 448.5
   },
   "right": {
     "id": "bb6033fe7f83a09b",
@@ -155,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 1 Lec - Introduction to Design Principles.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Week 1 Lec - Introduction to Design Principles"
             }
           },
           {
@@ -194,17 +182,21 @@
       "graph:Open graph view": false
     }
   },
-  "active": "a20f230f3d3caf69",
+  "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
+    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/31260_Fundamentals of Interaction Design - Subject Outline.md",
+    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 1 Lec - Introduction to Design Principles.md",
+    "Education/School/School - Subject Contents.md",
+    "Education/School/2025-2026/31260-Fundamentals of Interaction Design",
+    "Education/School/2025-2026/Software Engineering Fundamentals/SEF_Software Engineering Fundamentals - Subject Outline.md",
+    "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
+    "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 2 Lec - Application Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
-    "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 4 Lec - Transport Layer Security and DoS attack.md",
     "Education/School/2025-2026/48433-Software Architecture/Images/Business Value from Big Data.png",
-    "Education/School/School - Subject Contents.md",
-    "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
-    "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
     "Images/How DNS Works?.png",
     "Images/What Does TLS Do in Each Protocol?.png",
     "Images/Network Traffics During TLS Handshake.png",
@@ -233,7 +225,6 @@
     "Education/School/2025-2026/32548-Cybersecurity/Untitled.canvas",
     "Education/School/2025-2026",
     "Education/School/Diploma",
-    "Education/School/2025-2026/32548-Cybersecurity",
     "Welcome.md"
   ]
 }
