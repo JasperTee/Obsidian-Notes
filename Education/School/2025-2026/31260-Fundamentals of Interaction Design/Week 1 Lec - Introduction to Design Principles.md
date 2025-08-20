@@ -100,3 +100,126 @@
 - User **clicks “Send”** → system shows **“Message sent”**.
     
 - User **says “OK Google”** → system responds with voice feedback.
+## 3. Design Principles
+### 1. **Visibility**
+
+- Users must see **what actions are possible**.
+    
+- Clear visibility supports **discoverability** and helps predict outcomes.
+    
+- Use contrast, size, color, and placement to highlight important elements.
+    
+
+**Example:**
+
+- A large blue **“Login”** button at the center of the screen.
+    
+- A navigation menu placed at the top of a website instead of hidden in layers.
+    
+
+---
+
+### 2. **Feedback**
+
+- Tell users **what has happened, what is happening, and what will happen next**.
+    
+- Feedback must be **immediate and informative**.
+    
+
+**Example:**
+
+- Gmail shows “Your message has been sent” after sending an email.
+    
+- A **progress bar** when downloading a file.
+    
+- A smartwatch **vibrates** when you reach your daily steps goal.
+    
+
+---
+
+### 3. **Constraints**
+
+- Restrict wrong actions to reduce errors.
+    
+- Help users choose correctly even if they are new.
+    
+
+**Example:**
+
+- A battery can only be inserted in one orientation.
+    
+- Quiz apps: you can’t move to the next question before answering the current one.
+    
+- Greyed-out buttons when required fields are incomplete.
+    
+
+---
+
+### 4. **Consistency**
+
+- Similar actions should look and behave the same.
+    
+- Makes systems easier to learn and remember.
+    
+
+**Example:**
+
+- In MS Office, Word, Excel, and PowerPoint share the same ribbon toolbar.
+    
+- Shortcuts: **Ctrl+C** is always Copy, **Ctrl+S** is always Save.
+    
+
+---
+
+### 5. **Affordances**
+
+- Properties of an object suggest **how it can be used**.
+    
+- Good affordances let users know what to do just by looking.
+    
+
+**Example:**
+
+- A button that looks raised suggests “press me.”
+    
+- A door handle suggests “pull.”
+    
+- On a UI, icons with a shadow or border suggest “clickable.”
+    
+
+---
+
+### 6. **Signifiers**
+
+- Explicit signals used when affordances are not obvious.
+    
+- Labels, hints, or instructions that guide user actions.
+    
+
+**Example:**
+
+- A door with a label **“Push”** or **“Pull.”**
+    
+- A button with both an icon and text “Start.”
+    
+- “Swipe up to unlock” instruction on a smartphone screen.
+    
+
+---
+
+### 7. **Mapping**
+
+- The logical relationship between **controls** and **results**.
+    
+- Helps users understand actions without memorization.
+    
+- Supported by Gestalt principles (proximity, similarity, grouping).
+    
+
+**Example:**
+
+- Media player buttons arranged in sequence: << Rewind – Play – Forward >>.
+    
+- Stove knobs aligned directly with the burners they control.
+    
+- Volume control icon (speaker) placed next to the volume slider.
