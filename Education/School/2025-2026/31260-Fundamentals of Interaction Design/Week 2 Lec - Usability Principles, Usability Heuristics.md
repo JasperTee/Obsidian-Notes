@@ -254,3 +254,171 @@ Scholars in **software engineering** and **human–computer interaction (HCI)
         
 
 ---
+## 4. Nielsen’s 10 Usability Heuristics
+
+### 1. **Visibility of System Status**
+
+- The system should always inform users about what is happening, through timely feedback.
+    
+- **Example:** A progress bar during file upload shows how much is done.
+    
+
+---
+
+### 2. **Match Between System and the Real World**
+
+- Use concepts, language, and metaphors familiar to users.
+    
+- **Example:** A shopping cart icon in e-commerce sites mirrors a real shopping cart.
+    
+
+---
+
+### 3. **User Control and Freedom**
+
+- Users should be able to undo or redo actions, and escape unwanted states.
+    
+- **Example:** “Back” button in browsers; “Undo” in Photoshop.
+    
+
+---
+
+### 4. **Consistency and Standards**
+
+- Follow platform and industry conventions; don’t make users guess.
+    
+- **Example:** The “Play” icon (triangle) works the same across music apps.
+    
+
+---
+
+### 5. **Error Prevention**
+
+- Design systems to prevent errors before they occur, rather than just showing error messages.
+    
+- **Example:** Gmail warns you if you forgot to attach a file when you wrote “see attached.”
+    
+
+---
+
+### 6. **Recognition Rather than Recall**
+
+- Minimize memory load by making options visible.
+    
+- **Example:** Dropdown menus show all choices instead of forcing users to remember command names.
+    
+
+---
+
+### 7. **Flexibility and Efficiency of Use**
+
+- Allow users to tailor interactions; provide shortcuts for experts while keeping it simple for beginners.
+    
+- **Example:** Microsoft Word has menus for beginners, and keyboard shortcuts/macros for experts.
+    
+
+---
+
+### 8. **Aesthetic and Minimalist Design**
+
+- Interfaces should not contain irrelevant or unnecessary information.
+    
+- **Example:** Google’s homepage only shows the search bar and logo → minimal distractions.
+    
+
+---
+
+### 9. **Help Users Recognize, Diagnose, and Recover from Errors**
+
+- Error messages should be clear, written in plain language, and provide solutions.
+    
+- **Example:** Instead of “Error 404,” say: “Page not found. Check the URL or go back to the homepage.”
+    
+
+---
+
+### 10. **Help and Documentation**
+
+- Even if the system is usable without documentation, some help should be available.
+    
+- It should be easy to search, focused on user tasks, and concise.
+    
+- **Example:** In-app FAQs, guided tours, or tooltips.
+    
+
+---
+## Connection Between Principles & Heuristics
+
+### 1. **Nature**
+
+- **Usability Principles**
+    
+    - Come from **academic research** (Preece, Sommerville, Macaulay).
+        
+    - Purpose: provide **theoretical guidance** for designing usable systems.
+        
+    - Example: _“Reduce cognitive load”_ → designers should not overwhelm users with too much information.
+        
+- **Usability Heuristics (Nielsen)**
+    
+    - Come from **practical design and evaluation**.
+        
+    - Purpose: provide **rules of thumb** to check user interfaces.
+        
+    - Example: _“Recognition rather than recall”_ → make options visible so users don’t need to remember.
+        
+
+---
+
+### 2. **Similarities**
+
+- Both aim to **improve user experience** by reducing difficulties, preventing errors, and making interaction more satisfying.
+    
+- They overlap in key areas:
+    
+    - **Consistency** → found in Preece, Sommerville, Macaulay, and Nielsen.
+        
+    - **Error handling** → principles (Engineer for errors, Recoverability) vs heuristics (Error prevention, Help users recover).
+        
+    - **User support** → principles (User guidance, Supportiveness) vs heuristics (Help & documentation).
+        
+
+---
+
+### 3. **Differences**
+
+- **Principles**
+    
+    - More **conceptual and theoretical**.
+        
+    - State _“how design should be”_.
+        
+    - Example: _“Know the user population”_ → designers must understand their users.
+        
+- **Heuristics**
+    
+    - More **practical and evaluative**.
+        
+    - State _“what to check when evaluating a UI”_.
+        
+    - Example: _“Visibility of system status”_ → check whether the interface informs users about what is happening.
+        
+
+---
+
+### 4. **How They Work Together**
+
+- **Principles** → used mainly during the **design phase** to shape the product.
+    
+- **Heuristics** → used mainly during the **evaluation phase** to test whether the design meets usability goals.
+    
+
+---
+
+### 5. **Example**
+
+- Principle: _“Reduce cognitive load”_ (Preece, 1994).
+    
+- Heuristic: _“Recognition rather than recall”_ (Nielsen, 2006).
+    
+- → Both address the same issue: reducing memory burden. The principle is **conceptual**, while the heuristic is **a concrete evaluation rule**.
