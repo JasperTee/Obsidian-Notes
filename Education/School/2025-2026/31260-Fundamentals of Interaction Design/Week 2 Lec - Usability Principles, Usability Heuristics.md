@@ -65,3 +65,80 @@ Example:
     - **Final product**
         
 - This ensures usability problems are found early, before the product is released.
+## 2. The 5 Es of Usability
+
+These are five main factors used to measure **usability** of a product or system.
+
+---
+
+### 1. **Effective**
+
+- **Definition:** How completely and accurately users can achieve their goals.
+    
+- Meaning: Does the system allow users to accomplish what they want correctly?
+    
+- **Example:**
+    
+    - Google Maps gives correct directions to the destination → effective.
+        
+    - If the app shows the wrong location → not effective.
+        
+
+---
+
+### 2. **Efficient**
+
+- **Definition:** How quickly and with minimal resources a task can be completed.
+    
+- Meaning: Not just finishing the task, but finishing it in the best way.
+    
+- **Example:**
+    
+    - Using keyboard shortcuts like **Ctrl+C / Ctrl+V** is faster than using the mouse.
+        
+    - Amazon’s “1-click checkout” speeds up online purchases → efficient.
+        
+
+---
+
+### 3. **Engaging**
+
+- **Definition:** How well the interface draws users in, making the experience pleasant and satisfying.
+    
+- Meaning: Is it enjoyable and motivating to use?
+    
+- **Example:**
+    
+    - Duolingo makes learning fun with animations and rewards → engaging.
+        
+    - A plain e-learning site with only long text → less engaging.
+        
+
+---
+
+### 4. **Error Tolerant**
+
+- **Definition:** How well the system prevents errors, or helps users recover when errors occur.
+    
+- Meaning: Users should not easily make mistakes, and if they do, they can fix them quickly.
+    
+- **Example:**
+    
+    - Gmail shows a warning: “You forgot the subject line, send anyway?” → prevents error.
+        
+    - Microsoft Word allows **Undo/Redo** to fix mistakes.
+        
+
+---
+
+### 5. **Easy to Learn**
+
+- **Definition:** How quickly new users can learn to use the system, and how well they can continue to use it over time.
+    
+- Meaning: Users should not need heavy training or manuals.
+    
+- **Example:**
+    
+    - Instagram: open the app, and it’s immediately clear how to post a photo → easy to learn.
+        
+    - Complex software like AutoCAD requires long training before being usable → not easy to learn.
