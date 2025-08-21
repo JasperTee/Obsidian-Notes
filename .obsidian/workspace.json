@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 2 Lec - Usability Principles, Usability Heuristics.md",
+                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/images/Week 3 Lec - The interaction design process.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 2 Lec - Usability Principles, Usability Heuristics"
+              "title": "Week 3 Lec - The interaction design process"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 2 Lec - Usability Principles, Usability Heuristics.md",
+                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/images/Week 3 Lec - The interaction design process.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 2 Lec - Usability Principles, Usability Heuristics"
+              "title": "Outline of Week 3 Lec - The interaction design process"
             }
           },
           {
@@ -182,8 +182,11 @@
       "graph:Open graph view": false
     }
   },
-  "active": "1ffa685845189fb7",
+  "active": "30feacd5e8a1aa2c",
   "lastOpenFiles": [
+    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/31260_Fundamentals of Interaction Design - Subject Outline.md",
+    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/images/Week 3 Lec - The interaction design process.md",
+    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 2 Lec - Usability Principles, Usability Heuristics.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/images",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/images/The 5 Es of Usability.png",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
@@ -200,8 +203,6 @@
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 1 Lec - Introduction to Design Principles.md",
-    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 2 Lec - Usability Principles, Usability Heuristics.md",
-    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/31260_Fundamentals of Interaction Design - Subject Outline.md",
     "Education/School/School - Subject Contents.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design",
     "Education/School/2025-2026/Software Engineering Fundamentals/SEF_Software Engineering Fundamentals - Subject Outline.md",
@@ -226,7 +227,6 @@
     "Education/School/2025-2026/32548-Cybersecurity/Images",
     "Education/School/2025-2026/32548-Cybersecurity/Untitled.canvas",
     "Education/School/2025-2026",
-    "Education/School/Diploma",
     "Welcome.md"
   ]
 }
