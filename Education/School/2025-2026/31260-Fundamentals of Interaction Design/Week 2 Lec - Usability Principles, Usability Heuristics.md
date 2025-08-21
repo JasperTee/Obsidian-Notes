@@ -142,3 +142,115 @@ These are five main factors used to measure **usability** of a product or syst
     - Instagram: open the app, and it’s immediately clear how to post a photo → easy to learn.
         
     - Complex software like AutoCAD requires long training before being usable → not easy to learn.
+## 3. Usability Principles 
+
+Scholars in **software engineering** and **human–computer interaction (HCI)** proposed different sets of principles to guide usability design. Here are three influential ones:
+
+---
+
+### **A. Preece et al. (1994)**
+
+(From software engineering)
+
+1. **Know the user population**
+    
+    - Designers must understand the needs, abilities, and contexts of their target users.
+        
+    - Example: An app for children uses large icons and bright colors; an app for engineers uses precise technical data.
+        
+2. **Reduce the cognitive load**
+    
+    - Don’t force users to memorize too much information.
+        
+    - Techniques: chunking, progressive disclosure, eliminating unnecessary details, avoiding visual clutter.
+        
+    - Example: A website groups menu items into categories instead of listing hundreds of links.
+        
+3. **Engineer for errors**
+    
+    - Users make mistakes. The system should prevent errors or allow recovery.
+        
+    - Example: Confirmation popup before deleting a file; “Undo” button in Word.
+        
+4. **Maintain consistency and clarity**
+    
+    - Operations, terminology, and metaphors should remain consistent.
+        
+    - Example: The “shopping cart” icon always means “add to cart” in e-commerce websites.
+        
+
+---
+
+### **B. Sommerville (1995)**
+
+(From _Software Engineering_)
+
+1. **User familiarity**
+    
+    - Interfaces should use terms and concepts familiar to the target user group.
+        
+    - Example: A trash bin icon to represent deletion.
+        
+2. **Consistency**
+    
+    - Comparable operations should always be performed the same way.
+        
+    - Example: In Microsoft apps, **Ctrl+S** always means Save.
+        
+3. **Minimal surprise**
+    
+    - Systems should behave as users expect.
+        
+    - Example: Clicking the “X” button closes a window, not restarts the computer.
+        
+4. **Recoverability**
+    
+    - Users must be able to recover from errors.
+        
+    - Example: Undo/Redo functions; “Restore from Trash.”
+        
+5. **User guidance**
+    
+    - Provide context-sensitive help or hints.
+        
+    - Example: Tooltips when hovering over an icon.
+        
+
+---
+
+### **C. Macaulay (1995)**
+
+(From _Human–Computer Interaction for Software Designers_)
+
+1. **Naturalness**
+    
+    - Users should not have to change their natural work style to interact with the system.
+        
+    - Example: Touch and gesture interactions on smartphones feel natural.
+        
+2. **Consistency**
+    
+    - Expectations from one part of the system should not be violated in another.
+        
+    - Example: If “+” means add item in one part of the app, it should mean the same everywhere.
+        
+3. **Non-redundancy**
+    
+    - Users should only input the minimum required information.
+        
+    - Example: A sign-up form asking only for email and password, instead of 10 personal details.
+        
+4. **Supportiveness**
+    
+    - The system should assist users through dialogue and guidance.
+        
+    - Example: Input suggestions while filling out forms.
+        
+5. **Flexibility**
+    
+    - Support both novice and expert users.
+        
+    - Example: Beginners use menus, while advanced users rely on shortcuts.
+        
+
+---
