@@ -66,7 +66,7 @@ Example:
         
 - This ensures usability problems are found early, before the product is released.
 ## 2. The 5 Es of Usability
-
+![[The 5 Es of Usability.png]]
 These are five main factors used to measure **usability** of a product or system.
 
 ---
