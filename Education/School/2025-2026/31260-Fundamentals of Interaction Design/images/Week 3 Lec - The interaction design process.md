@@ -589,3 +589,120 @@ Designing a **student productivity app**:
 - It is **non-linear**: designers may jump back and forth between stages as needed.
     
 - Its strength is in **blending creativity with structured problem-solving**, ensuring solutions are desirable, feasible, and viable.
+## User Research (Quantitative & Qualitative)
+
+### Why User Research?
+
+In **Human-Centred Design (HCD)** and **Design Thinking**, research is crucial because it helps us **understand real users**— their behaviours, motivations, needs, and contexts. Without research, designs risk being based only on assumptions.
+
+---
+
+### Two Main Approaches
+
+#### 1. Quantitative Research (Quant.)
+
+- **Focus**: the **WHAT** (and WHEN).
+    
+- **Goal**: Identify **patterns of behaviour** and measure them numerically.
+    
+- **Methods**:
+    
+    - User logs (e.g., click tracking, heatmaps).
+        
+    - Questionnaires / surveys with closed-ended questions.
+        
+    - Text mining (extracting trends from large datasets).
+        
+- **Typical questions**:
+    
+    - How many users clicked this button?
+        
+    - What percentage of users completed sign-up successfully?
+        
+    - How many times did users make errors?
+        
+    - How satisfied are users on a scale of 1–5?
+        
+- **Value**:
+    
+    - Tells us **what is happening**.
+        
+    - Provides **statistical evidence** (e.g., “70% of users drop off at checkout”).
+        
+- **Limitation**:
+    
+    - Does not explain **why** the behaviour is happening.
+        
+
+---
+
+#### 2. Qualitative Research (Qual.)
+
+- **Focus**: the **WHY** (and HOW).
+    
+- **Goal**: Explore **motivation, feelings, experiences, and reasoning** behind behaviour.
+    
+- **Methods**:
+    
+    - Interviews (structured or semi-structured).
+        
+    - Focus groups / workshops.
+        
+    - User diaries.
+        
+    - Photos, videos, ethnographic studies.
+        
+    - Role playing and contextual inquiry.
+        
+- **Typical questions**:
+    
+    - Why did users ignore the call-to-action?
+        
+    - What frustrations did they face?
+        
+    - How do they feel about the product experience?
+        
+- **Value**:
+    
+    - Provides **rich, in-depth insights** into user experience.
+        
+    - Explains **why something happens**.
+        
+- **Limitation**:
+    
+    - Usually based on **smaller samples**; results are not statistically generalizable.
+        
+
+---
+
+### Quant vs Qual in Summary
+
+|Aspect|Quantitative|Qualitative|
+|---|---|---|
+|Focus|**What** is happening, **when**|**Why** it’s happening, **how**|
+|Data type|Numbers, statistics|Words, stories, observations|
+|Sample size|Large|Small|
+|Value|General patterns, measurable|Deeper insights, motivations|
+|Example method|Click tracking, surveys|Interviews, role play, workshops|
+
+---
+
+### How They Work Together
+
+- **Quantitative research** gives the **big picture** (e.g., “40% of users abandon shopping carts”).
+    
+- **Qualitative research** explains the **reasons** (e.g., “users felt checkout forms were too long and confusing”).
+    
+- Best practice in design: **combine both approaches** to get a holistic view.
+    
+
+---
+
+### Example
+
+Imagine designing an **online food delivery app**:
+
+- **Quantitative**: Data shows 35% of users quit before payment.
+    
+- **Qualitative**: Interviews reveal that users are frustrated because the app requires creating an account before checkout.  
+    → Combining both insights: solution could be a **“Guest Checkout” option**.
