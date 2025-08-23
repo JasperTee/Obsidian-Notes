@@ -401,7 +401,7 @@ Your lecture highlighted three main reasons:
 - **Hospital redesign using role play**: Designers wore “third age suits” simulating reduced mobility, poor vision, and limited tactile sensitivity. This helped them **empathize with elderly users** and redesign the hospital more effectively.
     
 - **Software interfaces**: Testing early prototypes with real users avoids later frustration and ensures the system feels natural.
-## Design Thinking
+## 5. Design Thinking
 
 ### Definition
 
@@ -589,7 +589,7 @@ Designing a **student productivity app**:
 - It is **non-linear**: designers may jump back and forth between stages as needed.
     
 - Its strength is in **blending creativity with structured problem-solving**, ensuring solutions are desirable, feasible, and viable.
-## User Research (Quantitative & Qualitative)
+## 6. User Research (Quantitative & Qualitative)
 
 ### Why User Research?
 
@@ -706,3 +706,344 @@ Imagine designing an **online food delivery app**:
     
 - **Qualitative**: Interviews reveal that users are frustrated because the app requires creating an account before checkout.  
     → Combining both insights: solution could be a **“Guest Checkout” option**.
+## 7. Prototyping
+
+### Definition
+
+- A **prototype** is an **experimental, often incomplete version** of a design.
+    
+- It represents an idea in a **tangible form** (paper sketch, model, digital mockup, or interactive demo).
+    
+- The purpose is to **explore, test, and communicate ideas** **before** investing significant time and resources into final development.
+    
+
+---
+
+### Purpose of Prototyping
+
+1. **Test ideas, concepts, and assumptions** – check feasibility, usefulness, and usability early.
+    
+2. **Think through making** – building prototypes helps designers discover insights and refine ideas.
+    
+3. **Facilitate discussion** – prototypes allow users, designers, and stakeholders to give concrete feedback.
+    
+4. **Save time and cost** – catch problems early, avoid expensive mistakes later.
+    
+
+---
+
+### Levels of Fidelity
+#### What is Fidelity?
+
+- **Fidelity** = the degree of **detail, realism, and interactivity** a prototype has compared to the final product.
+    
+- In prototyping, fidelity ranges from **very rough and abstract** to **highly polished and realistic**.
+    
+- Designers choose the right fidelity depending on:
+    
+    - The **goal of testing** (concept, layout, usability, or visual design).
+        
+    - The **stage of the design process** (early exploration vs. late refinement).
+        
+    - The **resources available** (time, budget, tools).
+        
+
+---
+
+#### 1. Low-Fidelity Prototypes
+
+- **Definition**: Simple, quick, and inexpensive representations of ideas.
+    
+- **Forms**:
+    
+    - Paper sketches
+        
+    - Wireframes
+        
+    - Storyboards
+        
+    - Simple physical mock-ups (e.g., cardboard, wood blocks)
+        
+- **Purpose**:
+    
+    - Explore **basic concepts** and structure.
+        
+    - Encourage creativity and rapid iteration.
+        
+    - Useful for brainstorming and early user feedback.
+        
+- **Pros**: fast, cheap, easy to change.
+    
+- **Cons**: limited realism; cannot capture complex interactions or detailed aesthetics.
+    
+- **Example**: A hand-drawn sketch of an app’s navigation flow.
+    
+
+---
+
+#### 2. Medium-Fidelity Prototypes
+
+- **Definition**: More detailed than sketches, but not fully polished.
+    
+- **Forms**:
+    
+    - Digital wireframes (using tools like Figma, Balsamiq).
+        
+    - Clickable prototypes with limited interaction.
+        
+    - Simplified physical models (3D-printed without full detail).
+        
+- **Purpose**:
+    
+    - Test **layout, navigation, and interaction flow**.
+        
+    - Communicate functionality more clearly to stakeholders.
+        
+- **Pros**: more realistic than low-fi, still relatively quick to create.
+    
+- **Cons**: not visually polished; may mislead users if they expect a “finished” product.
+    
+- **Example**: A clickable wireframe that lets users move between screens, but without visual design or animations.
+    
+
+---
+
+#### 3. High-Fidelity Prototypes
+
+- **Definition**: Detailed and close to the final product in look and interaction.
+    
+- **Forms**:
+    
+    - Interactive digital mockups (Figma, Adobe XD, InVision).
+        
+    - Fully functional code-based prototypes.
+        
+    - Detailed physical models with real materials.
+        
+- **Purpose**:
+    
+    - Test **usability, visual design, and user experience** in detail.
+        
+    - Demonstrate the product to stakeholders or clients.
+        
+- **Pros**: highly realistic, accurate feedback, better for usability testing.
+    
+- **Cons**: time-consuming, costly, harder to modify quickly.
+    
+- **Example**: A nearly complete mobile app prototype with clickable buttons, animations, and real content.
+    
+
+---
+
+#### When to Use Which?
+
+- **Low-fidelity**: early stage → explore ideas, test concepts quickly.
+    
+- **Medium-fidelity**: mid-stage → refine layout, flows, interactions.
+    
+- **High-fidelity**: late stage → validate design, usability, aesthetics before final development.        
+
+---
+
+### Key Characteristics
+
+- A prototype is **not the final product**.
+    
+- Its goal is **learning**, not perfection.
+    
+- Everything in a prototype is **subject to change** based on testing and feedback.
+    
+- Designers often create **multiple prototypes** with different fidelity levels depending on what they want to test.
+    
+
+---
+
+### Examples from the lecture
+
+- A **block of wood** as a prototype to test the actual size of a product.
+    
+- **Paper sketches** for app screens to check layout and navigation.
+    
+- **Interactive digital prototypes** to simulate user flows and gather usability feedback.
+    
+
+---
+
+### Key Takeaways
+
+- **Prototyping is about exploration, not finalization.**
+    
+- It allows designers to **experiment, validate, and communicate** ideas.
+    
+- Prototypes range from **low-fidelity (sketches)** to **high-fidelity (interactive mockups)**.
+    
+- The main benefit is **reducing risk and cost** by testing early and often.
+## 8. Testing
+
+### Definition
+
+- **Testing** is the final stage in the interaction design process.
+    
+- It is the process of **evaluating ideas and prototypes** by gathering feedback from **real users** or **experts**.
+    
+- The main goal: determine whether the design is **useful, usable, and acceptable**.
+    
+
+---
+
+### Objectives of Testing
+
+1. **Validate usefulness and usability**
+    
+    - Does the solution really solve the user’s problem?
+        
+    - Is it easy to use, clear, and accessible?
+        
+2. **Identify flaws and weaknesses**
+    
+    - Discover where users struggle, make mistakes, or feel confused.
+        
+    - Detect issues in interface, navigation, or interactions.
+        
+3. **Learn more about users**
+    
+    - Testing is not only for evaluating the design, but also for **discovering new insights** about user behaviour and needs.
+        
+4. **Refine and improve the design**
+    
+    - Use the results to iterate: return to Define, Ideate, or Prototype if necessary.
+        
+
+---
+
+### Testing Methods
+
+#### 1. Usability Testing
+
+- **Definition**: Observing real users as they attempt to complete tasks with a prototype or product.
+    
+- **Purpose**: Identify usability problems, measure success rates, and gather feedback on ease of use.
+    
+- **Process**:
+    
+    1. Define tasks (e.g., “Find and register for a course”).
+        
+    2. Ask users to perform them with a prototype.
+        
+    3. Observe behaviours, struggles, and errors.
+        
+    4. Collect feedback.
+        
+- **Pros**: Realistic, direct feedback from actual users.
+    
+- **Cons**: Can be time-consuming, requires recruiting participants.
+    
+- **Example**: Students use a low-fidelity app prototype to check if they can find assignment deadlines easily.
+    
+
+---
+
+#### 2. Heuristic Evaluation
+
+- **Definition**: Experts evaluate the design against established usability heuristics (principles).
+    
+- **Common heuristics** (Jakob Nielsen): visibility of system status, consistency, error prevention, user control, etc.
+    
+- **Pros**: Quick, inexpensive, doesn’t require users.
+    
+- **Cons**: Depends on expert skill; may miss issues that real users would face.
+    
+- **Example**: An expert reviews a banking app prototype and identifies that inconsistent icons might confuse users.
+    
+
+---
+
+#### 3. A/B Testing
+
+- **Definition**: Comparing two design variants (A and B) to see which performs better with users.
+    
+- **How it works**: Split user base randomly, show each group a different version, and measure metrics (clicks, conversions, time spent).
+    
+- **Pros**: Provides clear, quantitative evidence of which design works better.
+    
+- **Cons**: Requires larger sample sizes and live deployment context.
+    
+- **Example**: Testing two different button styles (“Sign Up Now” vs. “Join Free”) to see which gets more clicks.
+    
+
+---
+
+#### 4. Surveys and Questionnaires
+
+- **Definition**: Collecting structured feedback from many users, often after they interact with a prototype.
+    
+- **Purpose**: Measure subjective satisfaction, preferences, or perceived usability.
+    
+- **Pros**: Can reach many people; useful for attitudes and opinions.
+    
+- **Cons**: Responses may be biased, not always accurate about real behaviour.
+    
+- **Example**: After testing a learning app, students rate its ease of navigation on a scale from 1–5.
+    
+
+---
+
+#### 5. Remote User Testing
+
+- **Definition**: Users test a prototype remotely, often online, while their screen and interactions are recorded.
+    
+- **Pros**: Scalable, cheaper, can recruit diverse participants.
+    
+- **Cons**: Less control over the environment, harder to observe body language.
+    
+- **Example**: A prototype is shared online, and students test it from home while their sessions are tracked.
+    
+
+---    
+
+---
+
+### Prototypes for Testing
+
+- **Low-fidelity prototypes**: good for testing ideas early and cheaply.
+    
+- **High-fidelity prototypes**: used for detailed usability testing, checking layout, visual design, and user flow.
+    
+
+---
+
+### Typical Testing Process
+
+1. **Prepare**: define task scenarios (e.g., “Sign up for a course”).
+    
+2. **Recruit users**: explain the purpose and set up the test environment.
+    
+3. **Run the test**: users perform the tasks with the prototype.
+    
+4. **Observe and record**: note behaviours, struggles, errors; may use video.
+    
+5. **Analyse**: identify strengths, weaknesses, and unexpected behaviours.
+    
+6. **Refine**: make changes and possibly re-test.
+    
+
+---
+
+### Examples from Lecture
+
+- **Nintendo**: testing low-fidelity prototypes (paper, cardboard) to check early design ideas.
+    
+- **Lab testing sessions**: real users using prototypes while sessions are recorded for analysis.
+    
+
+---
+
+### Key Takeaways
+
+- **Testing is about learning, not just proving**.
+    
+- Can be done with **real users** (usability testing) or **experts** (heuristic evaluation).
+    
+- Works with prototypes of **different fidelity levels**.
+    
+- Testing results often lead back to earlier stages, highlighting the **iterative nature** of design.
