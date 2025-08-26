@@ -1,476 +1,195 @@
-## 1. Cognition
+## Cognition
+### 1) What cognition is and why it matters
 
-### **Concept**
-
-- Cognition is how the mind **transforms, reduces, elaborates, stores, retrieves, and uses** information to act.
+- **Cognition**: how people **take in → understand → hold in mind → decide → act**.
     
-- Design goal: **lower mental effort** and **fit how people actually think and work**.
+- **Design meaning**: if an interface makes users **guess**, **remember a lot**, **read long text**, or **can’t see state clearly**, cognitive load rises → more errors and drop-offs.
     
 
 ---
 
-### **Cognitive capability map (what UI must directly support)**
+### 2) The cognitive work your UI must support
 
-- _Attention & working memory_
+- **Attention & Working Memory**
     
-    - People can hold only a few “chunks” at once.
+    - People can hold only **about 3–5 “chunks”** at once.
         
-    - Design: **autocomplete**, **inline hints**, **step-by-step flows**; place information **right where it’s needed**.
+    - Design:
         
-- _Comprehension_
+        - Split flows into **small steps**; show info **at the right place/time** (inline hints).
+            
+        - Use **autocomplete**, **recents**, **sensible defaults** to reduce typing/remembering.
+            
+        - Keep **one primary focus** on a screen (one clear CTA); make everything else quieter.
+            
+- **Comprehension**
     
-    - Turning data into meaning.
+    - Turn data into **meaning** quickly.
         
-    - Design: strong **visual hierarchy** (title → subtitle → body), **plain language**.
+    - Design:
         
-- _Language (reading/writing)_
+        - Strong **visual hierarchy**: title → subtitle → body.
+            
+        - **Tables/charts** for comparisons; **consistent units and number formats**.
+            
+        - **Plain, concise language**; avoid insider jargon.
+            
+- **Language (reading/writing)**
     
-    - Keep microcopy short and specific; avoid internal jargon.
+    - Words drive understanding and action.
         
-    - Design: buttons use **action verbs** (“Pay”, “Send”, “Save”).
+    - Design:
         
-- _Calculation – reasoning – decisions_
+        - **Short, specific microcopy** with **action verbs** (“Pay”, “Send”).
+            
+        - **Labels close to inputs**, format examples (MM/YY), helpful placeholders.
+            
+        - **Validation** that states the error and **how to fix it**.
+            
+- **Reasoning & Decision-making**
     
     - Compare, estimate, choose.
         
-    - Design: **consistent units**, **clear number formatting**, prefer **tables/charts** over long paragraphs.
+    - Design:
+        
+        - **Reduce upfront choices**, reveal advanced ones (**progressive disclosure**).
+            
+        - Provide **defaults** based on past behavior; **easy to change** with a short explanation.
+            
+        - Show **option summaries** (price, delivery time, fees) to speed decisions.
+            
+
+---
+
+### 3) Cognitive load — three types & how to handle them
+
+- **Intrinsic load** (inherent difficulty of the task)
+    
+    - You can’t remove it; you can **restructure** it.
+        
+    - Moves: stepwise flow; examples; **presets/smart defaults**; sample-filled forms.
+        
+- **Extraneous load** (burden caused by the UI)
+    
+    - **Eliminate** it.
+        
+    - Moves: clean layout; whitespace; **group related items**; avoid decorative noise; exactly **one prominent CTA**.
+        
+- **Germane load** (useful effort that builds understanding)
+    
+    - **Encourage at the right time**.
+        
+    - Moves: short tooltips; A/B comparisons; on-the-spot illustrations; “pro tips” after the basic step is done.
         
 
 ---
 
-### **Cognitive load**
+### 4) Attention & preattentive cues
 
-- _Intrinsic (task difficulty itself)_ — can’t remove, **restructure** it.  
-    → Break into steps, show examples, use smart defaults.
+- The brain detects **size, weight, position, borders, motion, direction** very fast.
     
-- _Extraneous (UI-caused burden)_ — **eliminate** it.  
-    → Clean layout, whitespace, group related items, drop decorative noise.
+- Design:
     
-- _Germane (useful effort)_ — **encourage** at the right time.  
-    → In-place visuals, brief A/B comparisons, tooltips that build **chunks** of knowledge.
-    
-
----
-
-### **Attention & preattentive cues**
-
-- Fastest-to-see cues: **size, weight, border, position, direction**.
-    
-- Design: **one primary focal action** (one CTA), make key numbers **larger/bolder**, use **panels/borders** to group.
-    
-- Avoid change blindness: state changes must be **clear and immediate** (loading → progress → done), add **sound/vibration** when appropriate.
-    
-
----
-
-### **Memory: recognition > recall**
-
-- _Recognition beats recall_  
-    → Use autocomplete, recent items, date pickers, labels close to fields, and a **preview** before confirm.
-    
-- _Chunking_  
-    → Group fields by **task** (Shipping / Payment) and add clear subheadings.
-    
-
----
-
-### **Mental model & conceptual model**
-
-- Users come with a **mental model** (how they think it works).
-    
-- Provide a consistent **conceptual model** in the UI: names, flows, and icons all tell **one coherent story**.
-    
-- _Affordance & signifier_
-    
-    - Affordance: what can be done.
+    - Create **one focal action**; make key numbers **large/bold**.
         
-    - Signifier: the cue that says it can be done.  
-        → Raised button = “pressable”; ellipsis = “more options”.
+    - Use **panels/borders** and spacing so users “see what belongs together.”
+        
+    - Avoid **multiple competing highlights**.
         
 
 ---
 
-### **Choices & feedback**
+### 5) Memory: recognition beats recall
 
-- **Reduce upfront choices**, reveal more later (**progressive disclosure**).
+- **Recognition > Recall**: picking from suggestions is easier than remembering.
     
-- **Good defaults** (editable) with a short note of what they do.
+- Design:
     
-- **Immediate feedback** after every action (visual / audio / haptic) to close the loop.
-    
-- For long operations: **progress bar + time estimate + cancel** when sensible.
-    
-
----
-
-### **Human error: slips vs. mistakes**
-
-- _Slip (mis-action)_ — right goal, wrong tap.  
-    → Separate destructive buttons, prefer **Undo** over constant “Are you sure?”, confirm only for truly destructive acts.
-    
-- _Mistake (misunderstanding)_ — wrong goal/rule.  
-    → Plain language, **feedforward** (“what will happen next”), examples, validation with helpful explanations.
-    
-
----
-
-### **Language & readability**
-
-- Short sentences, familiar words, direct tone (“Delete file?” not formal boilerplate).
-    
-- **Information scent**: headings and short blurbs that predict what’s inside.
-    
-- Write **for the task**, avoid fluff.
-    
-
----
-
-### **Multimodal design**
-
-- If eyes/hands are busy: add **voice** or **haptics**; in noisy/quiet contexts: lean on **visuals**.
-    
-- **Redundant channels** for important messages: at least two (color + label + icon; sound + banner; haptic + toast).
-    
-
----
-
-### **Recommended patterns**
-
-- Task-based grouping; clear hierarchy; generous whitespace.
-    
-- **Inline hints & inline validation** (format examples; instant errors).
-    
-- Clear states: skeleton/loading → progress → result; **icon + short text**; brief animations.
-    
-- **Smart defaults** (remember last address, usual shipping).
-    
-- **Undo > Are you sure**; **progressive disclosure** for “Advanced”.
-    
-
-### **Anti-patterns to avoid**
-
-- Forcing people to **remember codes/IDs** across screens.
-    
-- **Multiple competing primaries** (2–3 CTAs all loud).
-    
-- Long text for tiny state changes; **color-only** meaning; **single-channel** messaging in risky contexts.
-    
-
----
-
-### **Quick application examples**
-
-- _Checkout form_
-    
-    - Labels close to inputs; group “Card / Billing / Shipping”; one primary button; inline validation; “MM/YY” hint.
+    - **Autocomplete**, **date pickers**, **recent addresses**, “recently used” lists.
         
-    - After “Pay”: clear progress → success with icon; brief **Undo** window.
+    - **Preview** before commit; **labels right by fields** so users don’t need to remember “what goes here.”
         
-- _Search & filter_
+- **Chunking**
     
-    - Autocomplete (history + suggestions); results show **filter chips**; on apply: short animation + “Filtering by: …” message.
+    - Group elements into **meaningful chunks**.
         
-- _File upload_
-    
-    - Skeleton → progress → “Done”; if the user switches tabs: **toast** + optional sound/haptic.
-## 2) Perception & the Interaction Loop 
-
-**Core idea**
-
-- Interaction is a **two-way dialogue**. The user **perceives** the interface → forms an intention → **acts**.
-    
-- The system **detects** the action → processes it → **responds**.
-    
-- The user then **perceives the response** and continues.
-    
-- Good design makes this loop **fast, clear, and continuous**.
-    
-
----
-
-**Human side (input and output of people)**
-
-- **Perception channels**: vision, hearing, touch (sometimes smell/taste in niche contexts).
-    
-- **Effectors (how we act)**: hands/fingers (tap, type, drag), voice (commands), body motion (tilt, gesture).
-    
-- Design goal: important elements are **easy to notice**; actions are **obvious and effortless**.
-    
-
-**System side (how products sense and reply)**
-
-- **Sensors/controls (inputs)**: keyboard, mouse/touch, mic, camera, sliders, buttons, biometrics, motion sensors.
-    
-- **Displays/outputs**: screen (text, color, motion), audio (tones, speech), haptics (vibration), lights/actuators.
-    
-- Design goal: pick the **right output channels** for context, and ensure the system **always acknowledges** user actions.
-    
-
----
-
-**Step-by-step loop (with design hooks)**
-
-- **Observe → Interpret**: user perceives the current state.
-    
-    - Make state **visible**: clear labels, enough contrast, one primary action.
-        
-- **Intend → Act**: user decides and performs an action.
-    
-    - Provide **affordances** (looks actionable) and **signifiers** (icons, microcopy). Offer **feedforward** (hint of what will happen).
-        
-- **System detects → Processes → Responds**: product receives input, updates state.
-    
-    - Guarantee **immediate acknowledgement** (pressed state, ripple, spinner), then show **progress or result**.
-        
-- **User perceives response → Continues**: user sees/hears/feels the change.
-    
-    - Use **redundant cues** (icon + text; sound + banner; haptic + toast) so feedback lands even when attention is divided.
+    - Design: sections like **Shipping / Payment** with **clear subheadings**; split long forms into subsections.
         
 
 ---
 
-**Timing benchmarks (to keep the loop alive)**
+### 6) Feedback & timing
 
-- ~**100 ms** → feels instantaneous (tap highlight, keypress echo).
+- Every action should trigger **visible feedback within 100–200 ms** (pressed state, ripple).
     
-- ~**1 s** → still feels fluent; show a lightweight progress hint if needed.
+- Tasks **> 2–3 seconds**: show a **progress bar + time estimate**; offer **Cancel** when appropriate.
     
-- **> 2–3 s** → must show **progress bar/estimate** and allow **cancel** if safe.
-    
-- Rule of thumb: every intentional action should get a **visible reaction within 100–200 ms**.
+- For important events, use **at least two channels** (icon + text; sound + banner; haptic + toast) so feedback isn’t missed.
     
 
 ---
 
-**Mapping channels to intent (multimodal design)**
+### 7) Human errors: Slip vs. Mistake (and how to prevent)
 
-- **Visual** → for dense information, precise status.
+- **Slip** (right goal, wrong action)
     
-- **Audio** → for attention-grabbing, eyes-off moments.
-    
-- **Haptic** → for confirmation without visual demand.
-    
-- For critical events, use **at least two channels** (e.g., success = checkmark + short tone; error = red banner + vibration).
-    
-- Avoid relying on **color alone**; always pair with labels or icons.
-    
-
----
-
-**Error-tolerant loop**
-
-- **Slip (mis-action)**: right goal, wrong tap.
-    
-    - Large targets, separate destructive actions, support **Undo**, reserve confirmation for destructive actions.
+    - Solutions: **large enough targets**, separate destructive controls, **Undo** (better than constant confirms); confirm only for truly destructive actions.
         
-- **Mistake (misunderstanding)**: wrong goal/rule.
+- **Mistake** (wrong goal/rule)
     
-    - Use **plain language**, feedforward (“what happens next”), examples, and validations that **explain fixes**.
+    - Solutions: **plain language**, **feedforward** (“Press ‘Cancel’ to stop the transaction”), examples, validation that explains **how to fix**.
         
-- Never fail silently: always state **what happened** and **what to do next**.
+
+---
+
+### 8) Patterns to use
+
+- Task-based grouping; clear hierarchy; **ample whitespace**.
+    
+- **Inline hints & inline validation**; format examples at the point of input.
+    
+- Explicit states: **skeleton → progress → result**; short text + small icon; brief animations only.
+    
+- **Smart defaults** (remember addresses, payment methods); easy to override.
+    
+- **Undo > Are you sure?**; **progressive disclosure** for advanced options.
+    
+
+**Anti-patterns**
+
+- Forcing users to **remember codes/IDs** across screens.
+    
+- **Multiple loud CTAs** at once.
+    
+- Long paragraphs for tiny state changes; **color-only** signals; **single-channel** feedback in risky contexts.
     
 
 ---
 
-**Patterns that strengthen the loop**
+### 9) Quick application examples
 
-- **Pressed state + micro-feedback** on every tap/click.
+- **Sign-up form**
     
-- **Inline validation** beside fields; don’t delay errors until the end.
+    - Before: six equally spaced fields, two loud buttons, errors at the top.
+        
+    - After:
+        
+        - Group **Personal info** (Name, Email) and **Security** (Password, Confirm).
+            
+        - **Labels right next** to inputs; errors **right below** the field.
+            
+        - **One** prominent “Create account” button; “Learn more” becomes a quiet link.
+            
+        - On submit: **progress** → “Success” + code; brief **Undo** window.
+            
+- **Checkout**
     
-- **Skeleton → progress → result**; avoid blank screens.
+    - Group as **Card / Billing / Shipping**; hints **MM/YY**, **CVV**; **instant** validation.
+        
+    - Single “Pay” button; after tap: progress + ETA; result page shows **summary** and **Undo** if feasible.
+        
+- **Search & filter**
     
-- **Snackbars/toasts** for background tasks (uploads, sync), optionally with subtle sound/haptic.
-    
-- **Progressive disclosure**: fewer upfront choices; expand as needed.
-    
-
-**Anti-patterns (that break the loop)**
-
-- State changes with **no cue**.
-    
-- **Multiple competing CTAs**, no clear next action.
-    
-- Important messages in only **one channel** (sound-only or color-only).
-    
-- Long tasks with **no progress indicator** or **no cancel option**.
-    
-
----
-
-**Mini-examples**
-
-- **File upload**: click “Upload” → button shows pressed state within ≤100 ms → progress bar updates → completion toast + checkmark; if app is backgrounded, add tone/vibration.
-    
-- **Voice timer**: “Set a 10-minute timer” → immediate confirmation (“Timer set for 10 minutes”) → subtle ring/progress circle → vibration + banner at finish.
-    
-- **Mobile checkout**: tap “Pay” → button locks + spinner (≤200 ms) → progress with ETA → success screen with order ID + optional **Undo/cancel within 10s**.
-## 3. Modes • Modalities • Types
-
-**One-sentence memory aid**
-
-- **Mode** = how the system is **interpreting** the same action right now.
-    
-- **Modality** = the **channel** you and the system use (see/hear/touch/voice).
-    
-- **Type** = the **specific way** you act within a channel (tap, drag, speak, type).
-    
-
----
-
-### Mode (the system’s “interpretation setting”)
-
-**Everyday intuition**
-
-- Caps Lock on a keyboard: the same key press yields a different result → that’s a **mode**.
-    
-- Camera app: **Photo** vs **Video**. Tapping the big button does different things depending on **mode**.
-    
-
-**UI examples**
-
-- Editor: **Insert** mode (Delete removes a character) vs **Select** mode (Delete removes the selection).
-    
-- Maps: default **Pan** vs **Measure** mode (drag pans vs drag draws).
-    
-
-**Typical failure: mode error**
-
-- Users think they’re in A but are actually in B → “why did it do that?”
-    
-
-**Design tactics**
-
-- Use **as few modes as possible**; prefer **modeless** for common tasks.
-    
-- Make mode **visible near the action** (toggle, badge, color, icon).
-    
-- Provide **feedforward**: hint what the action will do _in this mode_.
-    
-- **Easy escape** (one tap/ESC) and **Undo** for risky actions.
-    
-- When mode changes, **layout/controls should visibly shift** so users _feel_ the change.
-    
-
-**10-second test**
-
-- Hide the title bar. From the working area alone, can you **tell which mode you’re in**? If not, add stronger cues.
-    
-
----
-
-### Modality (the channel of interaction)
-
-**Everyday intuition**
-
-- Order pizza by **phone call** (voice) or via **app** (visual/touch). Same goal, different **channels**.
-    
-
-**UI examples**
-
-- Enter an address by **typing** (visual/touch) or by **saying it** (voice).
-    
-- Confirm completion with **checkmark + text** (visual) and **vibration** (haptic).
-    
-
-**Choosing the channel**
-
-- **Visual** for dense/precise info (forms, charts).
-    
-- **Audio** for attention-grabbing or **eyes-off** moments (driving, cooking).
-    
-- **Haptic** for subtle **confirmation** without visual demand.
-    
-
-**Multimodal principles**
-
-- For important events, use **at least two channels** (e.g., success = checkmark + short tone; error = red banner + vibration).
-    
-- Don’t rely on **color alone**; pair with labels or icons.
-    
-- Provide **fallbacks**: if voice fails, show the keyboard; if haptics are off, show a banner.
-    
-
-**10-second test**
-
-- Mute audio and partially cover the screen. Is the critical message **still clear**? If not, add redundancy.
-    
-
----
-
-### Type (the specific action within a channel)
-
-**Everyday intuition**
-
-- Opening a door: **press**, **turn**, or **pull**. Same channel (physical action), different **types**.
-    
-
-**UI examples**
-
-- **Tap/Click** for primary confirmation.
-    
-- **Long-press** for secondary options (don’t hide primary functions here).
-    
-- **Drag & Drop** for arranging/uploading; needs clear **handles** and **large drop zones**.
-    
-- **Swipe** for dismiss/Archive; must provide **Undo**.
-    
-- **Type** for precise input; support **autocomplete** and **inline validation**.
-    
-
-**Design tactics**
-
-- Make the **primary action** a **familiar type** (tap/click).
-    
-- Provide **micro-feedback within ~100–200 ms** for every type (pressed state, ripple, tiny vibration).
-    
-- Use adequate **target sizes**, spacing from destructive buttons, and generous **drop zones**.
-    
-- Gestures/shortcuts are **accelerators**, not the **only** path.
-    
-
-**10-second test**
-
-- At a glance, can you spot **what’s tappable/draggable**? If not, add signifiers (handles, borders, labels).
-    
-
----
-
-## One-line contrast (when you’re unsure)
-
-- **Mode** changes the **meaning** of the same action.
-    
-- **Modality** changes the **channel** used to communicate.
-    
-- **Type** changes the **form of the action** within a channel.
-    
-
----
-
-## Three mini-scenarios (all three concepts at once)
-
-**A) Camera app**
-
-- **Mode**: Photo ↔ Video (UI and timer strip change).
-    
-- **Modality**: touch to trigger; optional **shutter sound** (audio) + **tiny vibration** (haptic).
-    
-- **Type**: tap to capture; **press-and-hold** to record; **swipe** to switch lenses.
-    
-
-**B) Navigation map**
-
-- **Mode**: Browse (drag pans) ↔ Measure (drag draws a path).
-    
-- **Modality**: **voice** to enter destination; **visual** route; **haptic** buzz when GPS lock completes.
-    
-- **Type**: pinch to zoom; drag to adjust waypoints; tap to pick a route.
-    
-
-**C) File upload (web)**
-
-- **Mode**: _Select_ while choosing files; _Idle_ after selection.
-    
-- **Modality**: **drag & drop** (visual/touch) + completion **toast** (visual) + **short tone** (audio).
-    
-- **Type**: drag & drop, click “Upload”, type a note.
+    - Search with **autocomplete** (history + suggestions).
+        
+    - Filters as **chips** with labels; on apply → short animation + message “Filtering: size M, < 500k”.
