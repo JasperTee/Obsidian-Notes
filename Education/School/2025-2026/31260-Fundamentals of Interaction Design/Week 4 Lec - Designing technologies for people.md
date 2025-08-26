@@ -305,3 +305,172 @@
 - **Voice timer**: “Set a 10-minute timer” → immediate confirmation (“Timer set for 10 minutes”) → subtle ring/progress circle → vibration + banner at finish.
     
 - **Mobile checkout**: tap “Pay” → button locks + spinner (≤200 ms) → progress with ETA → success screen with order ID + optional **Undo/cancel within 10s**.
+## 3. Modes • Modalities • Types — Study Notes 
+
+**One-sentence memory aid**
+
+- **Mode** = how the system is **interpreting** the same action right now.
+    
+- **Modality** = the **channel** you and the system use (see/hear/touch/voice).
+    
+- **Type** = the **specific way** you act within a channel (tap, drag, speak, type).
+    
+
+---
+
+### Mode (the system’s “interpretation setting”)
+
+**Everyday intuition**
+
+- Caps Lock on a keyboard: the same key press yields a different result → that’s a **mode**.
+    
+- Camera app: **Photo** vs **Video**. Tapping the big button does different things depending on **mode**.
+    
+
+**UI examples**
+
+- Editor: **Insert** mode (Delete removes a character) vs **Select** mode (Delete removes the selection).
+    
+- Maps: default **Pan** vs **Measure** mode (drag pans vs drag draws).
+    
+
+**Typical failure: mode error**
+
+- Users think they’re in A but are actually in B → “why did it do that?”
+    
+
+**Design tactics**
+
+- Use **as few modes as possible**; prefer **modeless** for common tasks.
+    
+- Make mode **visible near the action** (toggle, badge, color, icon).
+    
+- Provide **feedforward**: hint what the action will do _in this mode_.
+    
+- **Easy escape** (one tap/ESC) and **Undo** for risky actions.
+    
+- When mode changes, **layout/controls should visibly shift** so users _feel_ the change.
+    
+
+**10-second test**
+
+- Hide the title bar. From the working area alone, can you **tell which mode you’re in**? If not, add stronger cues.
+    
+
+---
+
+### Modality (the channel of interaction)
+
+**Everyday intuition**
+
+- Order pizza by **phone call** (voice) or via **app** (visual/touch). Same goal, different **channels**.
+    
+
+**UI examples**
+
+- Enter an address by **typing** (visual/touch) or by **saying it** (voice).
+    
+- Confirm completion with **checkmark + text** (visual) and **vibration** (haptic).
+    
+
+**Choosing the channel**
+
+- **Visual** for dense/precise info (forms, charts).
+    
+- **Audio** for attention-grabbing or **eyes-off** moments (driving, cooking).
+    
+- **Haptic** for subtle **confirmation** without visual demand.
+    
+
+**Multimodal principles**
+
+- For important events, use **at least two channels** (e.g., success = checkmark + short tone; error = red banner + vibration).
+    
+- Don’t rely on **color alone**; pair with labels or icons.
+    
+- Provide **fallbacks**: if voice fails, show the keyboard; if haptics are off, show a banner.
+    
+
+**10-second test**
+
+- Mute audio and partially cover the screen. Is the critical message **still clear**? If not, add redundancy.
+    
+
+---
+
+### Type (the specific action within a channel)
+
+**Everyday intuition**
+
+- Opening a door: **press**, **turn**, or **pull**. Same channel (physical action), different **types**.
+    
+
+**UI examples**
+
+- **Tap/Click** for primary confirmation.
+    
+- **Long-press** for secondary options (don’t hide primary functions here).
+    
+- **Drag & Drop** for arranging/uploading; needs clear **handles** and **large drop zones**.
+    
+- **Swipe** for dismiss/Archive; must provide **Undo**.
+    
+- **Type** for precise input; support **autocomplete** and **inline validation**.
+    
+
+**Design tactics**
+
+- Make the **primary action** a **familiar type** (tap/click).
+    
+- Provide **micro-feedback within ~100–200 ms** for every type (pressed state, ripple, tiny vibration).
+    
+- Use adequate **target sizes**, spacing from destructive buttons, and generous **drop zones**.
+    
+- Gestures/shortcuts are **accelerators**, not the **only** path.
+    
+
+**10-second test**
+
+- At a glance, can you spot **what’s tappable/draggable**? If not, add signifiers (handles, borders, labels).
+    
+
+---
+
+## One-line contrast (when you’re unsure)
+
+- **Mode** changes the **meaning** of the same action.
+    
+- **Modality** changes the **channel** used to communicate.
+    
+- **Type** changes the **form of the action** within a channel.
+    
+
+---
+
+## Three mini-scenarios (all three concepts at once)
+
+**A) Camera app**
+
+- **Mode**: Photo ↔ Video (UI and timer strip change).
+    
+- **Modality**: touch to trigger; optional **shutter sound** (audio) + **tiny vibration** (haptic).
+    
+- **Type**: tap to capture; **press-and-hold** to record; **swipe** to switch lenses.
+    
+
+**B) Navigation map**
+
+- **Mode**: Browse (drag pans) ↔ Measure (drag draws a path).
+    
+- **Modality**: **voice** to enter destination; **visual** route; **haptic** buzz when GPS lock completes.
+    
+- **Type**: pinch to zoom; drag to adjust waypoints; tap to pick a route.
+    
+
+**C) File upload (web)**
+
+- **Mode**: _Select_ while choosing files; _Idle_ after selection.
+    
+- **Modality**: **drag & drop** (visual/touch) + completion **toast** (visual) + **short tone** (audio).
+    
+- **Type**: drag & drop, click “Upload”, type a note.
