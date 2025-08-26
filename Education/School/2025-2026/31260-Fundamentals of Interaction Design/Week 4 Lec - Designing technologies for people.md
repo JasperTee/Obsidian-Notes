@@ -305,7 +305,7 @@
 - **Voice timer**: “Set a 10-minute timer” → immediate confirmation (“Timer set for 10 minutes”) → subtle ring/progress circle → vibration + banner at finish.
     
 - **Mobile checkout**: tap “Pay” → button locks + spinner (≤200 ms) → progress with ETA → success screen with order ID + optional **Undo/cancel within 10s**.
-## 3. Modes • Modalities • Types — Study Notes 
+## 3. Modes • Modalities • Types
 
 **One-sentence memory aid**
 
