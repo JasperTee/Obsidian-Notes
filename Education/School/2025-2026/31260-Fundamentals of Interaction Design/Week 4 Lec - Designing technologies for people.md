@@ -193,3 +193,28 @@
     - Search with **autocomplete** (history + suggestions).
         
     - Filters as **chips** with labels; on apply → short animation + message “Filtering: size M, < 500k”.
+# Perception & the Interaction Loop
+
+**Human side**
+
+- Perceptual channels: vision, hearing, touch.
+    
+- Effectors: hands/fingers (tap, type, drag), voice, body movement.
+    
+
+**System side**
+
+- Inputs: keyboard, touch, microphone, camera, sensors.
+    
+- Outputs: screen, sound, vibration, lights.
+    
+
+**The loop**
+
+- The user sees/hears/feels → forms an intention → acts → the system senses → processes → responds → the user perceives the response.
+    
+
+**Timing rule**
+
+- Every action should receive feedback within ~100–200 ms; long tasks need a progress indicator + time estimate + a cancel option.
+- 
