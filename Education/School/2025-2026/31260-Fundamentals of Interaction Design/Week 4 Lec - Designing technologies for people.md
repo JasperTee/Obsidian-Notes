@@ -218,3 +218,53 @@
 
 - Every action should receive feedback within ~100–200 ms; long tasks need a progress indicator + time estimate + a cancel option.
 ## Visual Perception
+### Gestalt Laws
+
+#### 1) Concept & context
+
+- **Gestalt**: the visual system tends to organize separate elements into **meaningful wholes** (a unified configuration).
+    
+- Roots: German Gestalt psychology (Wertheimer, Köhler, Koffka).
+    
+- Implication: observers perceive **overall structure before details** (global precedence).
+    
+#### 2) The principles
+ **1) Proximity (Grouping by nearness)**  
+Content: Items placed close together are perceived as belonging to the same group.  
+Example: On a supermarket shelf, noodle packs set close to one another are seen as a single “noodle section,” even without a sign.
+
+**2) Common Region (Shared enclosure)**  
+Content: Items that sit within the same tray/box/frame are perceived as one group.  
+Example: Pens, a ruler, and an eraser kept in one pen tray are read as “one stationery set.”
+
+**3) Uniform Connectedness (Consistent connection)**  
+Content: Objects that are tied/stapled/attached on the same surface are strongly perceived as belonging together.  
+Example: Several sheets stapled together are taken as one packet—stronger than just placing them near each other.
+
+**4) Similarity (Look-alike → same kind)**  
+Content: Things that are alike (color, style, size, etc.) are perceived as the same category.  
+Example: A group of people wearing uniforms is immediately recognized as one team.
+
+**5) Continuation / Parallelism (Smooth path / parallel rows)**  
+Content: The eye prefers continuous lines and parallel arrangements; we naturally connect points into a smooth flow.  
+Example: When viewing traffic in parallel lanes, your eyes smoothly scan along each lane.
+
+**6) Figure/Ground (Figure vs. background)**  
+Content: Perception separates the focus (figure) from the rest (ground). Clearer boundaries make recognition easier.  
+Example: In a portrait with a blurred background, the face stands out as the figure; the scene behind recedes as the ground.
+
+**7) Focal Point (Primary attractor)**  
+Content: The most prominent element (larger/bolder/higher contrast) draws attention first.  
+Example: In a slightly dark room, a bright desk lamp grabs your gaze before anything else.
+
+**8) Prägnanz / Simplicity (Preference for the simple)**  
+Content: When multiple interpretations are possible, the mind prefers the simple, stable one.  
+Example: On a cluttered notice board, you grasp a few main groups (big headings) and ignore fussy details.
+
+**9) Closure (Completing the missing parts)**  
+Content: When a part is missing, the mind tends to “fill it in” to see a complete whole.  
+Example: You still read “H_llo” as “Hello”; a logo partly covered is still recognized as its brand.
+
+**10) Symmetry & Order (Balance and regularity)**  
+Content: Balanced, orderly layouts are perceived more easily and as more trustworthy.  
+Example: A dining table set symmetrically (two bowls and two pairs of chopsticks balanced on both sides) feels tidy and “proper.”
