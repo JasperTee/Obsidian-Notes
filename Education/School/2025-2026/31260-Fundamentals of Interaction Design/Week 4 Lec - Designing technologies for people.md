@@ -193,7 +193,7 @@
     - Search with **autocomplete** (history + suggestions).
         
     - Filters as **chips** with labels; on apply → short animation + message “Filtering: size M, < 500k”.
-# Perception & the Interaction Loop
+## Perception & the Interaction Loop
 
 **Human side**
 
@@ -217,10 +217,10 @@
 **Timing rule**
 
 - Every action should receive feedback within ~100–200 ms; long tasks need a progress indicator + time estimate + a cancel option.
-## Visual Perception
-### Gestalt Laws
+### Visual Perception
+#### Gestalt Laws
 
-#### 1) Concept & context
+##### 1) Concept & context
 
 - **Gestalt**: the visual system tends to organize separate elements into **meaningful wholes** (a unified configuration).
     
@@ -228,7 +228,7 @@
     
 - Implication: observers perceive **overall structure before details** (global precedence).
     
-#### 2) The principles
+##### 2) The principles
  **1) Proximity (Grouping by nearness)**  
 Content: Items placed close together are perceived as belonging to the same group.  
 Example: On a supermarket shelf, noodle packs set close to one another are seen as a single “noodle section,” even without a sign.
@@ -268,8 +268,8 @@ Example: You still read “H_llo” as “Hello”; a logo partly covered is sti
 **10) Symmetry & Order (Balance and regularity)**  
 Content: Balanced, orderly layouts are perceived more easily and as more trustworthy.  
 Example: A dining table set symmetrically (two bowls and two pairs of chopsticks balanced on both sides) feels tidy and “proper.”
-### Metaphors
-#### 1) What is a metaphor? 
+#### Metaphors
+##### 1) What is a metaphor? 
 
 - **Metaphor** = borrowing something **familiar from real life** to **name/explain** something **new in a digital product**.
     
@@ -280,7 +280,7 @@ Example: A dining table set symmetrically (two bowls and two pairs of chopsticks
 
 ---
 
-#### 2) How does a metaphor work? 
+##### 2) How does a metaphor work? 
 
 - Identify the **source domain** → pick a widely known object/idea (shopping cart, trash bin…).
     
@@ -299,7 +299,7 @@ Example: A dining table set symmetrically (two bowls and two pairs of chopsticks
 
 ---
 
-#### 3) Common metaphors 
+##### 3) Common metaphors 
 
 **Trash bin → Temporary delete**  
 • Meaning: move unwanted items to “trash,” with the option to **restore** before permanent deletion.  
@@ -353,7 +353,7 @@ Example: A dining table set symmetrically (two bowls and two pairs of chopsticks
 
 ---
 
-#### 4) When metaphors mislead 
+##### 4) When metaphors mislead 
 
 **Ambiguous “Home”**  
 • Cause: dual meaning (homepage vs home address).  
@@ -370,3 +370,68 @@ Example: A dining table set symmetrically (two bowls and two pairs of chopsticks
 **Cloud vs Wi-Fi**  
 • Cause: icons look **similar**.  
 • Fix: add **up/down arrows** with the cloud for upload/download; use the **fan-shaped signal** for Wi-Fi (no cloud); add labels.
+### Auditory Perception 
+
+#### What it is
+
+- Hearing (auditory perception) is sensing **changes in air pressure over time** (sound waves) with an organ like the ear; the brain then interprets this as sound. 
+    
+
+#### Core facts you need
+
+- **Human hearing range:** about **20 Hz–20 kHz**; the **highest piano note** is ~**4 kHz** (well within that range). 
+    
+- **Three basic properties of a sound wave:**
+    
+    - **Amplitude → perceived as volume** (loudness). 
+        
+    - **Frequency → perceived as pitch** (high vs low). 
+        
+    - **Duration → how long the sound lasts.**
+        
+
+#### Where audio appears in interactive products 
+
+- **Ambience**, **sound effects**, **auditory feedback**, **music**, **speech/voice**. Think: background atmosphere, event pings, action confirmations, mood/brand, spoken guidance. 
+---
+
+#### Why it matters in interaction
+
+- **Part of the human–system loop.** Systems present outcomes through “displays” that include **sound**; people sense those outcomes through channels like **vision, hearing, touch**. Interaction Design focuses mainly on **visual, audible, tactile** channels. 
+    
+- **Visibility of system status (faster feedback).** Audio confirms “received/processing/done” even when eyes are not on the screen (e.g., a short tone after pressing). 
+    
+- **Recognition over recall.** If each type of event has a familiar sound, users **recognize** it instantly instead of **remembering** rules. 
+    
+- **Error prevention and handling.** Alerts can stop a risky action or make users pause to confirm; clear error sounds + messages help diagnose and recover. 
+    
+- **Multimodal fit (context).** When hands/eyes are busy, or environments are noisy/quiet, audio is a practical channel; your course highlights choosing **modalities** (e.g., speech, touch, voice) based on context. 
+    
+
+---
+
+#### When to use audio 
+
+- **Auditory feedback:** confirm actions or states (“sent,” “saved,” “error”). 
+    
+- **Sound effects:** mark events (message arrived, toggle on/off). 
+    
+- **Speech/voice:** speak instructions/status when eyes or hands are occupied. 
+    
+- **Music/ambience:** set atmosphere and pace (used sparingly). 
+    
+
+#### Practical principles 
+
+- **Clear & timely:** sounds should quickly reveal system status. 
+    
+- **Consistent mapping:** the same kind of event → the same kind of sound. 
+    
+- **Minimal, not noisy:** use only what helps the task now (aesthetic & minimalist). 
+    
+- **User control:** let users toggle sounds, set volume, or mute (flexibility & efficiency). 
+    
+- **Helpful errors:** pair error sounds with plain-language fixes (recognize/diagnose/recover). 
+    
+
+---
