@@ -171,7 +171,7 @@
 
 ---
 
-### 5. **Affordances**
+c### 5. **Affordances**
 
 - Properties of an object suggest **how it can be used**.
     
