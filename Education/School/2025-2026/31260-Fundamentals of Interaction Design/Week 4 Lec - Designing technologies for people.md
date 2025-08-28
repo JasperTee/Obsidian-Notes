@@ -435,3 +435,57 @@ Example: A dining table set symmetrically (two bowls and two pairs of chopsticks
     
 
 ---
+### Tactile Perception
+
+#### Concept
+
+- **Tactile perception** is the brain’s ability to interpret information coming from the **skin** (especially the hands).  
+    In short: the skin senses → the brain interprets it as **touch**, **vibration**, **force/pressure**, **texture**.
+    
+
+#### Where touch sits in the interaction loop
+
+- In Interaction Design, we mainly use three channels for human–system input/output: **visual**, **auditory**, and **tactile**.  
+    Touch stands **alongside seeing and hearing** as a core feedback channel.
+    
+- At the **sensory data** level:  
+    **Tactile data =** what **we feel** with our skin **and** what the **system senses** via touch/force sensors.
+    
+
+#### Tactile I/O (input/output) 
+
+- **System input (what you do):** touch surfaces, knobs, sliders, force/pressure sensors—ways the system **receives your action**.
+    
+- **System output (what the system does back):** touch-based displays such as **vibration (vibrotactile)**, **moving/actuated surfaces**, or **physically raised elements** that you can feel.  
+    Examples: a **Braille pin display** that forms raised dot patterns; a **vibrotactile glove** that buzzes when events happen.
+    
+
+#### Why touch matters in interaction
+
+- **Feedback when eyes are busy or the screen is off:** a **short buzz** can mean “action received,” a **longer buzz** can mean “processing.”  
+    This extends **visibility of system status** beyond vision.
+    
+- **Motor accuracy and control:** physical buttons or surfaces with **click/resistance** let your hand **locate** and **control**more precisely than flat glass alone.  
+    (Related to **effectors**: the **hand** is a primary effector—our main “doer.”)
+    
+- **Accessibility:** **Braille** and **tactile graphics** let people **read by hand**, supporting blind/low-vision users or situations where looking is not possible.
+    
+- **Embodiment (sense of presence):** when interfaces **bring information into the physical world** (surfaces that rise/move), people grasp **structure and state** more easily than from a flat picture.  
+
+#### Representative examples from the course
+
+- **Reactable (musical TUI):** a tangible tabletop for making music by **moving/combining blocks**—a clear “tactile input → auditory/visual feedback” loop.
+    
+- **MIT inFORM:** an **actuated table** that **extrudes 3D shapes** in real time—both **touchable** and **visible** form, i.e., a very direct **tactile output**.
+    
+- **Ableton Push 3 (music controller):** **pads and knobs** provide **haptic/force feedback**, enabling **precise control by feel**.
+    
+- **Sense.Seat (interactive furniture):** uses **multisensory cues** and **priming** (preparing the user) to **embed interaction in a physical object** (a chair), i.e., interaction woven into the environment.
+    
+
+#### TUI — Tangible User Interfaces
+
+- **Core idea:** instead of only pointing/tapping on a screen, **physical objects become the interface**.  
+    You **grasp, rotate, push** to control; the system **senses** (via sensors) and **displays back** via **motion/shape/vibration**.
+    
+- **Learning benefit:** maps **hand actions → clear meanings** (e.g., pull = increase/decrease; place next to = group), which **reduces memory load**—it favors **recognition over recall**.
