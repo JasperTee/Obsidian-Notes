@@ -217,4 +217,4 @@
 **Timing rule**
 
 - Every action should receive feedback within ~100–200 ms; long tasks need a progress indicator + time estimate + a cancel option.
-- 
+## Visual Perception
