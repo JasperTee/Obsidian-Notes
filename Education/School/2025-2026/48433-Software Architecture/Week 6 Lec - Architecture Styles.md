@@ -732,3 +732,99 @@ A **ticket booking app**:
     
 
 ---
+### 3.3. Communication via Persistent Connections (WebSockets)
+
+#### Definition
+
+- A **persistent connection** is when a **client** opens a long-lived connection to a **server**.
+    
+- While the connection remains open, **both sides can send messages at any time**.
+    
+- Either side can close the connection.
+    
+- The most common example: **WebSockets**, supported by all modern browsers.
+    
+
+---
+
+#### Key Characteristics
+
+- **Bidirectional:** unlike REST (where the client requests and server responds), here the **server can also push messages** to the client.
+    
+- **Real-time:** data is delivered immediately as events happen.
+    
+- **Long-lived connection:** only one handshake is required; the connection stays open, reducing overhead compared to repeated HTTP requests.
+    
+
+---
+
+#### Pros
+
+1. **Real-time updates:** ideal for low-latency apps like chat, gaming, and live dashboards.
+    
+2. **Server push:** server can notify clients without waiting for them to poll.
+    
+3. **Less overhead:** fewer connection setups compared to traditional request/response.
+    
+
+---
+
+#### Cons
+
+1. **Ambiguous interface:**
+    
+    - WebSocket does **not enforce message formats**.
+        
+    - Developers must define their own schema/protocol (e.g., JSON structure, custom commands).
+        
+    - Lacks the strong standardization of REST APIs.
+        
+2. **Difficult to scale:**
+    
+    - WebSocket servers are **stateful** (must remember client sessions).
+        
+    - Handling millions of simultaneous connections is challenging.
+        
+    - Requires load balancing and often extra infrastructure (brokers).
+        
+3. **Not microservice-friendly:**
+    
+    - WebSockets create direct client ↔ server channels.
+        
+    - They don’t provide **loose coupling** between many services like message queues or event buses do.
+        
+
+---
+
+#### Example Scenario
+
+A **chat application**:
+
+- **User A** sends a message → client A sends it via WebSocket to the server.
+    
+- **Server** immediately pushes the message to client B.
+    
+- Both clients maintain open connections, so the message is delivered instantly.
+    
+
+**With REST:** client B would only see the new message after polling the server repeatedly (“Do I have new messages?”).
+
+---
+
+#### When to Use
+
+- Applications requiring **real-time two-way communication**: chat apps, multiplayer games, live notifications, stock trading dashboards.
+    
+- When the number of concurrent connections is moderate and manageable.
+    
+
+#### When Not to Use
+
+- Large-scale **microservice systems** that need strong decoupling.
+    
+- Workflows that require **reliability guarantees** (acknowledgments, retries, message ordering) → better suited for message queues/brokers.
+    
+- Systems with **millions of concurrent connections** where scaling WebSocket servers is very complex.
+    
+
+---
