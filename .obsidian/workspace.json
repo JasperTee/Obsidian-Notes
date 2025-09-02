@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f08d4d1ec7d444a0",
+        "id": "2fcf93544d786d74",
         "type": "tabs",
         "children": [
           {
-            "id": "db967760b71b9b56",
+            "id": "ad67bef88d13d9b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,11 +77,11 @@
         ]
       },
       {
-        "id": "97c233d501fccb8b",
+        "id": "8804bbaae8cacbcf",
         "type": "tabs",
         "children": [
           {
-            "id": "30feacd5e8a1aa2c",
+            "id": "10efa3d743e138c5",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -198,31 +198,33 @@
       "graph:Open graph view": false
     }
   },
-  "active": "db967760b71b9b56",
+  "active": "ad67bef88d13d9b7",
   "lastOpenFiles": [
+    "Education/School/2025-2026/48433-Software Architecture/Week 6 Lec - Architecture Styles.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 5 Lec - Security and Privacy.md",
+    "Untitled.base",
+    "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
+    "Week 4 - Designing Technology for People - Aut25 (dragged).pdf",
+    "Education/School/School - Subject Contents.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 1 Lec - Introduction to Design Principles.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 4 Lec - Designing technologies for people.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 3 Lec - The interaction design process.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 2 Lec - Usability Principles, Usability Heuristics.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
-    "Week 4 - Designing Technology for People - Aut25 (dragged).pdf",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/31260_Fundamentals of Interaction Design - Subject Outline.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/images",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/images/The 5 Es of Usability.png",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 1PA - Introduction to Software Engineering.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 2 Lec - Application Architecture.md",
-    "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
-    "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 4 Lec - Transport Layer Security and DoS attack.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lec - Public Key Infrastructure and Certificate.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 3 Lab - DNS Pharming.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lec - Web- based attacks, mitigation strategy.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lab - Password Cracking using John the Ripper and SQL Injection.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
-    "Education/School/School - Subject Contents.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design",
     "Education/School/2025-2026/Software Engineering Fundamentals/SEF_Software Engineering Fundamentals - Subject Outline.md",
     "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
@@ -243,7 +245,6 @@
     "Education/School/2025-2026/48433-Software Architecture",
     "Education/External Cources",
     "Education/Untitled.md",
-    "Education/School/2025-2026/32548-Cybersecurity/Images",
     "Education/School/2025-2026/32548-Cybersecurity/Untitled.canvas",
     "Welcome.md"
   ]

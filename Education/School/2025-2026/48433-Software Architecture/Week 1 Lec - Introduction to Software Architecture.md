@@ -378,7 +378,7 @@ High-level modules should not depend on low-level modules. Both should depend on
         
 
 **Benefit:** Reduces coupling, improves testability, and makes code easier to change or extend.
-## C4 Model 
+## 5. C4 Model 
 
 ### Core Idea
 

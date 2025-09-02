@@ -377,14 +377,15 @@
 - All possible points where attackers can attempt to exploit the system.
     
 - **Examples**: Open ports, API calls, user input fields, forgotten admin pages.
-### 3.3. STRIDE Threat Model
+### 3.3. Tools and Techniques in Threat Modelling
+#### 3.3.1. STRIDE Threat Model
 
 **STRIDE** was developed by Microsoft to classify different types of security threats.  
 Each letter in STRIDE represents a category of threat, along with the typical **security property it violates**.
 
 ---
 
-#### 1. **S – Spoofing Identity**
+##### 1. **S – Spoofing Identity**
 
 - **Definition**: Pretending to be someone/something else to gain access.
     
@@ -409,7 +410,7 @@ Each letter in STRIDE represents a category of threat, along with the typical *
 
 ---
 
-#### 2. **T – Tampering with Data**
+##### 2. **T – Tampering with Data**
 
 - **Definition**: Unauthorized modification of data, either in storage or during transmission.
     
@@ -432,7 +433,7 @@ Each letter in STRIDE represents a category of threat, along with the typical *
 
 ---
 
-#### 3. **R – Repudiation**
+##### 3. **R – Repudiation**
 
 - **Definition**: Denying having performed an action, when there’s no way to prove otherwise.
     
@@ -455,7 +456,7 @@ Each letter in STRIDE represents a category of threat, along with the typical *
 
 ---
 
-#### 4. **I – Information Disclosure**
+##### 4. **I – Information Disclosure**
 
 - **Definition**: Exposing information to people who are not authorized to see it.
     
@@ -480,7 +481,7 @@ Each letter in STRIDE represents a category of threat, along with the typical *
 
 ---
 
-#### 5. **D – Denial of Service (DoS)**
+##### 5. **D – Denial of Service (DoS)**
 
 - **Definition**: Making a system or service unavailable to legitimate users.
     
@@ -503,7 +504,7 @@ Each letter in STRIDE represents a category of threat, along with the typical *
 
 ---
 
-#### 6. **E – Elevation of Privilege**
+##### 6. **E – Elevation of Privilege**
 
 - **Definition**: Gaining higher access rights than intended.
     
@@ -522,3 +523,582 @@ Each letter in STRIDE represents a category of threat, along with the typical *
     - Code reviews and patching vulnerabilities.
         
     - Sandboxing applications.
+#### 3.3.2. DREAD
+##### Definition
+
+**DREAD** is a **quantitative risk assessment model** developed at Microsoft.  
+It helps security teams **prioritize threats** by assigning scores based on five criteria. Each criterion is usually scored from **1 to 10**.
+
+The acronym **DREAD** stands for:
+
+- **D – Damage**
+    
+- **R – Reproducibility**
+    
+- **E – Exploitability**
+    
+- **A – Affected Users**
+    
+- **D – Discoverability**
+    
+
+The total score = sum of all five values → higher scores = higher priority to fix.
+
+---
+
+##### Five Criteria in Detail
+
+###### 1. **Damage Potential**
+
+- **Question**: If this threat is exploited, how severe is the damage?
+    
+- **Low score (1–3)**: Small inconvenience (e.g., logout forced).
+    
+- **Medium score (4–7)**: Some data lost, service disruption.
+    
+- **High score (8–10)**: Financial loss, data breach, system-wide compromise.
+    
+- **Example**: Credit card leak = **10** (severe financial + reputation damage).
+    
+
+---
+
+###### 2. **Reproducibility**
+
+- **Question**: How easy is it to reproduce the attack?
+    
+- **Low score (1–3)**: Attack only works in rare conditions, hard to repeat.
+    
+- **Medium score (4–7)**: Some effort required but reproducible with skill.
+    
+- **High score (8–10)**: Works every time with little effort.
+    
+- **Example**: SQL injection that always works = **9–10**.
+    
+
+---
+
+###### 3. **Exploitability**
+
+- **Question**: How easy is it to launch the attack?
+    
+- **Low score (1–3)**: Requires advanced hardware, specialized access.
+    
+- **Medium score (4–7)**: Needs some tools and knowledge.
+    
+- **High score (8–10)**: Can be done with a simple script or widely available tool.
+    
+- **Example**: Using a free script to brute-force passwords = **8–9**.
+    
+
+---
+
+###### 4. **Affected Users**
+
+- **Question**: How many users are impacted if this threat is successful?
+    
+- **Low score (1–3)**: One or a few users.
+    
+- **Medium score (4–7)**: A group of users.
+    
+- **High score (8–10)**: All users of the system.
+    
+- **Example**: Login vulnerability affecting all customers = **10**.
+    
+
+---
+
+###### 5. **Discoverability**
+
+- **Question**: How easy is it for attackers to find the vulnerability?
+    
+- **Low score (1–3)**: Hidden, very hard to detect.
+    
+- **Medium score (4–7)**: Needs some scanning and analysis.
+    
+- **High score (8–10)**: Obvious to anyone (e.g., public form, error messages).
+    
+- **Example**: A search form vulnerable to SQL injection = **9**.
+    
+
+---
+
+##### Example: Online Banking Threat
+
+Threat: **SQL Injection on Login Form**
+
+|Criterion|Score (1–10)|Explanation|
+|---|---|---|
+|**Damage**|10|Attacker could bypass login and access all accounts.|
+|**Reproducibility**|9|The same injection works repeatedly.|
+|**Exploitability**|8|Only basic SQL knowledge and a script required.|
+|**Affected Users**|10|All bank customers could be affected.|
+|**Discoverability**|8|Input fields are public and easily tested.|
+|**Total**|**45/50**|Extremely high risk – must fix immediately.|
+
+---
+
+##### Strengths of DREAD
+
+- Gives a **numerical value** → makes prioritization easier.
+    
+- Helps teams compare different threats objectively.
+    
+- Easy to explain to non-technical stakeholders (management).
+    
+
+##### Limitations
+
+- Scoring can be **subjective** (depends on the assessor).
+    
+- Microsoft has retired official DREAD use in favor of newer models, but it is still widely used in learning and practice.
+#### 3.3.3. Attack Trees
+
+##### Definition
+
+An **Attack Tree** is a diagram that represents different ways an attacker can achieve a malicious goal.
+
+- The **root node** = the attacker’s **main objective**.
+    
+- The **branches** = the possible **steps, methods, or strategies** used to reach that goal.
+    
+- Each path shows how smaller sub-goals contribute to the overall attack.
+    
+
+Attack Trees were first popularized by **Bruce Schneier (1999)** and are still widely used in threat modelling.
+
+---
+
+##### Structure of an Attack Tree
+
+1. **Root Node** – The ultimate target.
+    
+    - Example: _“Steal money from online banking system”_.
+        
+2. **Intermediate Nodes** – Sub-goals or strategies.
+    
+    - Example: _“Gain access to account”_, _“Tamper with transaction data”_.
+        
+3. **Leaf Nodes** – Specific attack techniques.
+    
+    - Example: _“Phishing to get credentials”_, _“Exploit SQL injection”_.
+        
+
+Each node can be connected with **logic gates**:
+
+- **OR branch** – attacker only needs _one_ of the sub-goals.
+    
+- **AND branch** – attacker must complete _all_ sub-goals to succeed.
+    
+
+---
+
+##### Example: Online Banking Attack Tree
+
+**Root Goal**: Steal money from a customer’s bank account.
+
+- **Branch 1: Account Compromise**
+    
+    - (OR) Steal password via phishing.
+        
+    - (OR) Brute-force weak password.
+        
+    - (OR) Buy leaked credentials on dark web.
+        
+- **Branch 2: Transaction Tampering**
+    
+    - (AND) Intercept traffic with MITM attack.
+        
+    - (AND) Modify amount before sending to server.
+        
+- **Branch 3: Exploiting System Vulnerabilities**
+    
+    - (OR) SQL injection to bypass login.
+        
+    - (OR) Exploit vulnerable API to escalate privileges.
+        
+- **Branch 4: Insider Attack**
+    
+    - (OR) Bribe/corrupt a bank employee.
+        
+    - (OR) Install malware on employee’s machine.
+        
+
+---
+
+##### Benefits of Attack Trees
+
+- **Visualization**: Makes it easy to see all possible attack paths.
+    
+- **Prioritization**: Helps identify the most likely/impactful paths.
+    
+- **Defense Planning**: You can design countermeasures for each branch.
+    
+- **Reusability**: Same attack tree can be adapted for different systems.
+    
+
+---
+
+##### How Attack Trees Are Used in Practice
+
+1. **Build the tree**: Define the root goal and branches.
+    
+2. **Annotate nodes**: Add details such as likelihood, cost, or difficulty.
+    
+3. **Evaluate risks**: Use the tree to see which paths are most dangerous.
+    
+4. **Mitigate threats**: Apply security controls to break key attack paths.
+    
+
+---
+
+##### Example Mitigation from Attack Tree
+
+- If the tree shows phishing → **Mitigation**: Enable MFA to block stolen passwords.
+    
+- If the tree shows SQL injection → **Mitigation**: Parameterized queries, input validation.
+    
+- If the tree shows insider threat → **Mitigation**: Monitoring employee actions, strict access control.
+#### 3.3.4. Example: Threat Modelling for an Online Payment System
+
+##### 1. STRIDE Table
+
+|Category (STRIDE)|Threat Example|Security Property Broken|Mitigation|
+|---|---|---|---|
+|**S – Spoofing**|Attacker logs in using a stolen username/password|Authentication|Multi-Factor Authentication (MFA), session tokens|
+|**T – Tampering**|Attacker changes the payment amount from $500 to $50,000|Integrity|TLS encryption, digital signatures, checksums|
+|**R – Repudiation**|A customer makes a transaction and later denies it|Accountability|Tamper-proof audit logs, digital signatures|
+|**I – Information Disclosure**|Credit card numbers accidentally logged in plaintext|Confidentiality|Encryption (at rest & in transit), log sanitization|
+|**D – Denial of Service**|Flooding the payment server with requests to crash it|Availability|Load balancing, DDoS protection, rate limiting|
+|**E – Elevation of Privilege**|Normal user exploits a flaw to gain admin rights|Authorization|Role-based access control, patching, code reviews|
+
+---
+
+##### 2. DREAD Scoring
+
+Each threat is scored **1–10** for five criteria: **Damage, Reproducibility, Exploitability, Affected Users, Discoverability**.
+
+|Threat|Damage|Reproducibility|Exploitability|Affected Users|Discoverability|Total (50)|Priority|
+|---|---|---|---|---|---|---|---|
+|**Spoofing (login with stolen password)**|9|8|8|9|7|**41**|High|
+|**Tampering (change payment amount)**|10|7|7|9|6|**39**|High|
+|**Repudiation (deny transaction)**|6|6|5|7|5|**29**|Medium|
+|**Information Disclosure (credit card leak)**|10|8|7|10|8|**43**|Very High|
+|**Denial of Service (DDoS attack)**|7|9|9|8|8|**41**|High|
+|**Elevation of Privilege (user → admin)**|9|7|8|9|6|**39**|High|
+
+👉 **Top priorities**:
+
+1. Information Disclosure (**43**)
+    
+2. Spoofing (**41**)
+    
+3. Denial of Service (**41**)
+    
+
+---
+
+##### 3. Attack Tree
+
+**Goal (Root):** Steal money from the online payment system.
+
+- **Branch 1: Unauthorized Login (Spoofing)**
+    
+    - Phish user credentials.
+        
+    - Log in with stolen password.
+        
+    - Perform fraudulent transaction.
+        
+- **Branch 2: Transaction Manipulation (Tampering)**
+    
+    - Intercept traffic between client and server.
+        
+    - Modify payment amount or account number.
+        
+    - Send altered request to the server.
+        
+- **Branch 3: System Exploitation (Elevation of Privilege)**
+    
+    - Discover vulnerability in payment API.
+        
+    - Exploit it to escalate privileges.
+        
+    - Transfer funds from multiple accounts.
+        
+- **Branch 4: Service Disruption (Denial of Service)**
+    
+    - Use botnet to flood the payment gateway.
+        
+    - Make the system unavailable for customers.
+        
+    - Launch parallel attack during downtime.
+        
+
+---
+
+##### Conclusion
+
+- **STRIDE** classified the main threats (Spoofing, Tampering, Repudiation, Info Disclosure, DoS, Elevation).
+    
+- **DREAD** quantified risk levels → the most critical threats are **Information Disclosure**, **Spoofing**, and **DoS**.
+    
+- **Attack Trees** visualized possible attack paths → useful for designing layered defenses.
+### 3.4. Risk Response Strategies
+
+Once you know the threats, you must decide **how to respond**. There are four main strategies:
+
+---
+
+#### 1. **Fix / Remove Functionality**
+
+- **Definition**: Eliminate the feature or component that creates the risk.
+    
+- **When to use**: If the feature is not essential or if securing it is too complex.
+    
+- **Example**:
+    
+    - A web app has a file upload function, but it’s too risky to secure properly (attackers could upload malware). → Disable file upload.
+        
+    - Removing weak encryption algorithms (like MD5 or SHA-1) from a system.
+        
+
+---
+
+#### 2. **Accept Risk**
+
+- **Definition**: Acknowledge the risk exists but do nothing about it.
+    
+- **When to use**: If the risk has **low likelihood or low impact**, or the cost of fixing it is higher than the potential damage.
+    
+- **Example**:
+    
+    - A small e-commerce website accepts the risk of short outages during heavy traffic instead of paying for expensive DDoS protection.
+        
+    - A company accepts that some internal printers may not be encrypted because they pose minimal harm.
+        
+
+---
+
+#### 3. **Transfer Risk**
+
+- **Definition**: Shift the responsibility of the risk to a third party.
+    
+- **When to use**: If another entity can manage the risk more effectively.
+    
+- **Example**:
+    
+    - Buy **cybersecurity insurance** to cover financial loss from a data breach.
+        
+    - Use a **cloud provider (AWS, Azure, GCP)** instead of hosting your own servers, transferring some security responsibility to them.
+        
+    - Hiring a third-party payment processor (Stripe, PayPal) instead of handling credit card data directly.
+        
+
+---
+
+#### 4. **Mitigate Risk**
+
+- **Definition**: Reduce the risk by applying **security controls** to lower either likelihood or impact.
+    
+- **When to use**: For risks that cannot be fully removed but must be reduced to an acceptable level.
+    
+- **Example**:
+    
+    - Use HTTPS/TLS to mitigate the risk of data interception.
+        
+    - Apply input validation to reduce SQL injection risk.
+        
+    - Implement firewalls and intrusion detection to lower risk of external attacks.
+## 4. Secure Software Development Lifecycle (Secure SDLC)
+
+### Definition
+
+The **Secure Software Development Lifecycle (Secure SDLC)** is a process that ensures **security is built into software from the very beginning** (requirements phase) and maintained throughout its lifecycle (maintenance phase).
+
+It extends the traditional SDLC by embedding **security activities** such as threat modelling, secure coding, security testing, and vulnerability management at every step.
+### 4.1. Stages of Secure SDLC
+
+#### 1. **Requirements Analysis**
+
+- **Goal**: Identify both **functional requirements** and **security requirements**.
+    
+- **Activities**:
+    
+    - Define compliance requirements (e.g., GDPR, HIPAA, PCI-DSS).
+        
+    - Specify security needs (encryption, authentication, logging).
+        
+    - Define privacy considerations (data minimization, user consent).
+        
+- **Example**: A healthcare app must comply with HIPAA → all patient data must be encrypted at rest and in transit.
+    
+
+---
+
+#### 2. **Design**
+
+- **Goal**: Incorporate **security principles** into system architecture.
+    
+- **Activities**:
+    
+    - Perform **Threat Modelling (STRIDE, Attack Trees)**.
+        
+    - Define **trust boundaries** and attack surfaces.
+        
+    - Apply design principles (Least Privilege, Defense in Depth, Secure Defaults).
+        
+    - Design secure data flows and error handling.
+        
+- **Example**: In an online banking app, design architecture so that customer data flows only through encrypted channels and cannot bypass authentication checks.
+    
+
+---
+
+#### 3. **Development (Implementation)**
+
+- **Goal**: Write code that is **secure by default**.
+    
+- **Activities**:
+    
+    - Follow **secure coding standards** (e.g., OWASP Top 10).
+        
+    - Perform code reviews with security focus.
+        
+    - Avoid unsafe practices (e.g., string concatenation for SQL queries).
+        
+    - Use security libraries instead of inventing new cryptography.
+        
+- **Example**: Use prepared statements or ORM to prevent SQL injection instead of building manual query strings.
+    
+
+---
+
+#### 4. **Security Testing**
+
+- **Goal**: Validate the system against security requirements.
+    
+- **Activities**:
+    
+    - **Static Application Security Testing (SAST)** – scan source code.
+        
+    - **Dynamic Application Security Testing (DAST)** – test the running application.
+        
+    - **Penetration Testing** – simulate real-world attacks.
+        
+    - Automated tests in CI/CD pipelines.
+        
+- **Example**: Use automated scanners to detect XSS vulnerabilities in a web app before release.
+    
+
+---
+
+#### 5. **Release (Deployment)**
+
+- **Goal**: Ensure the deployed system is hardened and monitored.
+    
+- **Activities**:
+    
+    - Harden environments (disable default accounts, enforce secure configs).
+        
+    - Implement **audit logs** for accountability.
+        
+    - Create a **rollback plan** in case of deployment failure.
+        
+    - Use **immutable infrastructure** (no manual changes after deployment).
+        
+- **Example**: Before deploying an e-commerce app, ensure TLS certificates are installed, and the system logs all admin activities.
+    
+
+---
+
+#### 6. **Maintenance (Operations)**
+
+- **Goal**: Keep the system secure after deployment.
+    
+- **Activities**:
+    
+    - Monitor logs for anomalies (failed logins, privilege escalations).
+        
+    - Apply **security patches** and hotfixes regularly.
+        
+    - Conduct **periodic vulnerability scans** and audits.
+        
+    - Update threat models as the system evolves.
+        
+- **Example**: After the Log4j vulnerability was discovered, apply urgent patches to all Java apps in production.
+### 4.2. Best Practices in Secure SDLC
+
+- **Shift Left Security** – integrate security checks as early as possible in development (not just before release).
+    
+- **Automated Security Testing** – embed security tests into CI/CD pipeline.
+    
+- **Developer Training** – train developers on secure coding techniques.
+    
+- **Regular Vulnerability Scans** – schedule scanning to catch new risks.
+    
+- **Third-party/Independent Audits** – verify system with external security experts.
+### 4.3. SDLC vs Secure SDLC
+
+#### 1. Traditional SDLC (Software Development Lifecycle)
+
+- **Focus**: Delivering functional features (what the software _does_).
+    
+- **Approach**:
+    
+    - Security is often an **afterthought**.
+        
+    - Teams focus on coding features quickly, then test security near release.
+        
+- **Drawbacks**:
+    
+    - Vulnerabilities discovered late → expensive and time-consuming to fix.
+        
+    - Systems may pass functional testing but still be insecure.
+        
+- **Example**: A web app is released, then later security testing shows it is vulnerable to SQL injection. Fixing requires redesign of database queries.
+    
+
+---
+
+#### 2. Secure SDLC
+
+- **Focus**: Delivering software that is both **functional and secure**.
+    
+- **Approach**:
+    
+    - Security integrated at **every stage** (requirements → maintenance).
+        
+    - Teams use **threat modelling, secure design principles, code reviews, and automated security tests**.
+        
+- **Benefits**:
+    
+    - Cheaper to fix issues early (during design or coding).
+        
+    - Compliance with laws and standards (GDPR, ISO 27001, PCI-DSS).
+        
+    - Builds customer trust with a secure system.
+        
+- **Example**: During design, the team identifies SQL injection as a risk and decides to use parameterized queries. This prevents the vulnerability before coding even starts.
+    
+
+---
+
+#### 3. Key Differences
+
+|Aspect|Traditional SDLC|Secure SDLC|
+|---|---|---|
+|**Security timing**|Added at the end, after coding|Embedded from the very beginning|
+|**Main focus**|Functionality & delivery speed|Functionality + Security & Privacy|
+|**Cost of fixing issues**|High (found late in process)|Lower (caught early)|
+|**Testing**|Functional + some security before release|Continuous security testing in every stage|
+|**Compliance**|Often reactive (after audit or incident)|Proactive (designed for GDPR, ISO, etc.)|
+|**Outcome**|Software works but may have vulnerabilities|Software is secure by design & default|
+
+---
+
+#### 4. Analogy
+
+- **SDLC**: Like building a house and only adding locks after you finish construction. You might realize doors and windows weren’t designed for security.
+    
+- **Secure SDLC**: Like building a house with locks, cameras, and alarms already included in the blueprint → safer and cheaper than retrofitting later.
