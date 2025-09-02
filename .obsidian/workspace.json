@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 6 Lec - Architecture Styles.md",
+                "file": "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 6 Lec - Architecture Styles"
+              "title": "32548_Cybersecurity - Subject Outline"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Howtag:#How",
+                "query": "tag:#Core",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -158,13 +158,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/48433-Software Architecture/Week 6 Lec - Architecture Styles.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 6 Lec - Architecture Styles"
+              "title": "Outline"
             }
           },
           {
@@ -178,7 +177,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -198,23 +197,28 @@
       "graph:Open graph view": false
     }
   },
-  "active": "ad67bef88d13d9b7",
+  "active": "10efa3d743e138c5",
   "lastOpenFiles": [
-    "Education/School/2025-2026/48433-Software Architecture/Week 5 Lec - Security and Privacy.md",
+    "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
+    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/31260_Fundamentals of Interaction Design - Subject Outline.md",
+    "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
+    "Education/School/2025-2026/Software Engineering Fundamentals/SEF_Software Engineering Fundamentals - Subject Outline.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 6 Lec - Architecture Styles.md",
+    "Education/School/School - Subject Contents.md",
+    "Untitled.base",
+    "Education/School/2025-2026/48433-Software Architecture/Images/Microservices Architecture.png",
+    "Education/School/2025-2026/48433-Software Architecture/Images/Layered Architecture.png",
+    "Education/School/2025-2026/48433-Software Architecture/Week 5 Lec - Security and Privacy.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 1 Lec - Introduction to Software Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 2 Lec - Application Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 4 Lec - Cloud Reference Architecture.md",
     "Education/School/2025-2026/48433-Software Architecture/Week 3 Lec - Data Architecture and Management.md",
-    "Untitled.base",
     "Week 4 - Designing Technology for People - Aut25 (dragged).pdf",
-    "Education/School/School - Subject Contents.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 1 Lec - Introduction to Design Principles.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 4 Lec - Designing technologies for people.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 3 Lec - The interaction design process.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 2 Lec - Usability Principles, Usability Heuristics.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lab - Information Gathering & Unencrypted Data Extraction.md",
-    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/31260_Fundamentals of Interaction Design - Subject Outline.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/images",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/images/The 5 Es of Usability.png",
     "Education/School/2025-2026/Software Engineering Fundamentals/Week 2PA- Requirements Engineering.md",
@@ -226,9 +230,6 @@
     "Education/School/2025-2026/32548-Cybersecurity/Week 2 Lab - Password Cracking using John the Ripper and SQL Injection.md",
     "Education/School/2025-2026/32548-Cybersecurity/Week 1 Lec - Introduction to Cybersecurity.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design",
-    "Education/School/2025-2026/Software Engineering Fundamentals/SEF_Software Engineering Fundamentals - Subject Outline.md",
-    "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
-    "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
     "Education/School/2025-2026/48433-Software Architecture/Images/Business Value from Big Data.png",
     "Images/How DNS Works?.png",
     "Images/What Does TLS Do in Each Protocol?.png",
@@ -236,8 +237,6 @@
     "Images/Key Generation and Exchange.png",
     "Images/Type of Digital Certificates.png",
     "Images/How Reflected XSS Works?.png",
-    "Images/How CSRF Works?.png",
-    "Images/TLS Data Transmission.png",
     "Images",
     "Education/School/2025-2026/48433-Software Architecture/Images",
     "Education/School/2025-2026/Software Engineering Fundamentals/Images",
@@ -245,7 +244,6 @@
     "Education/School/2025-2026/48433-Software Architecture",
     "Education/External Cources",
     "Education/Untitled.md",
-    "Education/School/2025-2026/32548-Cybersecurity/Untitled.canvas",
-    "Welcome.md"
+    "Education/School/2025-2026/32548-Cybersecurity/Untitled.canvas"
   ]
 }

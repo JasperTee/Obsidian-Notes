@@ -1,6 +1,6 @@
 ---
 tags:
-  - SubCore
+  - Core
 ---
 Week 1
 [[Week 1 Lec - Introduction to Cybersecurity]]

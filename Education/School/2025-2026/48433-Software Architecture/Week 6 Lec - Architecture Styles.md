@@ -89,7 +89,7 @@ Everything is inside one big codebase, one big database, and one big deployment.
 - Move towards **Layered Architecture** (front-end, API, back-end) or **Microservices** (independent services).
 ## 2. Common Architecture Styles
 ### 2.1. Layered Architecture
-
+![[Layered Architecture.png]]
 #### Definition
 
 - **Layered Architecture** is a design model where the system is divided into **layers**, and each layer has a specific responsibility.
@@ -397,7 +397,7 @@ A ride-hailing app (like Uber):
     
 - **Asynchronous workflows:** order processing, sending emails/SMS, payments.
 ### 2.4. Microservices Architecture
-
+![[Microservices Architecture.png]]
 #### Definition
 
 - **Microservices Architecture** is a model where a system is built from many **small, independent services (microservices)**.

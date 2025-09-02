@@ -1,3 +1,4 @@
+#Core 
 Week 1
 [[Week 1 Lec - Introduction to Design Principles]]
 Week 2
