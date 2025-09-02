@@ -487,7 +487,7 @@ A ride-hailing app (like Uber):
 
 ---
 
-### Cons
+#### Cons
 
 - **Operational complexity:** requires advanced infrastructure (Kubernetes, monitoring, logging, tracing).
     
@@ -500,7 +500,7 @@ A ride-hailing app (like Uber):
 
 ---
 
-### Real-world Examples
+#### Real-world Examples
 
 - **Netflix:**
     
@@ -515,10 +515,220 @@ A ride-hailing app (like Uber):
 
 ---
 
-### Use Cases
+#### Use Cases
 
 - Large systems needing **independent scaling** of features.
     
 - Organizations with many teams working in parallel.
     
 - Cloud-native applications requiring continuous deployment and updates.
+
+## 3. Patterns of Communication
+
+The tutorial lists four common ways containers/services talk to each other: **via a repository, via an API, via persistent connections, and via queues/brokers**.
+### 3.1. Communication via a Repository (Shared Database)
+
+#### Definition
+
+- This pattern means **multiple containers or services read from and/or write to the same repository**, usually a cloud-based database.
+    
+- The repository acts as the **intermediary** for sharing data.
+    
+- Instead of calling each other’s APIs, containers interact through **basic CRUD (Create, Read, Update, Delete)**operations on the shared database.
+    
+
+---
+
+#### How It Works
+
+1. A **producer service** writes data to the database.
+    
+2. A **consumer service** reads data from the database when needed.
+    
+3. Often, **multiple services** both read and write to the same database.
+    
+
+**Example from tutorial:**
+
+- In the _We Feel System_, several services (tweet gatherer, tweet annotator, summary builder) all read/write to **Amazon DynamoDB** to store summaries of emotional data over time.
+    
+
+---
+
+#### Pros
+
+- **Simple to implement:** just connect all services to the same database.
+    
+- **No need for APIs** between services.
+    
+- **Quick for small systems:** useful when there are only a few containers.
+    
+
+---
+
+#### Cons
+
+- **Limited to CRUD interactions:** no rich messaging semantics.
+    
+- **Polling is wasteful:** if consumers constantly check the DB for updates, resources are wasted.
+    
+- **Consistency problems:**
+    
+    - Multiple writers can overwrite each other’s changes.
+        
+    - Example: two services updating the same inventory count at the same time.
+        
+- **Scalability issues:** the database may become a **bottleneck** as load grows.
+    
+
+---
+
+#### Example Scenario
+
+In an **e-commerce application**:
+
+- **Order Service** and **Payment Service** both update the same **Orders DB**.
+    
+- Order Service inserts a new order.
+    
+- Payment Service updates the order status to “Paid.”
+    
+- Risk: if Payment updates before Order has fully written → inconsistent data.
+    
+
+---
+
+#### When to Use
+
+- Small applications with few services.
+    
+- When data sharing is **simple CRUD**.
+    
+- When only one service writes while others just read (avoids conflicts).
+    
+
+#### When to Avoid
+
+- Large systems with many services writing simultaneously.
+    
+- When **real-time updates** or **event-driven communication** are required.
+    
+- When you want to avoid bottlenecks at a single database.
+### 3.2. Communication via APIs
+
+#### Definition
+
+- This is the **consumer ↔ provider** model:
+    
+    - **Consumer:** initiates all communication.
+        
+    - **Provider:** offers data/services, but doesn’t know or care who is consuming.
+        
+- All interactions are **started by the consumer** — it _pulls_ when it needs information and _pushes_ when it wants to send something.
+    
+
+---
+
+#### Key Characteristics
+
+- **Consumer depends on provider:** the consumer must know where the provider is, and what APIs it exposes.
+    
+- **Provider does not depend on consumer:** it just waits and responds when called.
+    
+- Communication follows a defined **API contract** (endpoints, methods, request/response formats).
+    
+
+---
+
+#### REST API – the most common standard
+
+- **URL = nouns (resources):**  
+    Example: `/users/123/orders`.
+    
+- **HTTP methods = verbs (operations):**
+    
+    - `GET` → retrieve data
+        
+    - `POST` → create new
+        
+    - `PUT/PATCH` → update
+        
+    - `DELETE` → delete
+        
+- **Stateless:** each request is independent; the server does not keep session state; authentication usually comes in headers.
+    
+- **Responses:** JSON payload + HTTP status codes (200 OK, 404 Not Found, 500 Server Error).
+    
+- **Relationships:** expressed through chaining:
+    
+    - `GET /shows/lion-king/tickets/` → fetch all tickets
+        
+    - `DELETE /shows/lion-king/tickets/13` → delete ticket 13
+        
+
+---
+
+#### Pros
+
+- **Clear and standardized** → easy to learn and use.
+    
+- **Easy to test** with tools like Postman or curl.
+    
+- **Cacheable:** especially GET requests.
+    
+- **Widely compatible** with many systems and languages.
+    
+
+---
+
+#### Cons
+
+- **Consumer-initiated only:** the server cannot push information to clients proactively.
+    
+    - Example: in a chat app, when one user sends a message, the server cannot notify other clients via REST unless they request it.
+        
+- **Not real-time:** designed for request/response, not continuous updates.
+    
+- **Versioning challenges:** when the API changes, all consumers must adapt.
+    
+
+---
+
+#### Example Scenario
+
+A **ticket booking app**:
+
+- **Consumer:** front-end web app (Angular).
+    
+- **Provider:** back-end API (Spring MVC).
+    
+- Flow:
+    
+    1. User clicks “Buy ticket.”
+        
+    2. Web app sends `POST /tickets`.
+        
+    3. Back-end API processes, stores in DB, and returns JSON:
+        
+        `{ "id": 123, "status": "paid" }`
+        
+
+---
+
+#### When to Use
+
+- Basic CRUD operations (orders, user profiles, product info).
+    
+- Synchronous **request/response** patterns.
+    
+- Integrating services with well-defined contracts.
+    
+
+#### When Not to Use
+
+- Systems requiring **real-time notifications** (chat, games, dashboards).
+    
+- Many-to-many communication (one event must fan out to multiple consumers).
+    
+
+---
