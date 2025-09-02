@@ -328,3 +328,197 @@
     - If your cloud is well-secured but employees use weak passwords → system is still vulnerable.
         
     - Attackers often target third-party vendors with weaker security to reach the main company.
+## 3. Threat Modelling (Mô hình hóa mối đe dọa)
+
+### 3.1. Definition
+
+- **Threat Modelling** is a structured process to **identify, analyze, and mitigate potential security threats** in a system.
+    
+- It helps answer:
+    
+    1. **What are you building?** – Understand the system, data flows, components.
+        
+    2. **What can go wrong?** – Identify threats, vulnerabilities.
+        
+    3. **What should you do about it?** – Propose mitigation strategies.
+        
+    4. **Did you do a good job?** – Review and refine.
+### 3.2. Key Concepts
+
+#### a. Entry Points
+
+- Places where external users or systems interact with your system.
+    
+- **Examples**: Login form, API endpoint, admin dashboard.
+    
+
+#### b. Trust Boundaries
+
+- Boundaries where data changes ownership or privilege level.
+    
+- **Examples**:
+    
+    - From user → web application.
+        
+    - From application → database.
+        
+    - From internal system → third-party API.
+        
+
+#### c. Data Flow
+
+- Understanding how information moves between components.
+    
+- **Example**: User login → Web app → Database → Authentication result returned.
+    
+
+#### d. Attack Surface
+
+- All possible points where attackers can attempt to exploit the system.
+    
+- **Examples**: Open ports, API calls, user input fields, forgotten admin pages.
+### 3.3. STRIDE Threat Model
+
+**STRIDE** was developed by Microsoft to classify different types of security threats.  
+Each letter in STRIDE represents a category of threat, along with the typical **security property it violates**.
+
+---
+
+#### 1. **S – Spoofing Identity**
+
+- **Definition**: Pretending to be someone/something else to gain access.
+    
+- **Violates**: **Authentication**.
+    
+- **Examples**:
+    
+    - Logging in with stolen usernames and passwords.
+        
+    - Attacker forges an IP address to impersonate a trusted machine.
+        
+    - Fake email (phishing) pretending to be from a bank.
+        
+- **Mitigations**:
+    
+    - Strong authentication (MFA, biometrics).
+        
+    - Unique session tokens.
+        
+    - Certificates and digital signatures.
+        
+
+---
+
+#### 2. **T – Tampering with Data**
+
+- **Definition**: Unauthorized modification of data, either in storage or during transmission.
+    
+- **Violates**: **Integrity**.
+    
+- **Examples**:
+    
+    - Changing the amount in a bank transfer request from $500 to $5000.
+        
+    - Altering a configuration file on the server.
+        
+- **Mitigations**:
+    
+    - Hashing and checksums to verify integrity.
+        
+    - Encryption (so modified data becomes invalid).
+        
+    - Write protection and access controls.
+        
+
+---
+
+#### 3. **R – Repudiation**
+
+- **Definition**: Denying having performed an action, when there’s no way to prove otherwise.
+    
+- **Violates**: **Non-repudiation** (accountability).
+    
+- **Examples**:
+    
+    - A customer claims they never authorized a money transfer.
+        
+    - A system admin deletes logs and denies doing it.
+        
+- **Mitigations**:
+    
+    - Digital signatures.
+        
+    - Secure, tamper-proof logging.
+        
+    - Audit trails that cannot be erased.
+        
+
+---
+
+#### 4. **I – Information Disclosure**
+
+- **Definition**: Exposing information to people who are not authorized to see it.
+    
+- **Violates**: **Confidentiality**.
+    
+- **Examples**:
+    
+    - A web app error message showing database structure.
+        
+    - Unencrypted credit card numbers stored in logs.
+        
+    - Data breach exposing personal information.
+        
+- **Mitigations**:
+    
+    - Data encryption (at rest and in transit).
+        
+    - Access control and permissions.
+        
+    - Masking sensitive information in error messages.
+        
+
+---
+
+#### 5. **D – Denial of Service (DoS)**
+
+- **Definition**: Making a system or service unavailable to legitimate users.
+    
+- **Violates**: **Availability**.
+    
+- **Examples**:
+    
+    - Flooding a website with fake traffic (DDoS).
+        
+    - Locking user accounts by entering wrong passwords repeatedly.
+        
+- **Mitigations**:
+    
+    - Rate limiting and throttling.
+        
+    - Load balancing, failover servers.
+        
+    - DDoS protection services (e.g., Cloudflare, AWS Shield).
+        
+
+---
+
+#### 6. **E – Elevation of Privilege**
+
+- **Definition**: Gaining higher access rights than intended.
+    
+- **Violates**: **Authorization**.
+    
+- **Examples**:
+    
+    - A normal user exploits a bug to become an admin.
+        
+    - Malware running with system-level privileges.
+        
+- **Mitigations**:
+    
+    - Principle of Least Privilege (limit permissions).
+        
+    - Code reviews and patching vulnerabilities.
+        
+    - Sandboxing applications.
