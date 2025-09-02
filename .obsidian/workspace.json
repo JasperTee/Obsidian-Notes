@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Week 1 Lec - Introduction to Design Principles"
             }
+          },
+          {
+            "id": "b3b59ae2d272b822",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.12"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.12"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,13 +171,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 1 Lec - Introduction to Design Principles.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 1 Lec - Introduction to Design Principles"
+              "title": "Outline"
             }
           },
           {
@@ -198,7 +210,7 @@
       "graph:Open graph view": false
     }
   },
-  "active": "db967760b71b9b56",
+  "active": "b3b59ae2d272b822",
   "lastOpenFiles": [
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 4 Lec - Designing technologies for people.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 1 Lec - Introduction to Design Principles.md",
