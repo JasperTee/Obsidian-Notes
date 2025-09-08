@@ -384,3 +384,81 @@ In IoT systems, data moves through a journey from **raw measurements** to beco
     
 
 ---
+### **1.4. IoT Design Principles**
+
+#### **1. Decouple ingestion from processing**
+
+- **Meaning**: Separate **data ingestion (collecting and receiving data)** from **data processing**.
+    
+- **Why**: If processing happens directly at ingestion, the system may crash or slow down during data spikes.
+    
+- **How**: Use a **queue** or messaging system to buffer data before processing.
+    
+- **Example**: A temperature sensor streams continuous data → data first goes into a Kafka queue → analytics services process it later in batches or streams.
+    
+
+---
+
+#### **2. Be ready for the data tsunami**
+
+- **Meaning**: IoT systems must handle **massive amounts of data** from millions of devices.
+    
+- **How**: Use scalable cloud-native infrastructure, auto-scaling, and load balancing.
+    
+- **Example**: A smart city with hundreds of thousands of surveillance cameras → system must scale to process simultaneous video streams.
+    
+
+---
+
+#### **3. Design for offline behaviour**
+
+- **Meaning**: IoT should still function when **network connectivity is lost**.
+    
+- **How**:
+    
+    - Devices store data locally until they reconnect.
+        
+    - Gateways perform local processing and sync later with the cloud.
+        
+- **Example**: A drone in agriculture collects crop data in an area with no 4G → stores data locally → uploads to cloud once back online.
+    
+
+---
+
+#### **4. Enrich data at the cloud (not on devices)**
+
+- **Meaning**: IoT devices should only **collect raw data**, while enrichment (adding context, compression, correlation) should happen in the cloud.
+    
+- **Why**: IoT devices have limited battery and computing power.
+    
+- **Example**: A smartwatch only uploads raw heart-rate data; the cloud app combines it with sleep and activity data to generate health insights.
+    
+
+---
+
+#### **5. Ensure least privilege permissions**
+
+- **Meaning**: Each IoT device should only have the **minimum access rights** needed.
+    
+- **Why**: If one device is hacked, damage is contained and won’t spread to the whole system.
+    
+- **Example**: A security camera can only upload video to its own server but cannot access other IoT sensor data in the network.
+    
+
+---
+
+#### **6. Cost optimization**
+
+- **Meaning**: Choose resources wisely to minimize storage, bandwidth, and cloud costs.
+    
+- **How**:
+    
+    - Use different storage types (SSD for hot data, HDD for cold/archive data).
+        
+    - Regularly monitor and optimize cloud spending.
+        
+- **Example**: An agriculture company keeps soil moisture data for only 3 months on fast storage → older data is archived to cheaper storage.
+    
+
+---
+## 2. AI/ML Architecture
