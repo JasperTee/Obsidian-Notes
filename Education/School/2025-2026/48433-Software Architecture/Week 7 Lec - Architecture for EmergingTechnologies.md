@@ -462,3 +462,50 @@ In IoT systems, data moves through a journey from **raw measurements** to beco
 
 ---
 ## 2. AI/ML Architecture
+### **2.1. Why AI/ML is booming today**
+
+AI and ML are not “new” ideas, but they are exploding now because **three key factors came together**:
+
+---
+
+#### **1. Algorithmic advancements**
+
+- In the past, ML models were simpler (e.g., decision trees, basic regression).
+    
+- Now, **new algorithms** such as **deep learning and transformers** can handle huge, complex datasets.
+    
+- **Transformers** especially changed the game — they can understand sequences (like text, speech) and deliver state-of-the-art results in NLP, vision, and even multimodal tasks.
+    
+- **Example**: ChatGPT (based on transformer models) performs much better than older NLP systems like simple recurrent neural networks (RNNs).
+    
+
+---
+
+#### **2. Data explosion**
+
+- AI/ML needs **lots of data** to learn patterns.
+    
+- With the rise of the Internet, smartphones, social media, IoT devices, and digital sensors, we now have **massive volumes of data** being generated every second.
+    
+- This abundance of data provides “fuel” for ML models.
+    
+- **Example**:
+    
+    - Netflix can train recommender systems because it has millions of user viewing histories.
+        
+    - Autonomous cars can be trained with millions of hours of driving video.
+        
+
+---
+
+#### **3. Cloud computing**
+
+- Training AI models requires **powerful hardware** (GPUs, TPUs) and **huge storage**.
+    
+- Before cloud, only big research labs or governments could afford this.
+    
+- Now, cloud services (AWS, Google Cloud, Microsoft Azure) offer **on-demand, scalable computing power**.
+    
+- This makes it affordable for startups, companies, and even individual developers to train and deploy AI models.
+    
+- **Example**: A small startup can use Google Cloud AI to train an image recognition model without owning any servers.
