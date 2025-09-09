@@ -1011,3 +1011,157 @@ There are four main approaches to integrate ML into applications:
     2. **Can it fail?** – Could it fail, and under what scenarios?
         
 - **Why it matters**: architectures usually last a long time, so they must be robust and resilient to risks.
+### **3.2. Controlled Convergence**
+
+#### **Definition**
+
+- **Controlled Convergence** is a structured method for **evaluating and comparing multiple architectural options**against predefined criteria.
+    
+- The goal is to **gradually converge on the best architecture** through guided, evidence-based discussion — rather than picking a design by intuition or personal bias.
+    
+
+---
+
+#### **Steps**
+
+1. **Define evaluation criteria**
+    
+    - Both **functional requirements** (e.g., does it meet business needs?) and **quality attributes** (performance, security, scalability, reliability, etc.).
+        
+2. **Identify candidate architectures**
+    
+    - List the possible architectural approaches (e.g., monolithic vs. microservices, direct plug-in call vs. manager-mediated plug-in call).
+        
+3. **Evaluate each option**
+    
+    - Score or assess each candidate against the established criteria.
+        
+    - Often represented in a **comparison matrix** (Architecture vs. Criteria).
+        
+4. **Group discussion & convergence**
+    
+    - Stakeholders discuss trade-offs.
+        
+    - Eliminate weak candidates.
+        
+    - Combine or refine options to better meet requirements.
+        
+5. **Select the best (or hybrid) option**
+    
+    - Sometimes the outcome is one clear “winner,” other times a **hybrid architecture** is proposed.
+        
+
+---
+
+#### **Example** – _Dragon Boat Regatta System_ (from the lecture)
+
+- Several candidate architectures were proposed.
+    
+- Each was evaluated on:
+    
+    - **Functional fit** (can it deliver the required features?).
+        
+    - **Qualities** (handles heavy load, works under poor network conditions, future scalability).
+        
+- After structured discussion, weaker options were filtered out, and the team converged toward the most feasible solution.
+    
+
+---
+
+#### **Pros**
+
+- Prevents teams from choosing architecture **based only on gut feeling**.
+    
+- Transparent and systematic decision-making.
+    
+- Allows combining ideas from multiple options into an improved solution.
+    
+
+#### **Cons**
+
+- Time-consuming, requires group sessions.
+    
+- Quality of results depends on **how well the evaluation criteria are defined**.
+### **3.3. ATAM – Architecture Trade-off Analysis Method**
+
+#### **Definition**
+
+- ATAM is a **structured evaluation method** used to analyze **key architectural decisions** and the **trade-offs** between quality attributes.
+    
+- It helps architects understand:
+    
+    - Why the architecture is designed in a certain way.
+        
+    - Which requirements it meets.
+        
+    - What risks or weaknesses may exist.
+        
+
+---
+
+#### **Core Principles**
+
+- **Scenario-driven**:
+    
+    - Scenarios describe situations the system must handle (e.g., traffic increases 10x, DDoS attack, users accessing globally).
+        
+    - These scenarios “stress test” the architecture.
+        
+- **Trade-off analysis**:
+    
+    - Architectural choices may **improve one quality attribute while weakening another**.
+        
+    - Example: Adding multiple layers of security increases security but reduces performance.
+        
+
+---
+
+#### **ATAM Phases**
+
+1. **Preparation**
+    
+    - Identify business drivers and critical quality attributes.
+        
+    - Prepare architecture documentation.
+        
+2. **Evaluation**
+    
+    - Describe the architecture.
+        
+    - Develop and prioritize scenarios.
+        
+    - Discuss how each scenario impacts the architecture.
+        
+    - Identify risks, non-risks, trade-off points.
+        
+3. **Follow-up**
+    
+    - Summarize the findings.
+        
+    - Provide recommendations for improvements or further analysis.
+        
+
+---
+
+#### **Outputs of ATAM**
+
+- **Risks**: potential weaknesses that could cause failure.
+    
+- **Non-risks**: architectural choices that pose no serious issue.
+    
+- **Trade-off points**: conflicts between quality attributes (e.g., security vs. performance).
+    
+- **Risk themes**: groups of risks showing broader systemic issues.
+    
+
+---
+
+#### **Real-world Example** – Online Banking System
+
+- **Scenario**: 100,000 users log in simultaneously.
+    
+    - **Trade-off**: Scaling servers improves performance but significantly increases costs.
+        
+- **Scenario**: DDoS attack.
+    
+    - **Trade-off**: Adding firewalls and filtering increases security but may reduce response speed.
