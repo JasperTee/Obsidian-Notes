@@ -1,100 +1,269 @@
 ## 1. Conceptualising interaction
 ### 1. Mental Models
 
-- **Definition**: A mental model is how users **think** and **believe** a system or device works.
+#### 1. Definition
+
+- A **mental model** is the way a user **thinks in their mind** about how a system, product, or device works.
     
-- **Characteristics**:
+- It’s like a **mental map** that people build based on their **experiences, observations, and assumptions**.
     
-    - **Personal** – each user forms their own mental model.
-        
-    - **Incomplete** – often based on limited experience, may be inaccurate.
-        
-    - **Dynamic** – changes over time as users gain new experiences.
-        
-- **Importance in design**:
+
+---
+
+#### 2. Characteristics of Mental Models
+
+- **Personal** – each person develops their own mental model of the same system.
     
-    - Users act based on their mental models.
-        
-    - If their mental model does not match reality → confusion, mistakes, frustration.
-        
-    - Designers should align products with familiar mental models to make them easy to learn and use.
-        
-- **Examples**:
+- **Incomplete** – often built from partial experience and not fully accurate.
     
-    - Pressing a pedestrian crossing button many times to make the light change faster → incorrect mental model.
+- **Flawed** – can be based on misunderstandings or false assumptions.
+    
+- **Dynamic** – changes over time as users learn or gain new experiences.
+    
+
+---
+
+#### 3. Why are Mental Models important in design?
+
+- Users act according to their **mental models**, not according to the designer’s system model.
+    
+- If their mental model doesn’t match how the system really works → confusion, mistakes, frustration.
+    
+- Good design should:
+    
+    - **Understand** users’ existing mental models.
         
-    - Recovering deleted files from a computer “trash bin” → correct mental model (reflects real-world experience).
+    - **Align** the conceptual model (designer’s intended model) with those mental models.
         
+    - Use **familiar metaphors, clear feedback, and intuitive language** to help users form accurate understandings.
+        
+
+---
+
+#### 4. Real-World Examples
+
+1. **Traffic light button**:
+    
+    - Many people believe pressing the button multiple times makes the light change faster.
+        
+    - This is a **wrong mental model**, but very common.
+        
+2. **Recycle Bin on computers**:
+    
+    - Users believe deleting a file moves it into the “trash,” where it can be restored.
+        
+    - This is a **correct mental model**, reflecting real-life trash bins.
+        
+3. **Save icon (floppy disk)**:
+    
+    - Many younger users have never seen a floppy disk, but still recognize it as “save.”
+        
+    - This shows how **mental models persist through familiar symbols**.
+        
+
+---
+
+#### 5. Connection to Design
+
+- Designers should **leverage users’ existing mental models** when possible, to make systems intuitive.
+    
+- If users’ mental models are **wrong**, designers must use **conceptual models** (through interface design, feedback, instructions) to reshape them correctly.
 
 ---
 
 ### 2. Conceptual Models
 
-- **Definition**: A conceptual model is the **designer’s intended model** of how the system should work, communicated to users.
+- #### 1. Definition
+
+- A **conceptual model** is the model that **designers create** to explain how a system works and how users should interact with it.
     
-- **Role**:
+- It is not the mental model in the user’s head; rather, it is the **“intended design idea”** that designers communicate through the interface, features, and feedback.
     
-    - Provides users with a **high-level understanding** of the system.
-        
-    - Shapes users’ mental models to be more accurate.
-        
-    - Makes systems more **intuitive and learnable**.
-        
-- **How it is conveyed**:
+
+---
+
+#### 2. Role of Conceptual Models
+
+- **Guide users** – help them understand how the system works.
     
-    - Through **interfaces, feedback, affordances, and metaphors**.
-        
-    - Uses language and concepts familiar to the target users.
-        
-- **Examples**:
+- **Shape mental models** – users form their mental models based on the conceptual model presented.
     
-    - Online shopping app: dragging products into a “shopping cart” → conceptual model matches the real-world mental model of shopping.
+- **Increase intuitiveness and learnability** – a clear conceptual model makes products easier to use, even for beginners.
+    
+- **Connect to real life** – uses metaphors, familiar language, and symbols to reduce the learning curve.
+    
+
+---
+
+#### 3. Characteristics
+
+- **Abstract representation** – not about technical details, but about how the user perceives and uses the system.
+    
+- **Represents designer’s intent** – shows how designers want users to think about and interact with the system.
+    
+- **Grounded in design principles** – e.g., affordances, mapping, feedback, visibility, and constraints.
+    
+
+---
+
+#### 4. Real-World Examples
+
+1. **Shopping cart in e-commerce**
+    
+    - Adding products into a “cart” mirrors real-life shopping.
         
-    - Calendar app: saving an appointment → matches users’ mental model of writing in a diary.
+    - Helps align user mental models with the digital system.
+        
+2. **Calendar apps**
+    
+    - Saving an event in an online calendar is like writing in a diary.
+        
+    - The conceptual model makes the system intuitive.
+        
+3. **Drag-and-drop**
+    
+    - Dragging a file into the “Recycle Bin” to delete it.
+        
+    - Reflects real-world experiences → intuitive and easy.
         
 
+---
+
+#### 5. Relationship with Mental Models
+
+- **Mental model** = what users believe about how the system works.
+    
+- **Conceptual model** = what designers intend to communicate.
+    
+- A good conceptual model ensures that **users build accurate mental models** of the system.
+    
+
+---
+
+#### 6. Principles for Creating Conceptual Models
+
+1. **Match familiar mental models** – leverage what users already know.
+    
+2. **Reduce cognitive load** – use metaphors and plain language.
+    
+3. **Provide clear feedback** – so users know the system is responding.
+    
+4. **Maintain consistency** – avoid confusion by keeping patterns predictable.
 ---
 
 ### 3. Interaction Types (Preece et al., 2015)
 
-There are four main types of interactions:
+#### 1. Concept
 
-1. **Instructing** – issuing commands (menus, keyboard shortcuts, voice commands).
+- Interaction types describe the **ways users interact with a system** – the methods they use to communicate with and control a product or application.
     
-    - Fast, efficient, good for repetitive tasks.
-        
-    - Example: “Print file,” “Send email.”
-        
-2. **Conversing** – interacting with the system as if having a conversation.
+- Preece et al. (2015) identify **four main types**: **Instructing, Conversing, Manipulating, and Exploring**.
     
-    - Used in chatbots, voice assistants.
-        
-    - Helpful for natural interaction and accessibility.
-        
-    - Example: Siri, Alexa, Google Assistant.
-        
-3. **Manipulating** – direct interaction with objects (drag, drop, resize, zoom).
+
+---
+
+#### 2. The Four Types
+
+##### a. Instructing
+
+- **Definition**: Users give **direct commands** to the system via menus, keyboard, buttons, or voice.
     
-    - Intuitive, hands-on.
-        
-    - Example: resizing a window, pinch-to-zoom on a smartphone.
-        
-4. **Exploring** – navigating through environments (physical or virtual).
+- **Characteristics**:
     
-    - Example: Google Maps Street View, VR with Oculus Rift, open-world games.
+    - Fast and efficient.
+        
+    - Suitable for **repetitive** or **precise** tasks.
+        
+- **Examples**:
+    
+    - Clicking “Print” to print a file.
+        
+    - Typing commands in a terminal.
+        
+    - Saying “Turn off the lights” to a voice assistant.
         
 
 ---
 
-### 4. Relationship Between Mental Models, Conceptual Models, and Interaction
+##### b. Conversing
 
-- **Mental Models** = what users believe about the system.
+- **Definition**: Users interact with the system as if having a **conversation with another person**.
     
-- **Conceptual Models** = what designers intend to communicate.
+- **Characteristics**:
     
-- **Interaction Types** = how users actually perform tasks with the system.
+    - Two-way communication.
+        
+    - Natural, approachable; useful for people with little technical experience.
+        
+- **Examples**:
     
-- If the conceptual model is well designed → users develop accurate mental models → interactions become smooth and effective.
+    - Customer service chatbots.
+        
+    - Siri, Alexa, Google Assistant.
+        
+    - Voice user interfaces (VUIs).
+        
+
+---
+
+##### c. Manipulating
+
+- **Definition**: Users **directly act** on objects (virtual or physical) through dragging, dropping, rotating, zooming, resizing.
+    
+- **Characteristics**:
+    
+    - Intuitive, easy to learn because it mimics real-world actions.
+        
+    - Provides a sense of “grabbing and controlling” objects.
+        
+- **Examples**:
+    
+    - Dragging a file into the Recycle Bin.
+        
+    - Pinch-to-zoom on a smartphone.
+        
+    - Using VR gloves or gesture-based controllers.
+        
+
+---
+
+##### d. Exploring
+
+- **Definition**: Users **navigate and move around** a physical or virtual environment to discover and learn.
+    
+- **Characteristics**:
+    
+    - Immersive, engaging.
+        
+    - Useful for learning, entertainment, and navigating complex environments.
+        
+- **Examples**:
+    
+    - Walking through a city in Google Maps Street View.
+        
+    - Playing open-world games like Assassin’s Creed or Minecraft.
+        
+    - Exploring 3D worlds in VR with Oculus Rift or HoloLens.
+        
+
+---
+
+#### 3. Importance in Design
+
+- Each interaction type has strengths and weaknesses, making it suitable for different contexts:
+    
+    - **Instructing** → best for quick, repetitive actions (e.g., adjusting volume, turning devices on/off).
+        
+    - **Conversing** → helpful for natural interactions, accessibility, and beginners.
+        
+    - **Manipulating** → powerful for design, drawing, or simulation tasks.
+        
+    - **Exploring** → ideal for discovery, learning, or immersive experiences.
+        
+- In practice, **systems often combine multiple interaction types** to provide a rich, flexible user experience.
+        
+
+---
 ## 2. Input and Output Technologies
 
 ### 1. Why are Input/Output important?
@@ -218,18 +387,116 @@ There are four main types of interactions:
 
 ### 4. Emerging Input/Output Technologies
 
-- **Brain-Computer Interfaces (BCI)**:
+#### 1. Brain-Computer Interfaces (BCI)
+
+- **Definition**: Technology that allows the **brain to communicate directly with computers** using neural signals.
     
-    - e.g., Neuralink – implant chips that allow controlling a cursor or device using brain signals.
+- **Examples**:
+    
+    - **Neuralink** (Elon Musk): implanted chip enabling people with paralysis to move a cursor with their thoughts.
         
-- **Wearable Sensors for Healthcare**:
-    
-    - Monitor vital signs + environment in real-time (IoT + telemedicine).
+    - **Brain-controlled robots**: controlling devices or prosthetics through brain activity.
         
-- **Bio-Digital Systems**:
+- **Impact**:
     
-    - Integration of biotechnology with digital tech → wearable laboratories to measure hormones, genomes, microbiomes.
+    - Assists people with severe disabilities.
         
-- **Augmented & Mixed Reality Devices**:
+    - Opens possibilities for human enhancement.
+        
+
+---
+
+#### 2. Wearable Sensors for Healthcare
+
+- **Definition**: Body-worn devices that **monitor health in real time**.
     
-    - Google Glass, Microsoft HoloLens, AR glasses, VR systems.
+- **Examples**:
+    
+    - Smartwatches measuring heart rate, sleep, blood oxygen.
+        
+    - IoT healthcare systems: sensors tracking heart rate + room conditions, sending data to doctors remotely.
+        
+- **Impact**:
+    
+    - Enables telemedicine (remote healthcare).
+        
+    - Supports proactive healthcare and early diagnosis.
+        
+
+---
+
+#### 3. Bio-Digital Systems
+
+- **Definition**: Integration of **biotechnology and digital technology** in wearable devices.
+    
+- **Examples**:
+    
+    - Wearable labs analyzing hormones, microbiomes, or genes directly on the body.
+        
+- **Impact**:
+    
+    - Moves from simply **measuring** health to **optimizing** it.
+        
+    - Supports personalized medicine.
+        
+
+---
+
+#### 4. Augmented Reality (AR) & Mixed Reality (MR) Devices
+
+- **Definition**: Devices that **merge the real and virtual worlds**, letting users see reality while interacting with digital content.
+    
+- **Examples**:
+    
+    - **Google Glass, Ray-Ban Meta smart glasses**: display information in the user’s view.
+        
+    - **Microsoft HoloLens, Vive XR Elite**: immersive MR with 3D objects in real spaces.
+        
+- **Impact**:
+    
+    - Useful in education, training, design, and healthcare.
+        
+    - Provides immersive, intuitive interaction.
+        
+
+---
+
+#### 5. Speech and Voice Interfaces (with AI integration)
+
+- **Definition**: Communicating with systems through speech, enhanced by AI for recognition and response.
+    
+- **Examples**:
+    
+    - Siri, Alexa, Google Assistant (improved accuracy with machine learning).
+        
+    - **WeChat “Voice Donor”** project: donors record voices to create synthetic speech for people who lost theirs.
+        
+- **Impact**:
+    
+    - Hands-free, eyes-free operation (e.g., while driving).
+        
+    - Improves accessibility for visually impaired users.
+        
+
+---
+
+#### 6. Tangible and Motion-Based Output
+
+- **Definition**: Outputs that users can **feel or physically interact with**, beyond visuals or audio.
+    
+- **Examples**:
+    
+    - 3D printing → turning digital data into real objects.
+        
+    - Haptic gloves, VR controllers → simulate touch and force.
+        
+    - Motion-based robots → physical responses to digital input.
+        
+- **Impact**:
+    
+    - Expands experience from “seeing and hearing” to “touching and feeling.”
+        
+    - Useful in remote surgery, vocational training, VR gaming.
+        
+
+---
