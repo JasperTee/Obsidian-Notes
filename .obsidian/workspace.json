@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 4 Lec - Designing technologies for people.md",
+                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 5 Lec - Representing Users in the Design Process.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Week 4 Lec - Designing technologies for people"
+              "title": "Week 5 Lec - Representing Users in the Design Process"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 4 Lec - Designing technologies for people.md",
+                "file": "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 5 Lec - Representing Users in the Design Process.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Week 4 Lec - Designing technologies for people"
+              "title": "Outline of Week 5 Lec - Representing Users in the Design Process"
             }
           },
           {
@@ -184,8 +184,9 @@
   },
   "active": "ad67bef88d13d9b7",
   "lastOpenFiles": [
-    "Education/School/2025-2026/48433-Software Architecture/Week 7 Lec - Architecture for EmergingTechnologies.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 4 Lec - Designing technologies for people.md",
+    "Education/School/2025-2026/31260-Fundamentals of Interaction Design/Week 5 Lec - Representing Users in the Design Process.md",
+    "Education/School/2025-2026/48433-Software Architecture/Week 7 Lec - Architecture for EmergingTechnologies.md",
     "Education/School/2025-2026/32548-Cybersecurity/32548_Cybersecurity - Subject Outline.md",
     "Education/School/2025-2026/31260-Fundamentals of Interaction Design/31260_Fundamentals of Interaction Design - Subject Outline.md",
     "Education/School/2025-2026/48433-Software Architecture/48433_Software Architecture - Subject Outline.md",
@@ -229,7 +230,6 @@
     "Education/School/2025-2026/Software Engineering Fundamentals",
     "Education/School/2025-2026/48433-Software Architecture",
     "Education/External Cources",
-    "Education/Untitled.md",
     "Education/School/2025-2026/32548-Cybersecurity/Untitled.canvas"
   ]
 }
