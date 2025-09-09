@@ -998,3 +998,16 @@ There are four main approaches to integrate ML into applications:
     
 
 👉 In short: **ML can be plugged into an application either as an external service or as a core module, depending on customization needs and resources.**
+## **3. Evaluating Architectures**
+
+### **3.1. Why evaluate architectures?**
+
+- **Humans make mistakes**: misunderstandings, wrong pattern choices, missing elements, inconsistencies between views.
+    
+- **Main goals**:
+    
+    1. **Will it work?** – Does the architecture meet objectives within constraints, at acceptable risk?
+        
+    2. **Can it fail?** – Could it fail, and under what scenarios?
+        
+- **Why it matters**: architectures usually last a long time, so they must be robust and resilient to risks.
