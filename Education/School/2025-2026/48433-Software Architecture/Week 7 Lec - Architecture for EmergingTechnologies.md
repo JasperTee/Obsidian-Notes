@@ -1165,3 +1165,68 @@ There are four main approaches to integrate ML into applications:
 - **Scenario**: DDoS attack.
     
     - **Trade-off**: Adding firewalls and filtering increases security but may reduce response speed.
+### **3.4. HAZOP – Hazard and Operability Analysis**
+
+#### **Definition**
+
+- HAZOP is a **systematic method for evaluating architectures**, based on **checklists** and **guide words** to identify:
+    
+    1. **Hazards** – potential safety risks.
+        
+    2. **Operability issues** – problems that prevent normal operation.
+        
+- It is especially used for **safety-critical or life-critical systems**.
+    
+
+---
+
+#### **Key Characteristics**
+
+- **Checklist-based**: evaluation is guided by a structured list of items to check.
+    
+- **Guide words**: simple keywords like _No_, _More_, _Less_, _Reverse_, _As well as_ are applied to design elements to ask questions such as:
+    
+    - “What happens if there is **more data** than expected?”
+        
+    - “What happens if there is **no response** from the system?”
+        
+    - “What happens if the flow is **reversed**?”
+        
+- **Expert workshops**: usually conducted with a cross-disciplinary team (engineers, safety experts, operators).
+    
+- **Formal documentation**: requires detailed architectural and design descriptions for effective analysis.
+    
+
+---
+
+#### **Applications**
+
+HAZOP is applied in industries where **failure could lead to severe consequences**:
+
+- **Healthcare**: ventilators, surgical robots.
+    
+- **Aerospace**: flight control systems.
+    
+- **Defense**: radar, missile systems.
+    
+- **Energy & Chemicals**: nuclear plants, chemical refineries.
+    
+
+---
+
+#### **Example** – Chemical Plant Pressure Control System
+
+- **Guide word: “More pressure”** → if pressure exceeds design limit → risk of explosion.
+    
+- **Guide word: “No flow”** → if coolant stops flowing → overheating, system failure.
+    
+- **Guide word: “Reverse flow”** → if fluid flows backward → pump damage, chemical leakage.
+### **Comparison of the 3 Methods**
+
+|**Criteria**|**Controlled Convergence**|**ATAM (Architecture Trade-off Analysis Method)**|**HAZOP (Hazard and Operability Analysis)**|
+|---|---|---|---|
+|**Purpose**|Compare multiple architecture options and converge on the best solution|Examine **trade-offs** between architectural decisions and quality attributes|Identify **hazards & deviations**affecting safety and operability|
+|**Approach**|- Define evaluation criteria (functional + quality)  <br>- Compare candidates  <br>- Group discussion to converge|- Use **scenarios** to test the architecture  <br>- Analyze impact on performance, security, usability, reliability  <br>- Identify risks & trade-offs|- Apply **checklists & guide words**(_No, More, Less, Reverse…_)  <br>- Explore deviations from design intent|
+|**When to use**|When there are **multiple candidate architectures** and a choice must be made|When you want to evaluate **critical decisions** and balance quality attributes|When dealing with **safety-critical systems** (healthcare, aerospace, nuclear, defense)|
+|**Outputs**|- Converged architecture (possibly hybrid)  <br>- List of pros/cons per option|- List of risks & non-risks  <br>- Trade-off points  <br>- Risk themes|- List of hazards  <br>- Deviations  <br>- Consequences  <br>- Mitigation measures|
+|**Example**|Dragon Boat Regatta System – selecting the optimal architecture|Online banking system – balancing performance vs. security|Chemical plant pressure control – analyzing risk of overpressure, no flow, reverse flow|
