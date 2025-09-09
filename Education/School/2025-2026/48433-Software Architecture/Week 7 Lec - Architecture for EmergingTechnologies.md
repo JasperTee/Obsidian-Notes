@@ -902,3 +902,99 @@ AI and ML are not “new” ideas, but they are exploding now because **three k
 - **Bias**: generated content may reflect social or cultural biases present in the training data.
     
 - **Resource intensive**: requires massive datasets, GPUs/TPUs, and high costs.
+#### **2.5. Integrating ML into Application Architecture**
+
+##### **Concept**
+
+- Machine Learning (ML) in software architecture should be treated as an **independent module**.
+    
+- It can be integrated into applications in different ways depending on business needs and technical resources.
+    
+- The goal: turn **ML models** into part of the system so they can generate **predictions or recommendations** that add value.
+    
+
+---
+
+##### **Ways to integrate ML into applications**
+
+1. **Use ML APIs from providers (Google, AWS, Microsoft, etc.)**
+    
+    - Vendors provide pre-trained models for NLP, image recognition, speech, etc.
+        
+    - Developers just call the API, no need to train models.
+        
+    - **Example**: Using Google Vision API to detect objects in a mobile app.
+        
+    - **Pros**: Fast, easy, low initial cost.
+        
+    - **Cons**: Vendor lock-in, limited customization.
+        
+
+---
+
+2. **Use open-source models (TensorFlow, Keras, PyTorch, etc.)**
+    
+    - Leverage existing pre-trained models from open libraries or communities.
+        
+    - Can fine-tune them slightly for your use case.
+        
+    - **Example**: Download a TensorFlow Hub model to classify cat vs. dog images on a website.
+        
+    - **Pros**: More flexible, strong community support.
+        
+    - **Cons**: Requires ML knowledge to implement.
+        
+
+---
+
+3. **Retrain existing models (Transfer Learning)**
+    
+    - Start with a pre-trained model and retrain it on your own dataset.
+        
+    - **Example**: Use BERT for language tasks, retrained with Vietnamese data for a banking chatbot.
+        
+    - **Pros**: Saves time and cost (no need to train from scratch).
+        
+    - **Cons**: Requires infrastructure and domain-specific data.
+        
+
+---
+
+4. **Build custom ML models (from scratch)**
+    
+    - Collect data, design, and train your own ML models.
+        
+    - **Example**: A healthcare company develops a model to detect diseases in X-rays with specialized medical data.
+        
+    - **Pros**: Tailored exactly to business needs.
+        
+    - **Cons**: Expensive, time-consuming, requires high expertise.
+        
+
+---
+
+##### **How ML models are deployed inside applications**
+
+- **Embedded models**: included directly in the application (good for small models on IoT or mobile).
+    
+- **Runtime loading**: models are loaded and updated dynamically during runtime.
+    
+- **ML serving frameworks**: models deployed as independent services (e.g., TensorFlow Serving, TorchServe, MLflow), and the app calls them via API.
+    
+
+---
+
+##### **Summary**
+
+There are four main approaches to integrate ML into applications:
+
+1. **Provider APIs** → fast, simple, less customizable.
+    
+2. **Open-source models** → flexible, requires ML knowledge.
+    
+3. **Retraining pre-trained models** → efficient, requires domain data.
+    
+4. **Custom models** → highly accurate for business needs, costly.
+    
+
+👉 In short: **ML can be plugged into an application either as an external service or as a core module, depending on customization needs and resources.**
